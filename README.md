@@ -1,6 +1,7 @@
 Creacion de repositorio!
 Carpeta General del Proyecto
-Johana Rincon
-Amalia Tineo - checkBranch :)
-Andres Gomez
+
+Johana Rincon - CheckBranch
+Amalia Tineo - CheckBranch
+Andres Gomez - CheckBranch
 Javier Galindo - CheckBranch
