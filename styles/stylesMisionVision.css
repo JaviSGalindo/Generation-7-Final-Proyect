@@ -1,0 +1,102 @@
+/*
+color palette:
+Hex #00003B Azul oscuro
+Hex #645853 Marron claro
+Hex #7CA0C0 Azul claro
+Hex #241909 Marrón oscuro
+Hex #E8E1D9 Beige
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden; /* Esto oculta cualquier desbordamiento horizontal */
+  }
+  
+  /* También puedes ajustar el contenedor principal */
+  main {
+    overflow-x: hidden;
+  }
+
+@font-face {
+  font-family: "Mollie Glaston";
+  src: url("../fonts/Mollie-Glaston-Regular.ttf");
+}
+
+html {
+  line-height: 1.5;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+#mision-vision-valores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #00003b;
+  color: #ffffff;
+}
+
+#mision-vision-valores section {
+  padding: 20px;
+}
+
+#mision-vision-valores #mision {
+  flex: 1;
+}
+
+#mision-vision-valores #valores {
+  flex: 1;
+}
+
+#mision-vision-valores #vision {
+  flex: 1;
+  border-left: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Valores" */
+  height: 100%; /* Ajuste de altura si es necesario */
+  margin: 50px 20px; /* Espaciado alrededor de la línea */
+}
+
+#mision-vision-valores h2 {
+  font-family: "Mollie Glaston", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#mision-vision-valores p,
+#cita {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 425px) {
+    #mision-vision-valores {
+        
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+}
+
+#mision-vision-valores #vision {
+
+    border-top: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Vision" */
+    border-left: none;
+
+  }
+}
