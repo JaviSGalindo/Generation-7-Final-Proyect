@@ -1,0 +1,25 @@
+
+.quienes-somos-section {
+    background-color: #00003B;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.left{
+    padding-top: 30px;
+    color: white;
+    font-family: 'Poppins';
+}
+h1{
+    font-family: ;
+}
+
+.imagen1{
+    margin: 30px;
+    height: 250px;
+    width: 250px;
+    box-shadow: 2px 5px 10px #01011F;
+    border-radius: 8px;
+}
