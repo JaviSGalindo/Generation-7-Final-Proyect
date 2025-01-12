@@ -1,6 +1,12 @@
-.main{
+
+.quienes-somos-section {
     background-color: #00003B;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
+
 .left{
     padding-top: 30px;
     color: white;
@@ -16,7 +22,4 @@ h1{
     width: 250px;
     box-shadow: 2px 5px 10px #01011F;
     border-radius: 8px;
-}
-.imagen1:hover {
-    transform: translateY(-5px)
 }
