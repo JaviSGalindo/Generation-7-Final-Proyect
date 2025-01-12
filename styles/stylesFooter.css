@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Css de la seccion 'footer' */
+.footer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: #00003B;
+    color: #E8E1D9;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Seccion de informacion de redes sociales */
+.footer-info-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+    background-color: #7CA0C0;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-info-title {
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+.footer-info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.footer-info-container a {
+    color: inherit;
+    text-decoration: none;
+}
+.footer-info-container a:hover {
+    color: #00003B;
+}
+
+
+
+/* Secccion de newsletter - suscripcion a informacion */
+.footer-newsletter-container {
+    padding: 50px;
+}
+.footer-newsletter-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-newsletter-container form p {
+    font-size: 20px;
+    padding-bottom: 10px;
+    max-width: 600px;
+}
+.footer-newsletter-container input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 8px;
+}
+.footer-newsletter-container button {
+    background-color: #7CA0C0;
+    box-shadow: none;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    color: #E8E1D9;
+    border-radius: 8px;
+}
+.footer-newsletter-container button:hover {
+    background-color: #7CA0C080;
+}
+
+/* Seccion de logo - informacion */
+.footer-final-section {
+    display: flex;
+    align-items: center;
+}
+.footer-logo-container img {
+    max-width: 200px;
+    height: auto;
+    padding: 20px;
+}
+
+/* Seccion de informacion final - logo - acceso a otras partes de la pagina */
+.footer-final-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.footer-elements-list {
+    list-style: none;
+    margin-top: 20px;  
+    margin-bottom: 20px;
+}
+.footer-elements p {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.footer-elements-list li a {
+    font-size: 15px;
+    /* text-align: left; */
+    text-decoration: none;
+    color: white;
+}
+.footer-elements-list li a:hover {
+    text-decoration: underline;
+    color: #7CA0C0;
+}
+
+/* Seccion todos los derechos reservados */
+.footer-bottom-section {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.back-to-top-button {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Footer = Media queries responsive */
+@media (max-width: 768px) {
+    .footer-info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-final-section {
+        flex-direction: column;
+        align-items: center;
+        grid: 20px;
+    }
+    .footer-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
