@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "Mollie Glaston";
+  src: url("../fonts/Mollie-Glaston.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #e8e1d9;
+  content: ""; /* para crear el pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../imagenes/sombras1.png");
+  background-size: cover; /* para que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  opacity: 0.5;
+  z-index: -1;
+  color: #333;
+}
+main {
+  padding-top: 50px; /*espacio superior para todo el contenido */
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.ourPeople-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ourPeople-member {
+  background: #7ca0c0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.ourPeople-member img {
+  width: 75%;
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.memberName {
+  font-family: "Mollie Glaston", serif;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: black;
+}
+
+.info {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin-top: 5px;
+}
+
+#initialTittle {
+  font-family: "Mollie Glaston", serif;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 15px; /* Espacio superior respecto a la tarjeta */
+}
+
+/* Botones individuales */
+.btn {
+  width: 50px; /* Tamaño del botón */
+  height: 50px;
+  border-radius: 50%; /* Hace el botón redondo */
+  display: flex; /* para centrar el contenido */
+  align-items: center; /* para centra el ícono verticalmente */
+  justify-content: center; /* para centrar el ícono horizontalmente */
+  background-color: #7ca0c0; /* Color de fondo (LinkedIn) */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  border: 2px solid white; /* Borde externo*/
+}
+
+/* Iconos dentro del botón */
+.btn i {
+  color: white; /* Color blanco para los íconos */
+  font-size: 25px; /* Tamaño del ícono */
+}
+
+/* Botón de LinkedIn */
+.linkedin {
+  background-color: #7ca0c0; /* Azul corporativo de LinkedIn */
+}
+
+.linkedin:hover {
+  background-color: #7ca0c0; /* Oscurece el azul al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Botón de GitHub */
+.github {
+  background-color: #7ca0c0#333; /* Color corporativo de GitHub */
+}
+
+.github:hover {
+  background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+/* Botón de GitHub */
+.mail {
+  background-color: #7ca0c0#333; /* Color corporativo de GitHub */
+}
+
+.mail:hover:hover {
+  background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+  }
+
+  .ourPeople-container {
+    gap: 15px; /* Reduce el espacio entre las tarjetas */
+  }
+
+  .ourPeople-member {
+    width: 200px; /* Reduce el tamaño de las tarjetas */
+    padding: 15px;
+  }
+
+  .ourPeople-member img {
+    width: 70%;
+    height: 130px; /* Ajusta el tamaño de las imágenes */
+  }
+
+  .btn {
+    width: 45px;
+    height: 45px; /* Reduce el tamaño de los botones */
+  }
+
+  .btn i {
+    font-size: 20px; /* Reduce el tamaño de los íconos */
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .ourPeople-container {
+    flex-direction: column; /* Las tarjetas se apilan verticalmente */
+    align-items: center; /* Centra las tarjetas */
+    gap: 10px;
+  }
+
+  .ourPeople-member {
+    width: 90%; /* Las tarjetas ocupan el 90% del ancho de la pantalla */
+  }
+
+  .ourPeople-member img {
+    width: 60%;
+    height: 120px; /* Reduce un poco más el tamaño de las imágenes */
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px; /* Botones más pequeños */
+  }
+
+  .btn i {
+    font-size: 18px; /* Íconos más pequeños */
+  }
+}
