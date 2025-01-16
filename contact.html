@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styleContact.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <main class="row">
+      <article class="mainformulario">
+        <form
+          action="https://formspree.io/f/meoonydk"
+          method="POST"
+          id="contactForm"
+          novalidate
+        >
+          <label for="name"> Nombre*</label>
+          <input type="name" name="name" id="name" required />
+          <span id="nameError" class="error-message"></span>
+
+          <label for="email"> Email*</label>
+          <input type="email" name="email" id="email" required />
+          <span id="emailError" class="error-message"></span>
+
+          <label for="message"> Mensaje*</label>
+          <textarea name="message" id="message" required></textarea>
+          <span id="messageError" class="error-message"></span>
+
+          <div class="politica-datos">
+            <input type="checkbox" id="policy" value="policy" required />
+            <label for="policy"
+              >He leído y acepto la política de privacidad*</label
+            >
+
+            <span id="policyError" class="error-message"></span>
+          </div>
+          <div class="styleboton">
+            <button type="submit" id="submitButton">Enviar</button>
+          </div>
+          <span id="successMessage" style="display: none"></span>
+        </form>
+      </article>
+    </main>
+    <script src="validator.js"></script>
+  </body>
+</html>
