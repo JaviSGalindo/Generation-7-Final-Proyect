@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: #E8E1D9;
+}
+
+/* Estilo general para la sección */
+.main-contactUs-section {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* min-height: 100vh; */
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow: hidden;
+    background-color: #E8E1D9;
+}
+
+/* Contenedor principal */
+.main-contactUs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Imágenes principales */
+.main-contactUs-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.main-contactUs-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+/* Texto principal */
+.main-contactUs-text {
+    position: absolute;
+    text-align: center;
+    color: #00003B;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    z-index: 3;
+    margin-top: 1rem;
+}
+
+.main-contactUs-text h1 {
+    font-weight: 900;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.main-contactUs-text p {
+    font-weight: 500;
+    font-size: clamp(0.875rem, 3vw, 1.5rem);
+}
+
+/* Estilo para pantallas medianas */
+@media (max-width: 768px) {
+    .main-contactUs-img {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #contactUs-img5 {
+        display: none;
+    }
+    #contactUs-img6 {
+        display: none;
+    }
+    #contactUs-img7 {
+        display: none;
+    }
+    #contactUs-img8 {
+        display: none;
+    }
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .main-contactUs-img {
+        grid-template-columns: 1fr;
+    }
+    #contactUs-img2 {
+        display: none;
+    }
+    #contactUs-img4 {
+        display: none;
+    }
+    .main-contactUs-text {
+        padding: 0.5rem;
+    }
+
+    .main-contactUs-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-contactUs-text p {
+        font-size: 0.875rem;
+    }
+}

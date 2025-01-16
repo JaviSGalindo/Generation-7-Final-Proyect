@@ -11,7 +11,7 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: #e8e1d9;
-    position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
+    position: relative;
 }
 
 body::before {
@@ -381,18 +381,17 @@ body::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding-top: 10px;
     color: white;
     background-color: #7CA0C0;
     font-family: 'Poppins', sans-serif;
 }
 .footer-info-title {
     font-size: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     font-family: "Mollie Glaston", sans-serif;
     font-weight: 600;
     margin: 0;
-    padding-bottom: 20px;
     text-align: center;
 }
 .footer-info-container {
@@ -411,44 +410,11 @@ body::before {
 }
 
 
-
-/* Secccion de newsletter - suscripcion a informacion */
-.footer-newsletter-container {
-    padding: 50px;
-}
-.footer-newsletter-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.footer-newsletter-container form p {
-    font-size: 20px;
-    padding-bottom: 10px;
-    max-width: 600px;
-}
-.footer-newsletter-container input {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 100%;
-    border-radius: 8px;
-}
-.footer-newsletter-container button {
-    background-color: #7CA0C0;
-    box-shadow: none;
-    border: none;
-    padding: 5px;
-    width: 100%;
-    color: #E8E1D9;
-    border-radius: 8px;
-}
-.footer-newsletter-container button:hover {
-    background-color: #7CA0C080;
-}
-
 /* Seccion de logo - informacion */
 .footer-final-section {
     display: flex;
     align-items: center;
+    margin-top: 5px;
 }
 .footer-logo-container img {
     max-width: 200px;
@@ -462,6 +428,10 @@ body::before {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+.footer-elements-container {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .footer-elements-list {
     list-style: none;
@@ -489,6 +459,42 @@ body::before {
     color: #7CA0C0;
 }
 
+
+
+/* Secccion de newsletter - suscripcion a informacion */
+.footer-newsletter-container {
+  padding: 30px;
+}
+.footer-newsletter-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-newsletter-container form p {
+  font-size: 20px;
+  padding-bottom: 10px;
+  max-width: 300px;
+}
+.footer-newsletter-container input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 8px;
+}
+.footer-newsletter-container button {
+  background-color: #7CA0C0;
+  box-shadow: none;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  color: #E8E1D9;
+  border-radius: 8px;
+}
+.footer-newsletter-container button:hover {
+  background-color: #7CA0C080;
+}
+
+
 /* Seccion todos los derechos reservados */
 .footer-bottom-section {
     width: 100%;
@@ -499,7 +505,7 @@ body::before {
 
 .back-to-top-button {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
 }
 
