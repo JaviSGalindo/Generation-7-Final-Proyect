@@ -17,28 +17,26 @@
           action="https://formspree.io/f/meoonydk"
           method="POST"
           id="contactForm"
-          novalidate
-        >
-          <label for="name"> Nombre*</label>
-          <input type="name" name="name" id="name" required />
+          novalidate class="formulario">
+
+          <label for="name"> Nombre *</label>
+          <input type="name" name="name" id="name" placeholder="Tu nombre" required />
           <span id="nameError" class="error-message"></span>
 
-          <label for="email"> Email*</label>
-          <input type="email" name="email" id="email" required />
+          <label for="email"> Email *</label>
+          <input type="email" name="email" id="email" placeholder="Tu correo electrónico" required />
           <span id="emailError" class="error-message"></span>
 
-          <label for="message"> Mensaje*</label>
-          <textarea name="message" id="message" required></textarea>
+          <label for="message"> Mensaje *</label>
+          <textarea name="message" id="message" placeholder="Tu Mensaje" required></textarea>
           <span id="messageError" class="error-message"></span>
 
           <div class="politica-datos">
             <input type="checkbox" id="policy" value="policy" required />
-            <label for="policy"
-              >He leído y acepto la política de privacidad*</label
-            >
-
-            <span id="policyError" class="error-message"></span>
+            <label for="policy">He leído y acepto la política de privacidad</label>
           </div>
+          <span id="policyError" class="error-message"></span>
+
           <div class="styleboton">
             <button type="submit" id="submitButton">Enviar</button>
           </div>
