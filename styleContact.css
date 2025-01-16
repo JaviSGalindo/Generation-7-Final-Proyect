@@ -170,10 +170,15 @@ button:hover {
 }
 
 @media(max-width: 300px){
+
+  main .formulario{
+    padding: 5px;
+  }
   .row .mainformulario .formulario span{
     font-size: 6px;
     padding: 0px;
-    height: 1.2rem;
+    height: 1rem;
+    border: 1px solid gray;
   }
 
   label{
@@ -182,9 +187,5 @@ button:hover {
   }
   .politica-datos label{
     font-size: 6px;
-  }
-
-  #name, #email, #message, textarea{
-    font-size: 7px;
   }
 }
