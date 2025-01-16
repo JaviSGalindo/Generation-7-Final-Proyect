@@ -48,7 +48,7 @@ body::before {
 
 .quienes-somos-info {
     flex: 1 1 100%;
-    max-width: 600px;
+    max-width: 900px;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
