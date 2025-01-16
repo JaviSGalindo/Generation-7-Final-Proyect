@@ -1,0 +1,200 @@
+/* general styles */
+
+@font-face {
+  font-family: "Mollie Glaston";
+  src: url("../fonts/Mollie-Glaston.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.mainformulario{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  width: 400px;
+  height: 450px;
+  background-color: #e8e1d9;
+  box-shadow: 3px 1px 10px 0.5px gray;
+}
+
+main .formulario{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #e8e1d9;
+  justify-content: space-between;
+  height: 400px;
+  width: 500px;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+textarea{
+    height: 20%;
+    font-family: "Poppins", sans-serif;
+}
+
+#name, #email, #message, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.row .mainformulario .formulario span{
+  height: 1.3rem;
+  padding: 5px;
+  font-size: 10px;
+}
+
+input:focus, textarea:focus{
+  
+  outline: none;
+}
+
+.styleboton {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+main article .formulario .politica-datos{
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.politica-datos label{
+  font-size: 12px;
+}
+
+/* mensajes de errores */
+
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+#messageSuccess {
+  display: flex;
+  justify-content: center;
+}
+#successMessage {
+  justify-content: center;
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+
+}
+
+input:invalid,
+textarea:invalid {
+  border: 1px solid red;
+}
+
+
+
+
+
+input:focus:invalid,
+textarea:focus:invalid {
+  background-color: #b1d1eea0;
+}
+
+button {
+  display: flex;
+  width: 35%;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #00003d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:active {
+  background-color: #7ca0c080;
+  transform: scale(0.95) !important;
+}
+
+button:hover {
+  background-color: #7ca0c0;
+  transform: scale(1.05);
+}
+
+/* media querys */
+@media(max-width: 600px){
+  .mainformulario{
+    width: 50%;
+  }
+  main .formulario{
+    height: auto;
+    width: 500px;
+    font-size: 12px;
+    padding: 10px;
+
+  }
+  main article .formulario{
+    gap: 4px;
+    grid-template-columns: auto auto;
+    font-size: 10px;
+  }
+  .politica-datos label{
+    font-size: 9px;
+  }
+  .row .mainformulario .formulario span{
+    font-size: 10px;
+    height: 3rem;
+  }
+  button{
+    width: 70px;
+    font-size: 12px;
+  }
+  textarea{
+    height: 60px;
+  }
+  #name, #email, #message, textarea{
+    font-size: 10px;
+    padding: 4px;
+  }
+}
+
+@media(max-width: 300px){
+
+  main .formulario{
+    padding: 5px;
+  }
+  .row .mainformulario .formulario span{
+    font-size: 6px;
+    padding: 0px;
+    height: 1rem;
+    border: 1px solid gray;
+  }
+
+  label{
+    font-size: 8px;
+
+  }
+  .politica-datos label{
+    font-size: 6px;
+  }
+}
