@@ -61,8 +61,8 @@ textarea{
   font-size: 10px;
 }
 
-input:focus{
-  border-color: #00003d;
+input:focus, textarea:focus{
+  
   outline: none;
 }
 
@@ -84,17 +84,22 @@ main article .formulario .politica-datos{
 /* mensajes de errores */
 
 .error-message {
-  color: red;
+  color: #ff0000;
   font-size: 12px;
   display: block;
   margin-top: 5px;
 }
 
+#messageSuccess {
+  display: flex;
+  justify-content: center;
+}
 #successMessage {
+  justify-content: center;
   color: green;
   font-size: 12px;
   margin-top: 5px;
-  justify-self: center;
+
 }
 
 input:invalid,
@@ -102,9 +107,13 @@ textarea:invalid {
   border: 1px solid red;
 }
 
+
+
+
+
 input:focus:invalid,
 textarea:focus:invalid {
-  background-color: #f8d7da;
+  background-color: #b1d1eea0;
 }
 
 button {
@@ -124,7 +133,7 @@ button {
 
 button:active {
   background-color: #7ca0c080;
-  transform: scale(0.95);
+  transform: scale(0.95) !important;
 }
 
 button:hover {

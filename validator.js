@@ -54,9 +54,6 @@ const handleSubmit = (event) => {
     hasErrors = true;
   }
 
-  //obtener el boton de submit y deshabilitarlo si hay errores para prevenir el envío del formulario
-  // const submitButton = document.getElementById("submitButton");
-  // submitButton.disabled = hasErrors;
   if (hasErrors) {
     return;
   }
@@ -67,7 +64,7 @@ const handleSubmit = (event) => {
     successMessage.style.display = "block";
     setTimeout(() => {
       successMessage.style.display = "none";
-    }, 1000); // Oculta el mensaje después de 5 segundos
+    }, 2000); // Oculta el mensaje después de 5 segundos
     document.getElementById("contactForm").reset(); // Limpiar el formulario
   }
 };
