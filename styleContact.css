@@ -14,7 +14,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+main {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #00003d;
+}
 .mainformulario{
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   padding: 3rem;
@@ -107,10 +113,6 @@ textarea:invalid {
   border: 1px solid red;
 }
 
-
-
-
-
 input:focus:invalid,
 textarea:focus:invalid {
   background-color: #b1d1eea0;
@@ -142,59 +144,73 @@ button:hover {
 }
 
 /* media querys */
-@media(max-width: 600px){
-  .mainformulario{
-    width: 50%;
-  }
-  main .formulario{
-    height: auto;
-    width: 500px;
-    font-size: 12px;
-    padding: 10px;
 
+/* Estilo para pantallas medianas (tablets, etc.) */
+@media (max-width: 768px) {
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  main article .formulario{
-    gap: 4px;
-    grid-template-columns: auto auto;
-    font-size: 10px;
+  .mainformulario {
+    width: 60%;
+    padding: 1.5rem;
   }
-  .politica-datos label{
-    font-size: 9px;
+  
+  main .formulario {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 20px;
   }
-  .row .mainformulario .formulario span{
-    font-size: 10px;
-    height: 3rem;
+  
+  #name, #email, #message, textarea {
+    font-size: 0.9rem;
   }
-  button{
-    width: 70px;
-    font-size: 12px;
-  }
-  textarea{
-    height: 60px;
-  }
-  #name, #email, #message, textarea{
-    font-size: 10px;
-    padding: 4px;
+  
+  button {
+    width: 50%;
+    font-size: 0.9rem;
   }
 }
 
-@media(max-width: 300px){
-
-  main .formulario{
-    padding: 5px;
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  .row .mainformulario .formulario span{
-    font-size: 6px;
-    padding: 0px;
-    height: 1rem;
-    border: 1px solid gray;
+  .mainformulario {
+    padding: 1rem;
+  }
+  
+  main .formulario {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 15px;
+    margin-right: 15px;
+  }
+  
+  #name, #email, #message, textarea {
+    font-size: 0.8rem;
+  }
+  #message {
+    min-height: 50px;
+    resize: none;
+  }
+  .row .mainformulario .formulario span {
+    padding-bottom: 20px;
   }
 
-  label{
-    font-size: 8px;
-
+  button {
+    width: 60%;
+    font-size: 0.8rem;
   }
-  .politica-datos label{
-    font-size: 6px;
+  
+  .politica-datos {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  
+  .politica-datos label {
+    font-size: 10px;
   }
 }
