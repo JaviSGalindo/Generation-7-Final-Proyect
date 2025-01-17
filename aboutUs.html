@@ -33,7 +33,7 @@
         <section class="quienes-somos-section">
             <div class="quienes-somos-container">
                 <div class="quienes-somos-info">
-                    <h1 class="quienes-somos-title">¿Quienes somos?</h1>
+                    <h1 class="quienes-somos-title">¿Quiénes somos?</h1>
                     <p>Nuestro propósito es envolverte en una experiencia única,
                         donde cada producto y detalle están impregnados de un
                         amor incondicional. Queremos que te sientas amada,
@@ -240,7 +240,7 @@
         </section>
 
         <!-- Seccion de Suscripcion a noticias e informacion de Elevia -->
-        <section class="footer-newsletter-section">
+        <!-- <section class="footer-newsletter-section">
             <div class="footer-newsletter-container">
                 <form action="subscribe.php" method="post">
                     <p>Suscribete a información y promociones especiales de Elevia</p>
@@ -248,7 +248,7 @@
                     <button type="submit">Suscribirse</button>
                 </form>
             </div>
-        </section>
+        </section> -->
 
         <!-- Seccion de logo - informacion respecto a la marca -->
         <section class="footer-final-section">
@@ -258,7 +258,7 @@
             </div>
             <!-- Opciones de Ayuda -->
             <div class="footer-elements-container">
-                <div class="footer-elements">
+                <div id="ayuda-footer" class="footer-elements">
                     <p>Ayuda</p>
                     <ul class="footer-elements-list">
                         <li><a href="mailto:devoluciones.elevia@gmail.com" target="_blank">Devoluciones</a></li>
@@ -270,7 +270,7 @@
             </div>
             <!-- Acceso a las secciones de la pagina de Elevia -->
             <div class="footer-elements-container">
-                <div class="footer-elements">
+                <div id="nosotros-footer" class="footer-elements">
                     <p>Nosotros</p>
                     <ul class="footer-elements-list">
                         <li> <a href="#contact-section">Productos</a> </li>
@@ -280,6 +280,15 @@
                     </ul>
                 </div>
             </div> 
+
+            <!-- Suscripcion a noticias e informacion de Elevia -->
+            <div class="footer-newsletter-container">
+              <form action="subscribe.php" method="post">
+                  <p>Suscribete a información y promociones especiales de Elevia</p>
+                  <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
+                  <button type="submit">Suscribirse</button>
+              </form>
+          </div>
             
         <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
         </section>

@@ -1,523 +1,555 @@
 @font-face {
-    font-family: "Mollie Glaston";
-    src: url("../fonts/Mollie-Glaston.ttf") format("truetype");
-  }
+  font-family: "Mollie Glaston";
+  src: url("../fonts/Mollie-Glaston.ttf") format("truetype");
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: #e8e1d9;
-    position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #e8e1d9;
+  position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
 }
 
 body::before {
-    content: ""; /* Necesario para crear el pseudo-elemento */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Asegura que cubra toda el área visible */
-    background-image: url("../imagenes/sombras1.png");
-    background-size: cover; /* Asegura que la imagen cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    opacity: 0.5; /* Controla la transparencia */
-    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  content: ""; /* Necesario para crear el pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Asegura que cubra toda el área visible */
+  background-image: url("../imagenes/sombras1.png");
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  opacity: 0.5; /* Controla la transparencia */
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
 }
 
 /* Seccion de quienes somos */
 .quienes-somos-section {
-    padding: 20px;
-    background-color: #00003B;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
+  padding: 20px;
+  background-color: #00003B;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 .quienes-somos-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    color: white;
-    flex-direction: row; /* Por defecto se alinean en fila */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+  justify-items: center;
 }
 
 .quienes-somos-info {
-    flex: 1 1 100%;
-    max-width: 600px;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el texto */
-    justify-content: center;
+  flex: 1 1 100%;
+  max-width: 800px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el texto */
+  justify-content: center;
 }
 
 .quienes-somos-title {
-    font-size: 60px;
-    margin-bottom: 10px;
-    font-family: "Mollie Glaston", sans-serif;
-    font-weight: 600;
-    padding-bottom: 30px;
+  font-size: 60px;
+  margin-bottom: 10px;
+  font-family: "Mollie Glaston", sans-serif;
+  font-weight: 600;
+  padding-bottom: 30px;
 }
 
 .quienes-somos-info p {
-    font-size: 1rem;
-    line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .imagen1 {
-    flex: 1 1 auto;
-    max-width: 400px;
-    margin-left: 20px;
-    padding-right: 80px;
-    padding-left: 30px;
-    display: flex;
-    justify-content: center; /* Centra la imagen en pantallas grandes */
+  flex: 1 1 auto;
+  max-width: 400px;
+  margin-left: 20px;
+  padding-right: 80px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: center; /* Centra la imagen en pantallas grandes */
 }
 
 .imagen1 img {
-    border-radius: 15px;
-    width: 100%;
-    height: auto;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
-    .quienes-somos-container {
-        flex-direction: column; /* Hace que los elementos se apilen */
-        justify-content: center;
-        padding-right: 30px;
-        padding-left: 10px;
-    }
+  .quienes-somos-container {
+      flex-direction: column; /* Hace que los elementos se apilen */
+      justify-content: center;
+      padding-right: 30px;
+      padding-left: 10px;
+  }
 
-    .quienes-somos-info {
-        padding-left: 0; /* Elimina el padding a la izquierda */
-        text-align: center; /* Asegura que el texto esté centrado */
-    }
+  .quienes-somos-info {
+      padding-left: 0; /* Elimina el padding a la izquierda */
+      text-align: center; /* Asegura que el texto esté centrado */
+  }
 
-    .imagen1 {
-        margin-left: 0;
-        margin-top: 20px;
-        margin-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 30px;
-        display: flex;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-    }
+  .imagen1 {
+      margin-left: 0;
+      margin-top: 20px;
+      margin-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      width: 100%;
+      height: auto;
+      justify-content: center;
+  }
 
-    .imagen1 img {
-        width: 100%;
-    }
+  .imagen1 img {
+      width: 100%;
+  }
 }
 
 
 /* Seccion mision y vision */
 #mision-vision-valores {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    margin-top: 60px;
-    background-color: #00003b;
-    color: #ffffff;
-  }
-  #mision header,
-  #vision header{
-    padding-bottom: 30px;
-  }
-  #mision-vision-valores section {
-    padding: 20px;
-  }
-  
-  #mision-vision-valores #mision {
-    flex: 1;
-  }
-  
-  #mision-vision-valores #valores {
-    flex: 1;
-  }
-  
-  #mision-vision-valores #vision {
-    flex: 1;
-    border-left: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Valores" */
-    height: 100%; /* Ajuste de altura si es necesario */
-    margin: 50px 20px; /* Espaciado alrededor de la línea */
-  }
-  
-  #mision-vision-valores h2 {
-    font-family: "Mollie Glaston", sans-serif;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  #mision-vision-valores p,
-  #cita {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  
-  @media screen and (max-width: 425px) {
-      #mision-vision-valores {
-          
-          flex-direction: column;
-          padding: 20px;
-          align-items: center;
-  }
-  
-  #mision-vision-valores #vision {
-  
-      border-top: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Vision" */
-      border-left: none;
-  
-    }
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  background-color: #00003b;
+  color: #ffffff;
+}
+#mision header,
+#vision header{
+  padding-bottom: 30px;
+}
+#mision-vision-valores section {
+  padding: 20px;
+}
 
-  /* Seccion de nuestro equipo */
+#mision-vision-valores #mision {
+  flex: 1;
+}
 
-  #initialTittle {
-    text-align: center;
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
-  }
-  .ourPeople-section {
-    margin-top: 60px;
-  }
-  .ourPeople-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .ourPeople-member {
-    background: #7ca0c0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-  }
-  
-  .ourPeople-member img {
-    width: 75%;
-    border-radius: 50%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .memberName {
-    font-family: "Mollie Glaston", serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 20px;
-    color: black;
-  }
-  
-  .info {
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    color: white;
-    margin-top: 5px;
-  }
-  
-  #initialTittle {
-    font-family: "Mollie Glaston", sans-serif;
-    font-weight: 600;
-    padding-bottom: 30px;
-    font-size: 60px;
-  }
-  
-  .social-buttons {
-    display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 20px; /* Espacio entre los botones */
-    margin-top: 15px; /* Espacio superior respecto a la tarjeta */
-  }
-  .social-buttons a {
-    width: 50px; /* Tamaño del botón */
-    height: 50px;
-    border-radius: 50%; /* Hace el botón redondo */
-    display: flex; /* para centrar el contenido */
-    align-items: center; /* para centra el ícono verticalmente */
-    justify-content: center; /* para centrar el ícono horizontalmente */
-    background-color: #7ca0c0; /* Color de fondo (LinkedIn) */
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    border: 2px solid white; /* Borde externo*/
-  }
+#mision-vision-valores #valores {
+  flex: 1;
+}
 
-  
-  /* Iconos dentro del botón */
-  .btn i {
-    color: white; /* Color blanco para los íconos */
-    font-size: 25px; /* Tamaño del ícono */
+#mision-vision-valores #vision {
+  flex: 1;
+  border-left: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Valores" */
+  height: 100%; /* Ajuste de altura si es necesario */
+  margin: 50px 20px; /* Espaciado alrededor de la línea */
+}
+
+#mision-vision-valores h2 {
+  font-family: "Mollie Glaston", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#mision-vision-valores p,
+#cita {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 425px) {
+    #mision-vision-valores {
+        
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+}
+
+#mision-vision-valores #vision {
+
+    border-top: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Vision" */
+    border-left: none;
+
   }
-  
-  /* Botón de LinkedIn */
-  .linkedin {
-    background-color: #7ca0c0; /* Azul corporativo de LinkedIn */
-  }
-  
-  .linkedin:hover {
-    background-color: #7ca0c0; /* Oscurece el azul al pasar el cursor */
-    transform: scale(1.1); /* Efecto de zoom */
-  }
-  
-  /* Botón de GitHub */
-  .github {
-    background-color: #7ca0c0#333; /* Color corporativo de GitHub */
-  }
-  
-  .github:hover {
-    background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
-    transform: scale(1.1); /* Efecto de zoom */
-  }
-  /* Botón de GitHub */
-  .mail {
-    background-color: #7ca0c0#333; /* Color corporativo de GitHub */
-  }
-  
-  .mail:hover:hover {
-    background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
-    transform: scale(1.1); /* Efecto de zoom */
-  }
-  
-  @media (max-width: 768px) {
-    #initialTittle {
-      font-size: 1.8rem; /* Reduce el tamaño del título */
-    }
-  
-    .ourPeople-container {
-      gap: 15px; /* Reduce el espacio entre las tarjetas */
-    }
-  
-    .ourPeople-member {
-      width: 200px; /* Reduce el tamaño de las tarjetas */
-      padding: 15px;
-    }
-  
-    .ourPeople-member img {
-      width: 70%;
-      height: 130px; /* Ajusta el tamaño de las imágenes */
-    }
-  
-    .btn {
-      width: 45px;
-      height: 45px; /* Reduce el tamaño de los botones */
-    }
-  
-    .btn i {
-      font-size: 20px; /* Reduce el tamaño de los íconos */
-    }
-  }
-  
-  /* Para pantallas pequeñas (móviles) */
-  @media (max-width: 480px) {
+}
+
+/* Seccion de nuestro equipo */
+
 #initialTittle {
-      font-size: 1.5rem; /* Ajusta el tamaño del título */
-    }
-  
-    .ourPeople-container {
-      flex-direction: column; /* Las tarjetas se apilan verticalmente */
-      align-items: center; /* Centra las tarjetas */
-      gap: 10px;
-    }
-  
-    .ourPeople-member {
-      width: 90%; /* Las tarjetas ocupan el 90% del ancho de la pantalla */
-    }
-  
-    .ourPeople-member img {
-      width: 60%;
-      height: 120px; /* Reduce un poco más el tamaño de las imágenes */
-    }
-  
-    .btn {
-      width: 40px;
-      height: 40px; /* Botones más pequeños */
-    }
-  
-    .btn i {
-      font-size: 18px; /* Íconos más pequeños */
-    }
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.ourPeople-section {
+  margin-top: 60px;
+}
+.ourPeople-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.ourPeople-member {
+  background: #7ca0c0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.ourPeople-member img {
+  width: 75%;
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.memberName {
+  font-family: "Mollie Glaston", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 20px;
+  color: black;
+}
+
+.info {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+  margin-top: 5px;
+}
+
+#initialTittle {
+  font-family: "Mollie Glaston", sans-serif;
+  font-weight: 600;
+  padding-bottom: 30px;
+  font-size: 60px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 15px; /* Espacio superior respecto a la tarjeta */
+}
+.social-buttons a {
+  width: 50px; /* Tamaño del botón */
+  height: 50px;
+  border-radius: 50%; /* Hace el botón redondo */
+  display: flex; /* para centrar el contenido */
+  align-items: center; /* para centra el ícono verticalmente */
+  justify-content: center; /* para centrar el ícono horizontalmente */
+  background-color: #7ca0c0; /* Color de fondo (LinkedIn) */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  border: 2px solid white; /* Borde externo*/
+}
+
+
+/* Iconos dentro del botón */
+.btn i {
+  color: white; /* Color blanco para los íconos */
+  font-size: 25px; /* Tamaño del ícono */
+}
+
+/* Botón de LinkedIn */
+.linkedin {
+  background-color: #7ca0c0; /* Azul corporativo de LinkedIn */
+}
+
+.linkedin:hover {
+  background-color: #7ca0c0; /* Oscurece el azul al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Botón de GitHub */
+.github {
+  background-color: #7ca0c0#333; /* Color corporativo de GitHub */
+}
+
+.github:hover {
+  background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+/* Botón de GitHub */
+.mail {
+  background-color: #7ca0c0#333; /* Color corporativo de GitHub */
+}
+
+.mail:hover:hover {
+  background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom */
+}
+
+@media (max-width: 768px) {
+  #initialTittle {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
   }
 
-  /* Css de la seccion 'footer' */
+  .ourPeople-container {
+    gap: 15px; /* Reduce el espacio entre las tarjetas */
+  }
+
+  .ourPeople-member {
+    width: 200px; /* Reduce el tamaño de las tarjetas */
+    padding: 15px;
+  }
+
+  .ourPeople-member img {
+    width: 70%;
+    height: 130px; /* Ajusta el tamaño de las imágenes */
+  }
+
+  .btn {
+    width: 45px;
+    height: 45px; /* Reduce el tamaño de los botones */
+  }
+
+  .btn i {
+    font-size: 20px; /* Reduce el tamaño de los íconos */
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+#initialTittle {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .ourPeople-container {
+    flex-direction: column; /* Las tarjetas se apilan verticalmente */
+    align-items: center; /* Centra las tarjetas */
+    gap: 10px;
+  }
+
+  .ourPeople-member {
+    width: 90%; /* Las tarjetas ocupan el 90% del ancho de la pantalla */
+  }
+
+  .ourPeople-member img {
+    width: 60%;
+    height: 120px; /* Reduce un poco más el tamaño de las imágenes */
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px; /* Botones más pequeños */
+  }
+
+  .btn i {
+    font-size: 18px; /* Íconos más pequeños */
+  }
+}
+
+/* Css de la seccion 'footer' */
 .footer-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-top: 60px;
-    align-items: center;
-    justify-content: center;
-    background-color: #00003B;
-    color: #E8E1D9;
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: #00003B;
+  color: #E8E1D9;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Seccion de informacion de redes sociales */
 .footer-info-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    color: white;
-    background-color: #7CA0C0;
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+  background-color: #7CA0C0;
+  font-family: 'Poppins', sans-serif;
 }
 .footer-info-title {
-    font-size: 50px;
-    padding-bottom: 25px;
-    font-family: "Mollie Glaston", sans-serif;
-    font-weight: 600;
-    margin: 0;
-    padding-bottom: 20px;
-    text-align: center;
+  font-size: 50px;
+  padding-bottom: 25px;
+  font-family: "Mollie Glaston", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
 }
 .footer-info-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 .footer-info-container a {
-    color: inherit;
-    font-size: 80px;
-    text-decoration: none;
+  color: inherit;
+  font-size: 80px;
+  text-decoration: none;
 }
 .footer-info-container a:hover {
-    color: #00003B;
+  color: #00003B;
 }
 
 
 
 /* Secccion de newsletter - suscripcion a informacion */
 .footer-newsletter-container {
-    padding: 50px;
+  padding: 20px;
+  max-width: 300px;
+  margin-right: 20px;
 }
 .footer-newsletter-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .footer-newsletter-container form p {
-    font-size: 20px;
-    padding-bottom: 10px;
-    max-width: 600px;
+  font-size: 20px;
+  padding-bottom: 10px;
+  
 }
 .footer-newsletter-container input {
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 100%;
-    border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border-radius: 8px;
 }
 .footer-newsletter-container button {
-    background-color: #7CA0C0;
-    box-shadow: none;
-    border: none;
-    padding: 5px;
-    width: 100%;
-    color: #E8E1D9;
-    border-radius: 8px;
+  background-color: #7CA0C0;
+  box-shadow: none;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  color: #E8E1D9;
+  border-radius: 8px;
 }
 .footer-newsletter-container button:hover {
-    background-color: #7CA0C080;
+  background-color: #7CA0C080;
 }
 
 /* Seccion de logo - informacion */
 .footer-final-section {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .footer-logo-container img {
-    max-width: 200px;
-    height: auto;
-    padding: 20px;
+  max-width: 200px;
+  height: auto;
+  padding: 20px;
 }
 
 /* Seccion de informacion final - logo - acceso a otras partes de la pagina */
 .footer-final-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+.footer-elements-container {
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .footer-elements-list {
-    list-style: none;
-    margin-top: 20px;  
-    margin-bottom: 20px;
+  list-style: none;
+  margin-top: 20px;  
+  margin-bottom: 20px;
+  padding-left: 0px;
+  margin-left: 0px;
+  text-align: center;
 }
 .footer-elements p {
-    font-size: 50px;
-    padding-bottom: 25px;
-    font-family: "Mollie Glaston", sans-serif;
-    font-weight: 600;
-    margin: 0;
-    padding-bottom: 5px;
-    text-align: center;
+  font-size: 50px;
+  padding-bottom: 25px;
+  font-family: "Mollie Glaston", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 5px;
+  text-align: center;
 }
 .footer-elements-list li a {
-    font-size: 15px;
-    /* text-align: left; */
-    text-decoration: none;
-    color: white;
-    text-align: left;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
 }
 .footer-elements-list li a:hover {
-    text-decoration: underline;
-    color: #7CA0C0;
+  text-decoration: underline;
+  color: #7CA0C0;
 }
 
 /* Seccion todos los derechos reservados */
 .footer-bottom-section {
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .back-to-top-button {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* Footer = Media queries responsive */
-@media (max-width: 768px) {
-    .footer-info-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-final-section {
-        flex-direction: column;
-        align-items: center;
-        grid: 20px;
-    }
-    .footer-info-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-}
+@media (max-width: 836px) {
+  .footer-newsletter-container {
+    margin-right: 10px;
+  }
+  .footer-final-section {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      text-align: center;
+      grid: 20px;
+  }
+  .footer-info-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+  }
   
+}
+@media (max-width: 550px) {
+  .footer-info-container a {
+    font-size: 55px;
+  }
+ .footer-final-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .footer-newsletter-container{
+    max-width: 80%;
+    margin-right: 0px;
+  }
+  .footer-info-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+}
