@@ -7,136 +7,195 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styleContact.css">
-    <link rel="stylesheet" href="styles/stylesContactUs.css">
-    <link rel="stylesheet" href="styles/stylesFooter.css">
+    <link rel="stylesheet" href="styleContact.css" />
+    <link rel="stylesheet" href="styles/stylesContactUs.css" />
+    <link rel="stylesheet" href="styles/stylesFooter.css" />
     <title>Contacto</title>
 
     <!-- Font Awesome -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    rel="stylesheet">
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="main-contactUs-section">
       <div class="main-contactUs-container">
-          <div class="main-contactUs-img">
-              <img id="contactUs-img1" src="images/imgAccesorios2.webp" alt="">
-              <img id="contactUs-img2" src="images/imgAccesorios.jpg" alt="">
-              <img id="contactUs-img3" src="images/imgAccesorios3.webp" alt="">
-              <img id="contactUs-img4" src="images/imgAccesorios4.webp" alt="">
-              <img id="contactUs-img5" src="images/imgAccesorios6.jpg" alt="">
-              <img id="contactUs-img6" src="images/imgAccesorios5.webp" alt="">
-              <img id="contactUs-img7" src="images/imgAccesorios7.webp" alt="">
-              <img id="contactUs-img8" src="images/imgAccesorios8.webp" alt="">
-          </div>
-          <div class="main-contactUs-text">
-              <h1>¡Contáctate con nosotros!</h1>
-              <p>Estamos aquí para ayudarte y responder a cualquier pregunta que puedas tener. Ya sea que necesites información sobre nuestros productos, asistencia con un pedido, o simplemente quieras darnos tu opinión, no dudes en comunicarte con nosotros. Tu satisfacción es nuestra prioridad, y estamos encantados de poder atenderte.</p>
-          </div>
+        <div class="main-contactUs-img">
+          <img id="contactUs-img1" src="images/imgAccesorios2.webp" alt="" />
+          <img id="contactUs-img2" src="images/imgAccesorios.jpg" alt="" />
+          <img id="contactUs-img3" src="images/imgAccesorios3.webp" alt="" />
+          <img id="contactUs-img4" src="images/imgAccesorios4.webp" alt="" />
+          <img id="contactUs-img5" src="images/imgAccesorios6.jpg" alt="" />
+          <img id="contactUs-img6" src="images/imgAccesorios5.webp" alt="" />
+          <img id="contactUs-img7" src="images/imgAccesorios7.webp" alt="" />
+          <img id="contactUs-img8" src="images/imgAccesorios8.webp" alt="" />
+        </div>
+        <div class="main-contactUs-text">
+          <h1>¡Contáctate con nosotros!</h1>
+          <p>
+            Estamos aquí para ayudarte y responder a cualquier pregunta que
+            puedas tener. Ya sea que necesites información sobre nuestros
+            productos, asistencia con un pedido, o simplemente quieras darnos tu
+            opinión, no dudes en comunicarte con nosotros. Tu satisfacción es
+            nuestra prioridad, y estamos encantados de poder atenderte.
+          </p>
+        </div>
       </div>
-  </section>
+    </section>
     <main class="row">
       <article class="mainformulario">
         <form
           action="https://formspree.io/f/meoonydk"
           method="POST"
           id="contactForm"
-          novalidate class="formulario">
-
+          novalidate
+          class="formulario"
+        >
           <label for="name"> Nombre *</label>
-          <input type="name" name="name" id="name" placeholder="Tu nombre" required />
+          <input
+            type="name"
+            name="name"
+            id="name"
+            placeholder="Tu nombre"
+            required
+          />
           <span id="nameError" class="error-message"></span>
 
           <label for="email"> Email *</label>
-          <input type="email" name="email" id="email" placeholder="Tu correo electrónico" required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
           <span id="emailError" class="error-message"></span>
 
           <label for="message"> Mensaje *</label>
-          <textarea name="message" id="message" placeholder="Tu Mensaje" required></textarea>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Tu Mensaje"
+            required
+          ></textarea>
           <span id="messageError" class="error-message"></span>
 
           <div class="politica-datos">
             <input type="checkbox" id="policy" value="policy" required />
-            <label for="policy">He leído y acepto la política de privacidad</label>
+            <label for="policy"
+              >He leído y acepto la política de privacidad</label
+            >
           </div>
           <span id="policyError" class="error-message"></span>
 
           <div class="styleboton">
             <button type="submit" id="submitButton">Enviar</button>
           </div>
-          <span id="successMessage" style="display: none"></span>
+          <div class="sm">
+            <span id="successMessage" style="display: none"></span>
+          </div>
         </form>
       </article>
     </main>
     <!-- Seccion Footer -->
     <footer class="footer-section">
-
       <!-- Section de informacion de footer -->
       <section class="footer-info-section">
-          <div class="footer-info-title">
-              <p id="redes">Nuestras Redes Sociales</p>
-          </div>
-          <div class="footer-info-container">
-              <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
-              <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
-              </a></p>
-              <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
-              </a></p>
-              <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
-          </div>
+        <div class="footer-info-title">
+          <p id="redes">Nuestras Redes Sociales</p>
+        </div>
+        <div class="footer-info-container">
+          <p>
+            <a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
+              ><i class="fab fa-instagram" target="_blank"></i
+            ></a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i> </a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-whatsapp"></i> </a>
+          </p>
+          <p>
+            <a href="mailto:elevia.contact@gmail.com" target="_blank"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </p>
+        </div>
       </section>
 
       <!-- Seccion de logo - informacion respecto a la marca -->
       <section class="footer-final-section">
-          <!-- Logo y Nombre de la Marca -->
-          <div class="footer-logo-container">
-              <img src="images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia">
-          </div>
-          <!-- Opciones de Ayuda -->
-          <div class="footer-elements-container">
-              <div id="ayuda-footer" class="footer-elements">
-                  <p>Ayuda</p>
-                  <ul class="footer-elements-list">
-                      <li><a href="mailto:devoluciones.elevia@gmail.com" target="_blank">Devoluciones</a></li>
-                      <li><a href="mailto:atencion.elevia@gmail.com" target="_blank">Atención al cliente</a></li>
-                      <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Peticiones</a></li>
-                      <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Quejas y Reclamos</a></li>
-                  </ul>
-              </div>
-          </div>
-          <!-- Acceso a las secciones de la pagina de Elevia -->
-          <div class="footer-elements-container">
-              <div id="nosotros-footer" class="footer-elements">
-                  <p>Nosotros</p>
-                  <ul class="footer-elements-list">
-                      <li> <a href="#contact-section">Productos</a> </li>
-                      <li> <a href="#contact-section">Quiénes Somos</a> </li>
-                      <li> <a href="#contact-section">Contáctanos</a> </li>
-                      <li><a href="#redes">Redes Sociales</a></li>
-                  </ul>
-              </div>
-          </div> 
-
-          <!-- Suscripcion a noticias e informacion de Elevia -->
-          <div class="footer-newsletter-container">
-            <form action="subscribe.php" method="post">
-                <p>Suscribete a información y promociones especiales de Elevia</p>
-                <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
-                <button type="submit">Suscribirse</button>
-            </form>
+        <!-- Logo y Nombre de la Marca -->
+        <div class="footer-logo-container">
+          <img src="images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia" />
         </div>
-          
-      <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+        <!-- Opciones de Ayuda -->
+        <div class="footer-elements-container">
+          <div id="ayuda-footer" class="footer-elements">
+            <p>Ayuda</p>
+            <ul class="footer-elements-list">
+              <li>
+                <a href="mailto:devoluciones.elevia@gmail.com" target="_blank"
+                  >Devoluciones</a
+                >
+              </li>
+              <li>
+                <a href="mailto:atencion.elevia@gmail.com" target="_blank"
+                  >Atención al cliente</a
+                >
+              </li>
+              <li>
+                <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                  >Peticiones</a
+                >
+              </li>
+              <li>
+                <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                  >Quejas y Reclamos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Acceso a las secciones de la pagina de Elevia -->
+        <div class="footer-elements-container">
+          <div id="nosotros-footer" class="footer-elements">
+            <p>Nosotros</p>
+            <ul class="footer-elements-list">
+              <li><a href="#contact-section">Productos</a></li>
+              <li><a href="#contact-section">Quiénes Somos</a></li>
+              <li><a href="#contact-section">Contáctanos</a></li>
+              <li><a href="#redes">Redes Sociales</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Suscripcion a noticias e informacion de Elevia -->
+        <div class="footer-newsletter-container">
+          <form action="subscribe.php" method="post">
+            <p>Suscribete a información y promociones especiales de Elevia</p>
+            <input
+              type="email"
+              id="email-newsletter"
+              name="email"
+              placeholder="Tu correo electrónico"
+              required
+            />
+            <button type="submit">Suscribirse</button>
+          </form>
+        </div>
+
+        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
       </section>
       <section class="footer-bottom-section">
-          <div>
-              <p>&copy; 2025 Elevia  -  Todos los derechos reservados.</p>
-          </div>
+        <div>
+          <p>&copy; 2025 Elevia - Todos los derechos reservados.</p>
+        </div>
       </section>
-  </footer>
-    
+    </footer>
+
     <script src="funcionalities/validator.js"></script>
   </body>
 </html>
