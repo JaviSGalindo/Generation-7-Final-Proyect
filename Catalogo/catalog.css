@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para la navbar */
+#navbar {
+    background-color: #f0f0f0;
+    height: 100px; /* Establece una altura para que sea visible */
+    border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */
+}
+
+
+
+.primer-row {
+    display: flex;
+    align-items: center; /* Alinear verticalmente al centro */
+    justify-content: space-around
+  }
+  
+  .action-btns {
+    display: flex; /* Asegura que los botones estén en línea */
+    gap: 0.5rem; /* Espaciado entre los botones */
+  }
+
+.productos-container {
+    justify-items: center;
+}
+
+
+
+
+
+/* Estilo para el footer */
+#footer {
+    background-color: #f0f0f0; 
+    height: 100px; /* Ajusta la altura del footer */
+    border: 2px dashed #ccc; /* Borde discontínuo para ver el área */
+}
