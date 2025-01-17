@@ -1,9 +1,5 @@
 /* general styles */
 
-@font-face {
-  font-family: "Mollie Glaston";
-  src: url("../fonts/Mollie-Glaston.ttf") format("truetype");
-}
 
 * {
   margin: 0;

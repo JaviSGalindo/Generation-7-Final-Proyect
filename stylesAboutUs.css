@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "Mollie Glaston";
-  src: url("../fonts/Mollie-Glaston.ttf") format("truetype");
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +45,7 @@ body::before {
 
 .quienes-somos-info {
   flex: 1 1 100%;
-  max-width: 800px;
+  max-width: 700px;
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -59,8 +56,8 @@ body::before {
 .quienes-somos-title {
   font-size: 60px;
   margin-bottom: 10px;
-  font-family: "Mollie Glaston", sans-serif;
-  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
   padding-bottom: 30px;
 }
 
@@ -153,9 +150,9 @@ body::before {
 }
 
 #mision-vision-valores h2 {
-  font-family: "Mollie Glaston", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3.0rem;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -223,9 +220,9 @@ body::before {
 }
 
 .memberName {
-  font-family: "Mollie Glaston", serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 20px;
   color: black;
 }
@@ -238,8 +235,8 @@ body::before {
 }
 
 #initialTittle {
-  font-family: "Mollie Glaston", sans-serif;
-  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
   padding-bottom: 30px;
   font-size: 60px;
 }
@@ -381,7 +378,8 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: white;
   background-color: #7CA0C0;
   font-family: 'Poppins', sans-serif;
@@ -389,8 +387,8 @@ body::before {
 .footer-info-title {
   font-size: 50px;
   padding-bottom: 25px;
-  font-family: "Mollie Glaston", sans-serif;
-  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
   margin: 0;
   padding-bottom: 20px;
   text-align: center;
@@ -483,8 +481,8 @@ body::before {
 .footer-elements p {
   font-size: 50px;
   padding-bottom: 25px;
-  font-family: "Mollie Glaston", sans-serif;
-  font-weight: 600;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 700;
   margin: 0;
   padding-bottom: 5px;
   text-align: center;

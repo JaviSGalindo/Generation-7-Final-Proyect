@@ -52,8 +52,9 @@
 }
 
 .main-contactUs-text h1 {
-    font-weight: 900;
+    font-weight: 700;
     font-size: clamp(1.5rem, 5vw, 3rem);
+    font-family: "Playfair Display", "sans-serif";
 }
 
 .main-contactUs-text p {
