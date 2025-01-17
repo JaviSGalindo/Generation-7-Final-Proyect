@@ -19,8 +19,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: white;
     background-color: #7CA0C0;
     font-family: 'Poppins', sans-serif;
@@ -31,8 +31,8 @@
     padding-bottom: 25px;
     padding-right: 25px;
     padding-left: 25px;
-    font-family: "Mollie Glaston", sans-serif;
-    font-weight: 600;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
     margin: 0;
     padding-bottom: 20px;
     text-align: center;
@@ -153,8 +153,8 @@
   
   .footer-elements-list {
     list-style: none;
-    margin-top: 20px;  
-    margin-bottom: 20px;
+    margin-top: 10px;  
+    margin-bottom: 10px;
     padding-left: 0px;
     margin-left: 0px;
     text-align: center;
@@ -163,8 +163,8 @@
   .footer-elements p {
     font-size: 50px;
     padding-bottom: 25px;
-    font-family: "Mollie Glaston", sans-serif;
-    font-weight: 600;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
     margin: 0;
     padding-bottom: 5px;
     text-align: center;
