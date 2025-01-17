@@ -33,42 +33,24 @@
 
   <body>
     <main>
-      <!-- Quienes somos - Seccion -->
-      <section class="quienes-somos-section">
-        <div class="quienes-somos-container">
-          <div class="quienes-somos-info">
-            <h1 class="quienes-somos-title">¿Quienes somos?</h1>
-            <p>
-              Nuestro propósito es envolverte en una experiencia única, donde
-              cada producto y detalle están impregnados de un amor
-              incondicional. Queremos que te sientas amada, apreciada y radiante
-              en cada paso que des. Somos testigo de tus sueños más profundos y
-              la compañera en tu viaje hacia el empoderamiento y la
-              autenticidad. Juntas, descubriremos el poder que yace en tu
-              interior y lo elevaremos hasta lo más alto.
-            </p>
-          </div>
-          <div class="imagen1">
-            <img
-              src="../Generation-7-Final-Proyect/img/logo 1.jpg"
-              alt="Imagen
-            de quienes somos"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- Seccion Mision y Vision -->
-      <article id="mision-vision-valores">
-        <section id="mision">
-          <header>
-            <h2>Misión</h2>
-          </header>
-          <p>
-            Brindar una experiencia única donde cada producto refleja amor
-            incondicional, haciendo que nuestros usuarios se sientan amados,
-            apreciados y empoderados en su viaje hacia la autenticidad.
-          </p>
+        <!-- Quienes somos - Seccion -->
+        <section class="quienes-somos-section">
+            <div class="quienes-somos-container">
+                <div class="quienes-somos-info">
+                    <h1 class="quienes-somos-title">¿Quiénes somos?</h1>
+                    <p>Nuestro propósito es envolverte en una experiencia única,
+                        donde cada producto y detalle están impregnados de un
+                        amor incondicional. Queremos que te sientas amada,
+                        apreciada y radiante en cada paso que des.
+                        Somos testigo de tus sueños más profundos y la compañera
+                        en tu viaje hacia el empoderamiento y la autenticidad.
+                        Juntas, descubriremos el poder que yace en tu interior y lo
+                        elevaremos hasta lo más alto.</p>
+                </div>
+                <div class="imagen1">
+                    <img src="/img/logo 1.jpg" alt="Imagen de quienes somos">
+                </div>
+            </div>
         </section>
 
         <section id="vision">
@@ -283,56 +265,57 @@
         </div>
       </section>
 
-      <!-- Seccion de logo - informacion respecto a la marca -->
-      <section class="footer-final-section">
-        <!-- Logo y Nombre de la Marca -->
-        <div class="footer-logo-container">
-          <img
-            src="../Generation-7-Final-Proyect/images/Elevia-Logo-1-Footer.png"
-            alt="Logo de Elevia"
-          />
-        </div>
-        <!-- Opciones de Ayuda -->
-        <div class="footer-elements-container">
-          <div class="footer-elements">
-            <p>Ayuda</p>
-            <ul class="footer-elements-list">
-              <li>
-                <a href="mailto:devoluciones.elevia@gmail.com" target="_blank"
-                  >Devoluciones</a
-                >
-              </li>
-              <li>
-                <a href="mailto:atencion.elevia@gmail.com" target="_blank"
-                  >Atención al cliente</a
-                >
-              </li>
-              <li>
-                <a href="/files/peticiones.pdf" download="peticiones.pdf"
-                  >Peticiones</a
-                >
-              </li>
-              <li>
-                <a href="/files/peticiones.pdf" download="peticiones.pdf"
-                  >Quejas y Reclamos</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Acceso a las secciones de la pagina de Elevia -->
-        <div class="footer-elements-container">
-          <div class="footer-elements">
-            <p>Nosotros</p>
-            <ul class="footer-elements-list">
-              <li><a href="#contact-section">Productos</a></li>
-              <li><a href="#contact-section">Quiénes Somos</a></li>
-              <li><a href="#contact-section">Contáctanos</a></li>
-              <li><a href="#redes">Redes Sociales</a></li>
-            </ul>
-          </div>
-        </div>
+        <!-- Seccion de Suscripcion a noticias e informacion de Elevia -->
+        <!-- <section class="footer-newsletter-section">
+            <div class="footer-newsletter-container">
+                <form action="subscribe.php" method="post">
+                    <p>Suscribete a información y promociones especiales de Elevia</p>
+                    <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </section> -->
 
+        <!-- Seccion de logo - informacion respecto a la marca -->
+        <section class="footer-final-section">
+            <!-- Logo y Nombre de la Marca -->
+            <div class="footer-logo-container">
+                <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia">
+            </div>
+            <!-- Opciones de Ayuda -->
+            <div class="footer-elements-container">
+                <div id="ayuda-footer" class="footer-elements">
+                    <p>Ayuda</p>
+                    <ul class="footer-elements-list">
+                        <li><a href="mailto:devoluciones.elevia@gmail.com" target="_blank">Devoluciones</a></li>
+                        <li><a href="mailto:atencion.elevia@gmail.com" target="_blank">Atención al cliente</a></li>
+                        <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Peticiones</a></li>
+                        <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Quejas y Reclamos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Acceso a las secciones de la pagina de Elevia -->
+            <div class="footer-elements-container">
+                <div id="nosotros-footer" class="footer-elements">
+                    <p>Nosotros</p>
+                    <ul class="footer-elements-list">
+                        <li> <a href="#contact-section">Productos</a> </li>
+                        <li> <a href="#contact-section">Quiénes Somos</a> </li>
+                        <li> <a href="#contact-section">Contáctanos</a> </li>
+                        <li><a href="#redes">Redes Sociales</a></li>
+                    </ul>
+                </div>
+            </div> 
+
+            <!-- Suscripcion a noticias e informacion de Elevia -->
+            <div class="footer-newsletter-container">
+              <form action="subscribe.php" method="post">
+                  <p>Suscribete a información y promociones especiales de Elevia</p>
+                  <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
+                  <button type="submit">Suscribirse</button>
+              </form>
+          </div>
+            
         <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
       </section>
       <section class="footer-bottom-section">
