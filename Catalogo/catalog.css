@@ -44,21 +44,42 @@ p {
   text-align: center;
 }
 
-/* Estilo para la navbar */
+/* Estilo para la navbar  */
 #navbar {
-  background-color: #dd9b9b;
+  background-color: rgba(232, 225, 217, 0.9);
   height: 100px; /* Establece una altura para que sea visible */
-  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */
+  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */ 
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
 }
 
 /* Estilos banner */
 
 .banner-img {
+  margin-top: 100px;
   background-image: url("../images/16-9-rectangle-imgaccesorios-jpg_custom_resized.jpg");
   height: 540px;
   width: 100%;
   background-size: cover;
+  background-position: center;
 }
+
+@media (max-width: 1024px) {
+  .banner-img {
+  height: 400px;
+  }
+}
+
+@media (max-width: 570px) {
+  .banner-img {
+  height: 260px;
+  }
+}
+
+
 
 /* Estilos Destacados */
 
@@ -210,14 +231,6 @@ article {
     padding: 1rem;
   }
 }
-/* Estilo para el footer */
-
-#footer {
-  background-color: #f0b4b4;
-  height: 100px; /* Ajusta la altura del footer */
-  border: 2px dashed #ccc; /* Borde discontínuo para ver el área */
-}
-
 
 /* Estilos para los botones de wishlist y carrito */
 .action-btns {
@@ -252,6 +265,7 @@ article {
 
 /* Efecto cuando el botón es clickeado (activo) */
 .action-btns button:active i {
-  color: #7CA0C080; /* Cambia el ícono cuando es clickeado */
+  color: #7CA0C080; 
+  transform: scale(1);
 }
 
