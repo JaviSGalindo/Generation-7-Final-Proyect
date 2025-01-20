@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #ffffff;
+  background-color: #e8e1d9;
 }
 
 h1,
@@ -97,6 +97,8 @@ p {
   padding-top: 30px;
   padding-bottom: 30px;
   max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .producto-destacado img {
@@ -145,7 +147,7 @@ article {
 }
 
 .producto-destacado img {
-  border: 2px solid rgba(0, 0, 0, 0.2); /* Borde más visible */
+  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
   border-radius: 5px; /* Esquinas redondeadas */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
   transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
@@ -159,7 +161,7 @@ article {
 
 .producto-destacado img:active {
   transform: scale(1); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
 
@@ -173,9 +175,9 @@ article {
   max-width: 400px ;
   max-height: 500px;
   object-fit: cover;
-  border: 1px solid rgba(0, 0, 0, 0.1); /* Borde más visible */
+  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
   border-radius: 5px; /* Esquinas redondeadas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
   transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
 }
 
@@ -186,7 +188,7 @@ article {
 
 .producto-catalogo img:active {
   transform: scale(1); /* retorna  el tamaño */
- 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .productos-container {
@@ -196,6 +198,18 @@ article {
   gap: 1rem;
   align-items: center;
   padding: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 2560px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 1220px) {
@@ -231,6 +245,9 @@ article {
     padding: 1rem;
   }
 }
+
+
+
 
 /* Estilos para los botones de wishlist y carrito */
 .action-btns {
