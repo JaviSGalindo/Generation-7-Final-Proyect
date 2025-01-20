@@ -113,7 +113,6 @@ h2 {
 }
 
 .linkedin:hover {
-  background-color: #7ca0c0; /* Oscurece el azul al pasar el cursor */
   transform: scale(1.1); /* Efecto de zoom */
 }
 
@@ -123,7 +122,6 @@ h2 {
 }
 
 .github:hover {
-  background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
   transform: scale(1.1); /* Efecto de zoom */
 }
 /* Botón de GitHub */
@@ -132,7 +130,6 @@ h2 {
 }
 
 .mail:hover:hover {
-  background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
   transform: scale(1.1); /* Efecto de zoom */
 }
 

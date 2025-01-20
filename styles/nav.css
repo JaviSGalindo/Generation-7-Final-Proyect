@@ -1,0 +1,253 @@
+body {
+  background-color: #e8e1d9;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilo para la barra de navegación */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(30px);
+  padding: 10px 30px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrado horizontal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Ajusta la posición a la izquierda */
+  z-index: 1000;
+}
+
+/* Logo: contenedor circular */
+.navBar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 70%;
+  background-color: #00003b;
+}
+
+/* Logo: imagen */
+.navBar .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estiliza el contenedor principal */
+.barSections {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-family: poppins;
+}
+/*movimiento de barSection al estar visible barra de busquedad*/
+.barSections.move-bar {
+  margin-right: 100px;
+}
+
+/* Elimina los estilos predeterminados de la lista */
+.barSections ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estiliza los elementos de la lista */
+.barSections ul li {
+  margin: 0 15px;
+}
+
+/* Estiliza los enlaces */
+.barSections ul li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+
+/* Efecto hover para los enlaces */
+.barSections ul li a:hover {
+  color: white;
+}
+
+/* Contenedor de los íconos */
+.actionIcons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+/* Estilo base para los enlaces */
+.actionIcons a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Cambiar color al pasar el mouse */
+.actionIcons a:hover {
+  color: white;
+  transform: translateY(-10px);
+}
+/*estilo de texto de iconos*/
+.icon-text {
+  display: none;
+  font-size: 12px;
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+/*Muestra texto al pasar cursor en iconos*/
+.actionIcons a:hover .icon-text {
+  display: list-item;
+  opacity: 1;
+}
+
+/* Íconos específicos con contadores (ejemplo carrito)*/
+.actionIcons .cart::after {
+  content: "0"; /* Ejemplo de cantidad en el carrito */
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #00003b;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%; /* Centrar verticalmente en el contenedor */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 0; /* Oculto inicialmente */
+  overflow: hidden;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease-in-out;
+  z-index: 1000;
+  transition: none;
+}
+/*estilo de barra de busqueda*/
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  opacity: 0;
+}
+/*tamaño y ubicacion de barra de busqueda*/
+.search-bar.active {
+  width: 180px;
+  left: 67%;
+}
+
+.search-bar.active input {
+  opacity: 1;
+}
+
+.search-bar {
+  left: calc(100% - 240px); /* Desplaza la barra desde el botón */
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .navBar {
+    display: flex;
+    padding: 10px; /* Reduce el padding general */
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  .logo {
+    display: block;
+  }
+
+  .barSections {
+    display: none; /* Ocultamos el menú en pantallas pequeñas */
+    width: 100%;
+  }
+
+  .barSections ul {
+    display: flex;
+    flex-direction: column; /* Disposición horizontal de los enlaces */
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+
+  .barSections ul li {
+    margin: 0 10px; /* Ajuste de los márgenes */
+  }
+  /*estilo de iconos pantalla pequeña*/
+  .actionIcons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6.5px;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger i {
+    font-size: 30px;
+    color: white;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+  /* Mostrar menú y ocultar logo al activar */
+  .navBar.open .barSections {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navBar.open .logo, .navBar.open .actionIcons {
+    display: none;
+  }
+}
+
+/* Mostrar menú cuando el hamburger icon es clickeado */
+.navBar.open .barSections {
+  display: flex;
+}
+
+/* Pantallas grandes */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
