@@ -12,12 +12,14 @@ body {
   backdrop-filter: blur(30px);
   padding: 10px 30px;
   border-radius: 10px;
-  width: 95%; /* No ocupa toda la pantalla */
+  width: 95%;
   max-width: 1200px;
-  margin: 30px auto; /* Centrado horizontal */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra*/
-  position: relative;
+  margin: 0 auto; /* Centrado horizontal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
   top: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Ajusta la posición a la izquierda */
   z-index: 1000;
 }
 
@@ -70,7 +72,7 @@ body {
 .barSections ul li a {
   position: relative;
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: normal;
   transition: color 0.3s;
@@ -78,7 +80,7 @@ body {
 
 /* Efecto hover para los enlaces */
 .barSections ul li a:hover {
-  color: #00003b;
+  color: white;
 }
 
 /* Contenedor de los íconos */
@@ -92,7 +94,7 @@ body {
 
 /* Estilo base para los enlaces */
 .actionIcons a {
-  color: white;
+  color: black;
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -101,7 +103,7 @@ body {
 
 /* Cambiar color al pasar el mouse */
 .actionIcons a:hover {
-  color: #00003b;
+  color: white;
   transform: translateY(-10px);
 }
 /*estilo de texto de iconos*/
@@ -161,7 +163,7 @@ body {
 }
 /*tamaño y ubicacion de barra de busqueda*/
 .search-bar.active {
-  width: 200px;
+  width: 180px;
   left: 67%;
 }
 
@@ -233,7 +235,7 @@ body {
     width: 100%;
   }
 
-  .navBar.open .logo {
+  .navBar.open .logo, .navBar.open .actionIcons {
     display: none;
   }
 }

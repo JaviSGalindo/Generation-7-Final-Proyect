@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #e8e1d9;
   position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
@@ -28,6 +27,7 @@ body::before {
 
 /* Seccion de quienes somos */
 .quienes-somos-section {
+  margin-top: 80px;
   padding: 20px;
   background-color: #00003B;
   font-family: "Poppins", sans-serif;
