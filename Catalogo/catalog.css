@@ -60,6 +60,7 @@ p {
 
 .banner-img {
   margin-top: 100px;
+  margin-bottom: 10px;
   background-image: url("../images/16-9-rectangle-imgaccesorios-jpg_custom_resized.jpg");
   height: 540px;
   width: 100%;
@@ -85,16 +86,32 @@ p {
 
 #title-destacados {
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 #title-catalogo {
   padding-bottom: 2.5rem;
+   padding-top: 2.5rem;
+
+}
+
+@media (max-width: 425px) {
+  #title-destacados {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  #title-catalogo {
+    padding-bottom: 1.5rem;
+     padding-top: 1.5rem;
+  
+  }
 }
 
 .destacados-container {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 30px;
+  align-items: center;
   padding-bottom: 30px;
   max-width: 100%;
   padding-left: 10px;
@@ -111,6 +128,13 @@ p {
   object-fit: cover;
 }
 
+@media (max-width: 2560px) {
+  .producto-destacado img {
+    width: 80vw; /* Reduce el tamaño de las imágenes */
+    
+  }
+
+}
 @media (max-width: 768px) {
   .producto-destacado img {
     width: 100%; /* Reduce el tamaño de las imágenes */
@@ -123,16 +147,7 @@ p {
   }
 }
 
-@media (max-width: 2560px) {
-  .producto-destacado img {
-    width: 80vw; /* Reduce el tamaño de las imágenes */
-    
-  }
 
-  .destacados-container {
-    align-items: center;
-  }
-}
 
 /* Estilos Catalogo */
 
@@ -201,11 +216,22 @@ article {
   justify-content: center;
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 2100px) {
   .productos-container {
     justify-items: center;
     display: grid;
     grid-template-columns: repeat(6, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1700px) and (max-width: 2100px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
     gap: 1rem;
     align-items: center;
     padding: 1rem;
