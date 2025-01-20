@@ -126,6 +126,21 @@ p {
   justify-content: center;
   aspect-ratio: 16/9;
   object-fit: cover;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
+}
+
+.producto-destacado img:hover {
+  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.producto-destacado img:active {
+  transform: scale(1); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
 @media (max-width: 2560px) {
@@ -161,25 +176,6 @@ article {
   padding: 10px;
 }
 
-.producto-destacado img {
-  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
-  border-radius: 5px; /* Esquinas redondeadas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
-  
-}
-
-.producto-destacado img:hover {
-  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
-}
-
-.producto-destacado img:active {
-  transform: scale(1); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
-}
-
-
 .producto-catalogo img {
   max-width: 100%;
   height: auto;
@@ -194,6 +190,7 @@ article {
   border-radius: 5px; /* Esquinas redondeadas */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
   transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
+  cursor: pointer;
 }
 
 .producto-catalogo img:hover {
