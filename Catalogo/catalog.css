@@ -5,56 +5,309 @@
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
+  background-color: #e8e1d9;
 }
 
-/* Estilo para la navbar */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-self: center;
+  color: #00003B;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  text-align: center;
+}
+
+/* Estilo para la navbar  */
 #navbar {
-  background-color: #f0f0f0;
+  background-color: rgba(232, 225, 217, 0.9);
   height: 100px; /* Establece una altura para que sea visible */
-  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */
+  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */ 
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
 }
 
 /* Estilos banner */
 
-/* como esta contenida
-cover size img
-mover ejes dentro del contenedor
-100x400
-unsplash
-object-fit: cover *
+.banner-img {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  background-image: url("../images/16-9-rectangle-imgaccesorios-jpg_custom_resized.jpg");
+  height: 540px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
 
-otra opcion es que manejes la imagen como background
- 
-background-image: url(''); 
- 
-background-size: cover;
- /
+@media (max-width: 1024px) {
+  .banner-img {
+  height: 400px;
+  }
+}
+
+@media (max-width: 570px) {
+  .banner-img {
+  height: 260px;
+  }
+}
+
+
+
 /* Estilos Destacados */
+
+#title-destacados {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+#title-catalogo {
+  padding-bottom: 2.5rem;
+   padding-top: 2.5rem;
+
+}
+
+@media (max-width: 425px) {
+  #title-destacados {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  #title-catalogo {
+    padding-bottom: 1.5rem;
+     padding-top: 1.5rem;
+  
+  }
+}
+
+.destacados-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 30px;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.producto-destacado img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
+}
+
+.producto-destacado img:hover {
+  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.producto-destacado img:active {
+  transform: scale(1); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+@media (max-width: 2560px) {
+  .producto-destacado img {
+    width: 80vw; /* Reduce el tamaño de las imágenes */
+    
+  }
+
+}
+@media (max-width: 768px) {
+  .producto-destacado img {
+    width: 100%; /* Reduce el tamaño de las imágenes */
+  }
+  .destacados-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+  }
+}
 
 
 
 /* Estilos Catalogo */
 
 .primer-row {
+  padding-top: 10px;
   display: flex;
   align-items: center; /* Alinear verticalmente al centro */
   justify-content: space-around;
+  margin: 0 10px 0 10px;
 }
 
-.action-btns {
-  display: flex; /* Asegura que los botones estén en línea */
-  gap: 0.5rem; /* Espaciado entre los botones */
+article {
+  padding: 10px;
+}
+
+.producto-catalogo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  aspect-ratio: 9/16;
+  max-width: 400px ;
+  max-height: 500px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
+  cursor: pointer;
+}
+
+.producto-catalogo img:hover {
+  transform: scale(1.015); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.producto-catalogo img:active {
+  transform: scale(1); /* retorna  el tamaño */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .productos-container {
   justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
 }
 
-/* Estilo para el footer */
-
-#footer {
-  background-color: #f0f0f0;
-  height: 100px; /* Ajusta la altura del footer */
-  border: 2px dashed #ccc; /* Borde discontínuo para ver el área */
+@media (min-width: 2100px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
 }
+
+@media (min-width: 1700px) and (max-width: 2100px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+
+@media (max-width: 620px) {
+  .productos-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+
+
+
+/* Estilos para los botones de wishlist y carrito */
+.action-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btns button {
+  background-color: transparent; /* Fondo transparente */
+  border-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Iconos de los botones */
+.action-btns button i {
+  font-size: 1.2rem;
+  margin: 5px; /* Espaciado entre el ícono y el texto */
+  color: #00003B;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición también en los íconos */
+}
+
+/* Efecto de hover */
+.action-btns button:hover i {
+  color: #7CA0C0;
+  transform: scale(1.2);
+}
+
+/* Efecto cuando el botón es clickeado (activo) */
+.action-btns button:active i {
+  color: #7CA0C080; 
+  transform: scale(1);
+}
+

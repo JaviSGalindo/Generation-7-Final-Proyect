@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo</title>
 
-    <!-- Fuente Poppins -->
+    <!-- Fuentes -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -16,43 +16,83 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="../styles/stylesFooter.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="catalog.css" />
   </head>
   <body>
-    <!-- Espacio para Navbar -->
-    <section id="navbar">
-        <div class="barnav">
-            <!-- Contenido de la navbar -->
-        </div>
-    </section>
+    <!--  Navbar -->
+    <nav class="navBar">
+      <div class="logo">
+        <img src="../img/Elevia-ícono-1.png" alt="logo" />
+      </div>
+
+      <div class="barSections">
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#products">Catálogo</a></li>
+          <li><a href="#blog">Empodérate</a></li>
+          <li><a href="#AboutUs">¿Quiénes somos?</a></li>
+          <li><a href="#contact">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="actionIcons">
+        <a href="#search" class="search" title="Buscar">
+          <i class="fa fa-search"></i>
+          
+        </a>
+        <a href="#wishlist" class="wishlist" title="Deseos">
+          <i class="fa fa-heart"></i>
+          
+        </a>
+        <a href="#cart" class="cart" title="Carrito">
+          <i class="fa fa-shopping-cart"></i>
+         
+        </a>
+        <a href="#login" class="login" title="Iniciar sesión">
+          <i class="fa fa-user"></i>
+          
+        </a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar..." />
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </nav>
     <main>
-      
       <!-- Hero Section -->
       <section id="banner-container">
         <div class="banner">
-          <article class="banner-img">
-            <img src="https://picsum.photos/id/237/1200/400" alt="" />
-          </article>       
+          <a href="#">
+            <article class="banner-img"></article>
+          </a>
+        </div>
       </section>
 
       <!-- Destacados Section -->
       <section id="destacados">
         <header>
-          <h2>Productos Destacados</h2>
+          <h1 id="title-destacados">Productos Destacados</h1>
         </header>
         <div class="destacados-container">
           <article class="producto-destacado">
-            <img src="https://picsum.photos/id/237/300/200" alt="" />
-            <h4>Nombre del producto</h4>
+            <a href="#">
+              <img
+                src="../images/16-9-rectangle-imgaccesorios-jpg_custom_resized.jpg"
+                alt=""
+              />
+            </a>
           </article>
           <article class="producto-destacado">
-            <img src="https://picsum.photos/id/237/300/200" alt="" />
-            <h4>Nombre del producto</h4>
-          </article>
-          <article class="producto-destacado">
-            <img src="https://picsum.photos/id/237/300/200" alt="" />
-            <h4>Nombre del producto</h4>
+            <a href="#">
+              <img
+                src="../images/16-9-rectangle-imgaccesorios6-jpg_custom_resized.jpg"
+                alt=""
+              />
+            </a>
           </article>
         </div>
       </section>
@@ -60,20 +100,15 @@
       <!-- Catalogo Section -->
       <section id="Catalogo">
         <header>
-          <h2>Catálogo</h2>
+          <h1 id="title-catalogo">Catálogo</h1>
         </header>
-        <div
-          class="productos-container"
-          style="
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-          "
-        >
+        <div class="productos-container">
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#">
+              <img src="../images/imgAccesorios1.webp" />
+            </a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -83,13 +118,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p class="descripcion-producto">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios2.webp" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -99,13 +134,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios3.webp" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -115,13 +150,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios4.webp" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -131,13 +166,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios5.webp" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -147,13 +182,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios6.jpg" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -163,13 +198,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios7.webp" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -179,13 +214,13 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"><img src="../images/imgAccesorios8.webp" /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -195,13 +230,16 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
           <article class="producto-catalogo">
-            <img src="https://picsum.photos/id/237/200/300" />
+            <a href="#"
+              ><img
+                src="../images/16-9-rectangle-imgaccesorios-jpg_custom_resized.jpg"
+            /></a>
             <div class="primer-row">
-              <h5>Nombre Ref</h5>
+              <h3>Nombre Ref</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -211,20 +249,122 @@
                 </button>
               </div>
             </div>
-            <p>Descripción producto</p>
-            <h6>$69.00</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            <h4>$69.00</h4>
           </article>
         </div>
       </section>
     </main>
 
-    <!-- Espacio para Footer -->
-    <footer id="footer">
-      <div class="footer-content">
-        <!-- Contenido del footer  -->
-      </div>
+    <!--Footer -->
+    <footer class="footer-section">
+      <!-- Section de informacion de footer -->
+      <section class="footer-info-section">
+        <div class="footer-info-title">
+          <p id="redes">Nuestras Redes Sociales</p>
+        </div>
+        <div class="footer-info-container">
+          <p>
+            <a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
+              ><i class="fab fa-instagram" target="_blank"></i
+            ></a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i> </a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-whatsapp"></i> </a>
+          </p>
+          <p>
+            <a href="mailto:elevia.contact@gmail.com" target="_blank"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Seccion de Suscripcion a noticias e informacion de Elevia -->
+      <!-- <section class="footer-newsletter-section">
+          <div class="footer-newsletter-container">
+              <form action="subscribe.php" method="post">
+                  <p>Suscribete a información y promociones especiales de Elevia</p>
+                  <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
+                  <button type="submit">Suscribirse</button>
+              </form>
+          </div>
+      </section> -->
+
+      <!-- Seccion de logo - informacion respecto a la marca -->
+      <section class="footer-final-section">
+        <!-- Logo y Nombre de la Marca -->
+        <div class="footer-logo-container">
+          <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia" />
+        </div>
+        <!-- Opciones de Ayuda -->
+        <div class="footer-elements-container">
+          <div id="ayuda-footer" class="footer-elements">
+            <p>Ayuda</p>
+            <ul class="footer-elements-list">
+              <li>
+                <a href="mailto:devoluciones.elevia@gmail.com" target="_blank"
+                  >Devoluciones</a
+                >
+              </li>
+              <li>
+                <a href="mailto:atencion.elevia@gmail.com" target="_blank"
+                  >Atención al cliente</a
+                >
+              </li>
+              <li>
+                <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                  >Peticiones</a
+                >
+              </li>
+              <li>
+                <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                  >Quejas y Reclamos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Acceso a las secciones de la pagina de Elevia -->
+        <div class="footer-elements-container">
+          <div id="nosotros-footer" class="footer-elements">
+            <p>Nosotros</p>
+            <ul class="footer-elements-list">
+              <li><a href="#contact-section">Productos</a></li>
+              <li><a href="#contact-section">Quiénes Somos</a></li>
+              <li><a href="#contact-section">Contáctanos</a></li>
+              <li><a href="#redes">Redes Sociales</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Suscripcion a noticias e informacion de Elevia -->
+        <div class="footer-newsletter-container">
+          <form action="subscribe.php" method="post">
+            <p>Suscribete a información y promociones especiales de Elevia</p>
+            <input
+              type="email"
+              id="email-newsletter"
+              name="email"
+              placeholder="Tu correo electrónico"
+              required
+            />
+            <button type="submit">Suscribirse</button>
+          </form>
+        </div>
+
+        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+      </section>
+      <section class="footer-bottom-section">
+        <div>
+          <p>&copy; 2025 Elevia - Todos los derechos reservados.</p>
+        </div>
+      </section>
     </footer>
     <script src="catalog.js"></script>
+    <script src="../funcionalities/nav.js"></script>
   </body>
-  
 </html>
