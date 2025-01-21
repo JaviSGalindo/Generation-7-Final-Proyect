@@ -167,9 +167,11 @@ p {
 /* Estilos Catalogo */
 
 .primer-row {
+  padding-top: 10px;
   display: flex;
   align-items: center; /* Alinear verticalmente al centro */
   justify-content: space-around;
+  margin: 0 10px 0 10px;
 }
 
 article {

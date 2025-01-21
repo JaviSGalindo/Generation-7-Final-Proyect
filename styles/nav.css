@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(30px);
+  background-color: #e8e1d9;
   padding: 10px 30px;
   border-radius: 10px;
   width: 95%;
@@ -72,15 +72,36 @@ body {
 .barSections ul li a {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: #00003b;
   font-size: 16px;
-  font-weight: normal;
-  transition: color 0.3s;
+  font-weight: normal;  
+  transition: all 0.3s ease;
 }
 
 /* Efecto hover para los enlaces */
 .barSections ul li a:hover {
-  color: white;
+  color: #7Ca0C0;
+  transform: scale(1.1);
+  
+}
+
+.barSections ul li {
+  transition: all 0.3s ease;
+}
+
+.barSections ul li:hover {
+  transform: scale(1.05);
+}
+
+
+.barSections ul li:active {
+  transform: scale(1);
+}
+
+.barSections ul li a:active {
+  color: #7Ca0C0;
+
+  
 }
 
 /* Contenedor de los íconos */
@@ -94,17 +115,24 @@ body {
 
 /* Estilo base para los enlaces */
 .actionIcons a {
-  color: black;
+  color: #00003b;
   font-size: 24px;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 /* Cambiar color al pasar el mouse */
 .actionIcons a:hover {
-  color: white;
-  transform: translateY(-10px);
+  color: #7Ca0C0;
+  transform: scale(1.1);
+
+}
+
+.actionIcons a:active {
+  color: #7Ca0C0;
+  transform: scale(1);
+
 }
 /*estilo de texto de iconos*/
 .icon-text {
@@ -129,7 +157,7 @@ body {
   position: absolute;
   top: -5px;
   right: -10px;
-  background-color: #00003b;
+  background-color: #7Ca0C0;
   color: white;
   font-size: 12px;
   padding: 2px 6px;
