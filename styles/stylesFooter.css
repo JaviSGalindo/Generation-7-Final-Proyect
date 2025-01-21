@@ -1,4 +1,8 @@
 /* Css de la seccion 'footer' */
+* {
+  transition: all 0.15s ease;
+}
+
 .footer-section {
     width: 100%;
     display: flex;
