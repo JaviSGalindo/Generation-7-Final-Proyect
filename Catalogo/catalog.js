@@ -42,7 +42,7 @@ productos.forEach((producto) => {
               <img src="${producto.img}" />
             </a>
             <div class="primer-row">
-              <h3>${producto.nombre}</h3>   <h4>$${producto.precio.toFixed(3)}</h4>
+              <h3>${producto.nombre}</h3>
               <div class="action-btns">
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
@@ -52,6 +52,7 @@ productos.forEach((producto) => {
                 </button>
               </div>
             </div>
+            <h4>$${producto.precio.toFixed(3)}</h4>
             <p class="descripcion-producto">${producto.descripcion}</p> 
             
           </article>
