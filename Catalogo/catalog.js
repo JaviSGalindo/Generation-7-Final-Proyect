@@ -1,32 +1,64 @@
-/*
-//Bucle para agregar productos dinámicamente 
+//Bucle para agregar productos dinámicamente
 const productos = [
-  { nombre: "Producto 1", descripcion: "Descripción", precio: 69, img: "https://picsum.photos/id/237/200/300" },
-  // Más productos...
-];
+  {
+    nombre: "CONFIANZA",
+    descripcion: "Vestido con escote profundo con amarre al frente y recogido en las mangas.",
+    precio: 165,
+    img: "../images/imgAccesorios1.webp",
+  },
+  {
+    nombre: "COQUETA",
+    descripcion: "Enterizo disponible en negro, incluye cinturón",
+    precio: 172,
+    img: "../images/imgAccesorios1.webp",
+  },
+  {
+    nombre: "TENAZ",
+    descripcion: "Set x 2. Top con manga en capa y falda.",
+    precio: 162,
+    img: "../images/imgAccesorios1.webp",
+  },
+  {
+    nombre: "VALIENTE",
+    descripcion: "Set x 3. En lino.",
+    precio: 199,
+    img: "../images/imgAccesorios1.webp",
+  },
+  {
+    nombre: "CREATIVA",
+    descripcion: "Set x 2",
+    precio: 155,
+    img: "../images/imgAccesorios1.webp",
+  },
+  
+]; //confianza, coqueta, tenaz, valiente, creativa
+// coraje, audaz, compasiva, comprometida, sabia
 
-const contenedor = document.querySelector('.productos-container');
-productos.forEach(producto => {
+const contenedor = document.querySelector(".productos-container");
+productos.forEach((producto) => {
   contenedor.innerHTML += `
     <article class="producto-catalogo">
-      <img src="${producto.img}" alt="${producto.nombre}" />
-      <div class="primer-renglon">
-        <h5>${producto.nombre}</h5>
-        <div class="action-btns">
-          <button class="wishlist-btn" aria-label="Agregar a wishlist">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="carrito-btn" aria-label="Agregar al carrito">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-      <p>${producto.descripcion}</p>
-      <h6>$${producto.precio.toFixed(2)}</h6>
-    </article>
+            <a href="#">
+              <img src="${producto.img}" />
+            </a>
+            <div class="primer-row">
+              <h3>${producto.nombre}</h3>   <h4>$${producto.precio.toFixed(3)}</h4>
+              <div class="action-btns">
+                <button class="wishlist-btn" aria-label="Agregar a wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="carrito-btn" aria-label="Agregar al carrito">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <p class="descripcion-producto">${producto.descripcion}</p> 
+            
+          </article>
   `;
-});
+}); //La descripcion debe tener un maximo de n caracteres.
 
+/*
 //Fn Slider
 let currentIndex = 0;
 
