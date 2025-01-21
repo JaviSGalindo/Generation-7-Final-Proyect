@@ -271,7 +271,19 @@ article {
   }
 }
 
+.descripcion-producto {
+  padding: 0 10px 0 10px;
+  margin: 0 20px 0 20px;
+  height: 100px; /* Ajusta según lo necesario */
 
+}
+
+@media (min-width:2400px) {
+.descripcion-producto {
+  padding: 0 10px 0 10px;
+  margin: 0 30px 0 30px;
+}
+}
 
 
 /* Estilos para los botones de wishlist y carrito */
