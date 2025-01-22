@@ -19,7 +19,7 @@ h6 {
   font-weight: 600;
   display: flex;
   justify-self: center;
-  color: #00003B;
+  color: #00003b;
 }
 
 h1 {
@@ -48,7 +48,7 @@ p {
 #navbar {
   background-color: rgba(232, 225, 217, 0.9);
   height: 100px; /* Establece una altura para que sea visible */
-  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */ 
+  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */
   top: 0;
   width: 100%;
   position: fixed;
@@ -70,17 +70,15 @@ p {
 
 @media (max-width: 1024px) {
   .banner-img {
-  height: 400px;
+    height: 400px;
   }
 }
 
 @media (max-width: 570px) {
   .banner-img {
-  height: 260px;
+    height: 260px;
   }
 }
-
-
 
 /* Estilos Destacados */
 
@@ -91,8 +89,7 @@ p {
 
 #title-catalogo {
   padding-bottom: 2.5rem;
-   padding-top: 2.5rem;
-
+  padding-top: 2.5rem;
 }
 
 @media (max-width: 425px) {
@@ -100,11 +97,10 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  
+
   #title-catalogo {
     padding-bottom: 1.5rem;
-     padding-top: 1.5rem;
-  
+    padding-top: 1.5rem;
   }
 }
 
@@ -146,9 +142,7 @@ p {
 @media (max-width: 2560px) {
   .producto-destacado img {
     width: 80vw; /* Reduce el tamaño de las imágenes */
-    
   }
-
 }
 @media (max-width: 768px) {
   .producto-destacado img {
@@ -161,8 +155,6 @@ p {
     padding: 10px;
   }
 }
-
-
 
 /* Estilos Catalogo */
 
@@ -185,7 +177,7 @@ article {
   margin: 0 auto;
   justify-content: center;
   aspect-ratio: 9/16;
-  max-width: 400px ;
+  max-width: 400px;
   max-height: 500px;
   object-fit: cover;
   border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
@@ -208,7 +200,7 @@ article {
 .productos-container {
   justify-items: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   align-items: center;
   padding: 1rem;
@@ -219,7 +211,7 @@ article {
   .productos-container {
     justify-items: center;
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
@@ -230,7 +222,7 @@ article {
   .productos-container {
     justify-items: center;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
@@ -241,7 +233,7 @@ article {
   .productos-container {
     justify-items: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
@@ -252,27 +244,37 @@ article {
   .productos-container {
     justify-items: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
   }
 }
-
 
 @media (max-width: 620px) {
   .productos-container {
     justify-items: center;
     display: grid;
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
   }
 }
 
+.descripcion-producto {
+  padding: 0 10px 0 10px;
+  margin: 5px 20px 5px 20px;
+  height: 50px; /* Ajusta según lo necesario */
+  font-size: 12px;
+  align-content: center;
+}
 
-
+@media (min-width: 2400px) {
+  .descripcion-producto {
+    margin: 0 30px 0 30px;
+  }
+}
 
 /* Estilos para los botones de wishlist y carrito */
 .action-btns {
@@ -295,19 +297,18 @@ article {
 .action-btns button i {
   font-size: 1.2rem;
   margin: 5px; /* Espaciado entre el ícono y el texto */
-  color: #00003B;
+  color: #00003b;
   transition: transform 0.3s ease, color 0.3s ease; /* Transición también en los íconos */
 }
 
 /* Efecto de hover */
 .action-btns button:hover i {
-  color: #7CA0C0;
+  color: #7ca0c0;
   transform: scale(1.2);
 }
 
 /* Efecto cuando el botón es clickeado (activo) */
 .action-btns button:active i {
-  color: #7CA0C080; 
+  color: #7ca0c080;
   transform: scale(1);
 }
-
