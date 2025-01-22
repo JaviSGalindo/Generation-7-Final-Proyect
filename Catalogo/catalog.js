@@ -70,6 +70,7 @@ const productos = [
 // coraje, audaz, compasiva, comprometida, sabia
 
 const contenedor = document.querySelector(".productos-container");
+
 productos.forEach((producto) => {
   contenedor.innerHTML += `
     <article class="producto-catalogo">
