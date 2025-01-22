@@ -3,64 +3,64 @@
     "nombre": "CONFIANZA",
     "descripcion": "Vestido con escote profundo con amarre al frente y recogido en las mangas.",
     "precio": 165,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/confianza.jpg"
   },
   {
     "nombre": "COQUETA",
     "descripcion": "Enterizo disponible en negro, incluye cinturón",
     "precio": 172,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/coqueta.webp"
   },
   {
     "nombre": "TENAZ",
     "descripcion": "Set x 2. Top con manga en capa y falda.",
     "precio": 162,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/tenaz.webp"
   },
   {
     "nombre": "VALIENTE",
     "descripcion": "Set x 3. En lino.",
     "precio": 199,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/valiente.webp"
   },
   {
     "nombre": "CREATIVA",
     "descripcion": "Set x 2",
     "precio": 155,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/creativa.webp"
   },
   {
     "nombre": "CORAJE",
     "descripcion": "Vestido corto con amarre lateral.",
     "precio": 180,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/coraje.jpg"
   },
 
   {
-    "nombre": "AUDAZ",
-    "descripcion": "Set x 2. Pantalón y top, incluye cinturón.",
+    "nombre": "SOÑADORA",
+    "descripcion": "Set x 2. Pantalón, top, incluye cinturón.",
     "precio": 171,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/sonadora.jpg"
   },
 
   {
     "nombre": "COMPASIVA",
     "descripcion": "Set x 2. Top y pantaloneta",
     "precio": 147,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/compasiva.jpg"
   },
 
   {
     "nombre": "COMPROMETIDA",
     "descripcion": "Set x 3. Camisa, falda y shorts.",
     "precio": 175,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/comprometida.jpg"
   },
 
   {
-    "nombre": "SABIA",
-    "descripcion": "Set x 3. Pantalón, camisa y body.",
+    "nombre": "FORTALEZA",
+    "descripcion": "Set x 2.",
     "precio": 215,
-    "img": "../images/imgAccesorios1.webp"
+    "img": "imgProducts/fortaleza.jpg"
   }
 ]
