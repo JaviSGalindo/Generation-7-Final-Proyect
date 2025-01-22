@@ -88,6 +88,7 @@ productos.forEach((producto) => {
                 </button>
               </div>
             </div>
+            <h4>$${producto.precio.toFixed(3)}</h4>
             <p class="descripcion-producto">${producto.descripcion}</p> 
             <h4>$${producto.precio.toFixed(3)}</h4>
           </article>
