@@ -61,7 +61,7 @@ p {
 .banner-img {
   margin-top: 100px;
   margin-bottom: 10px;
-  background-image: url("../images/16-9-rectangle-imgaccesorios-jpg_custom_resized.jpg");
+  background-image: url("../images/anillo.png");
   height: 540px;
   width: 100%;
   background-size: cover;
@@ -114,6 +114,12 @@ p {
   padding-right: 10px;
 }
 
+.producto-destacado {
+  display: flex;
+  position: relative; /* Necesario para posicionar elementos absolutos dentro */
+  justify-content: center;
+}
+
 .producto-destacado img {
   max-width: 100%;
   height: auto;
@@ -154,6 +160,39 @@ p {
     justify-content: space-around;
     padding: 10px;
   }
+}
+
+.main-destacados-text {
+  position: absolute; /* Posiciona el texto en relación al contenedor */
+  bottom: 0; /* Alinea el texto en la parte inferior */
+  /* Alinea el texto al borde izquierdo */
+  width: 90%; /* Coincide con el ancho de la magen */
+  border-radius: 10px;
+  margin: 10px;
+
+  text-align: center; /* Centra el texto horizontalmente */
+  overflow: hidden;
+  color: #000000;
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  background-color: rgba(232, 225, 217, 0.5);
+  /* Asegura que el padding no rompa el diseño */
+  opacity: 0; /* Oculta el texto por defecto */
+  transition: opacity 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.main-destacados-text h1 {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 425px) {
+  .main-destacados-text h1 {
+    font-size: 1rem;
+  }
+}
+
+.producto-destacado:hover .main-destacados-text {
+  opacity: 1; /* Muestra el texto al hacer hover */
 }
 
 /* Estilos Catalogo */
