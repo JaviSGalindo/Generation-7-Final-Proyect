@@ -1,23 +1,23 @@
 const contenedor = document.querySelector(".productos-container");
 
 // Cargar los productos desde el archivo JSON
-fetch('catalogo.json')
-  .then(response => {
+fetch("catalogo.json")
+  .then((response) => {
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     return response.json(); // Convertir la respuesta a JSON
   })
-  .then(data => {
-    data.forEach(producto => addProducts(producto));
+  .then((data) => {
+    data.forEach((producto) => addProducts(producto));
   })
-  .catch(error => {
-    console.error('Hubo un problema con la solicitud fetch:', error);
+  .catch((error) => {
+    console.error("Hubo un problema con la solicitud fetch:", error);
   });
 
-  // Función para agregar un producto al contenedor
-  const addProducts = (producto) => {
-    contenedor.innerHTML += `
+// Función para agregar un producto al contenedor
+const addProducts = (producto) => {
+  contenedor.innerHTML += `
     <article class="producto-catalogo">
             <a href="#">
               <img src="${producto.img}" alt="${producto.nombre}" />
@@ -37,4 +37,4 @@ fetch('catalogo.json')
             <h4>$${producto.precio.toFixed(3)}</h4>
           </article>
   `;
-  }
+};
