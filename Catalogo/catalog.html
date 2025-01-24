@@ -19,9 +19,12 @@
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
     <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="catalog.css" />
-    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="carrito.css" />
   </head>
   <body>
+    <div id="toast-container">
+
+    </div>
     <!--  Navbar -->
     <nav class="navBar">
       <div class="logo">
@@ -41,19 +44,16 @@
       <div class="actionIcons">
         <a href="#search" class="search" title="Buscar">
           <i class="fa fa-search"></i>
-          
         </a>
         <a href="#wishlist" class="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
-          
         </a>
         <a id="abrir-carrito" class="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
-         
+          <span id="contadorCarrito">0</span>
         </a>
         <a href="#login" class="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
-          
         </a>
       </div>
       <div class="search-bar">
@@ -64,6 +64,7 @@
       </div>
     </nav>
 
+<<<<<<< HEAD
 <!--------- Contenedor del carrito de compras---- -->
 <div id="cerrar-carrito" class="carrito-modal">
   <div id="carrito-modal" class="carrito-modal">
@@ -79,9 +80,28 @@
     </div>
   </div>
 </div>
+=======
+    <!--------- Contenedor del carrito de compras---- -->
+    <div id="carrito-modal" class="carrito-modal">
+      <div class="carrito-header">
+        <h2>Tu Carrito</h2>
+        <button id="cerrar-carrito" class="cerrar-carrito">&times;</button>
+      </div>
+
+      <div id="carrito-items" class="carrito-items">
+        <!-- Aquí se agregarán los productos dinámicamente -->
+      </div>
+
+      <div class="carrito-footer">
+        <p id="total-precio">Total: $0.00</p>
+        <button id="vaciar-carrito" class="vaciar-carrito">
+          Vaciar Carrito
+        </button>
+      </div>
+    </div>
+>>>>>>> b90e076a7ecafb60131cdb3272566bf430628ea0
 
     <!--------- FIN Contenedor del carrito de compras---- -->
-
 
     <main>
       <!-- Hero Section -->
@@ -101,29 +121,21 @@
         <div class="destacados-container">
           <article class="producto-destacado">
             <a href="#">
-              <img
-                src="../images/imgAccesorios1.webp"
-                alt=""
-              />
+              <img src="../images/imgAccesorios1.webp" alt="" />
             </a>
             <div class="main-destacados-text">
-              <h1>CONFIANZA</h1>                
+              <h1>CONFIANZA</h1>
             </div>
           </article>
-          
+
           <article class="producto-destacado">
             <a href="#">
-              <img
-                src="../images/imgAccesorios2.webp"
-                alt=""
-              />
+              <img src="../images/imgAccesorios2.webp" alt="" />
             </a>
             <div class="main-destacados-text">
               <h1>COQUETA</h1>
-                
             </div>
           </article>
-          
         </div>
       </section>
 
@@ -133,9 +145,7 @@
           <h1 id="title-catalogo">Catálogo</h1>
         </header>
         <div class="productos-container">
-          
           <!--Productos agregados dinamicamente-->
-          
         </div>
       </section>
     </main>
@@ -248,8 +258,9 @@
         </div>
       </section>
     </footer>
-    <script src="fetchCatalog.js"></script>
-    <script src="../funcionalities/nav.js"></script>
     <script src="carrito.js"></script>
+    <script type="module" src="fetchCatalog.js"></script>
+    <script src="fetchCarrito.js"></script>
+    <script src="../funcionalities/nav.js"></script>
   </body>
 </html>

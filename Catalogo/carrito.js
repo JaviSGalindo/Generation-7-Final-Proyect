@@ -23,7 +23,8 @@ document.getElementById("vaciar-carrito").addEventListener("click", () => {
 });
 
   
-  document.getElementById("vaciar-carrito").addEventListener("click", () => {
+  document.getElementById("vaciar-carrito").addEventListener("click", (event) => {
+    event.preventDefault();
     localStorage.removeItem("carrito"); // Limpiar carrito en localStorage
     location.reload(); // Recargar la página para actualizar el estado del carrito
   });
