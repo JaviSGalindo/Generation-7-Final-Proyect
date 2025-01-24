@@ -1,13 +1,8 @@
 const contenedor = document.querySelector(".productos-container");
 
 // Cargar los productos desde el archivo JSON
-<<<<<<< HEAD
 fetch("catalogo.json")
   .then((response) => {
-=======
-fetch('catalogo.json')
-  .then(response => {
->>>>>>> b90e076a7ecafb60131cdb3272566bf430628ea0
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -51,10 +46,4 @@ const formatoPesos = new Intl.NumberFormat("es-CO", {
             <h4>${formatoPesos.format(producto.precio)}</h4>
           </article>
   `;
-<<<<<<< HEAD
 };
-=======
- }
-
-  
->>>>>>> b90e076a7ecafb60131cdb3272566bf430628ea0

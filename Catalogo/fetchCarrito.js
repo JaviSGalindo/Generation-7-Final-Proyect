@@ -6,7 +6,7 @@ const contadorCarrito = document.getElementById("contadorCarrito");
 const toast = document.getElementById("toast-container");
 
 // Cargar carrito desde localStorage si existe
-let carrito = JSON.parse(localStorage.getItem("carrito")) || []; // Si no existe, se inicializa como vacío
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // Formateador para pesos colombianos
 const formatoPesos = new Intl.NumberFormat("es-CO", {
@@ -17,65 +17,107 @@ const formatoPesos = new Intl.NumberFormat("es-CO", {
 
 // Guardar carrito en localStorage
 const guardarCarrito = () => {
-  localStorage.setItem("carrito", JSON.stringify(carrito)); // Guardamos el carrito como string
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
-// Función para agregar un producto al carrito
-const addToCart = (producto) => {
-  carrito.push(producto);
-  guardarCarrito(); // Guardar después de agregar el producto al carrito
+// Renderizar el carrito en pantalla
+const renderCarrito = () => {
+  contenedorCarrito.innerHTML = "";
 
-  contenedorCarrito.innerHTML += `
-    <div class="carrito-item">
-      <img src="${producto.img}" alt="${producto.nombre}" />
-      <div>
-        <h4>${producto.nombre}</h4>          
-        <h5>${formatoPesos.format(producto.precio)}</h5>
+  carrito.forEach((producto) => {
+    contenedorCarrito.innerHTML += `
+      <div class="carrito-item">
+        <img src="${producto.img}" alt="${producto.nombre}" />
+        <div>
+          <h4>${producto.nombre}</h4>
+          <h5>${formatoPesos.format(producto.precio)}</h5>
+          <div class="cantidad-container">
+            <button class="btn-decrementar" data-nombre="${producto.nombre}">-</button>
+            <span class="cantidad">${producto.cantidad}</span>
+            <button class="btn-incrementar" data-nombre="${producto.nombre}">+</button>
+          </div>
+        </div>
       </div>
-    </div>
-  `;
+    `;
+  });
 
   actualizarTotal();
-};
-
-// Función para mostrar un mensaje en pantalla
-const addToast = (message) => {
-  const nuevoToast = document.createElement("div");
-  nuevoToast.classList.add("toast");
-  nuevoToast.innerHTML = `<h4>${message}</h4>`;
-  
-  // Agregar el nuevo toast al contenedor
-  toast.appendChild(nuevoToast);
-
-  // Eliminar el toast después de 3 segundos
-  setTimeout(() => {
-    nuevoToast.remove();
-  }, 3000);
-};
-
-// Actualizar el contador de productos en el carrito
-const actualizarContadorCarrito = () => {
-  contadorCarrito.textContent = carrito.length; // Actualiza el número de productos
+  actualizarContadorCarrito();
 };
 
 // Actualizar el total del carrito
 const actualizarTotal = () => {
-  const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
   totalPrecio.textContent = `Total: ${formatoPesos.format(total)}`;
+};
+
+// Actualizar el contador de productos en el carrito
+const actualizarContadorCarrito = () => {
+  const totalUnidades = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+  contadorCarrito.textContent = totalUnidades;
+};
+
+// Agregar un producto al carrito
+const addToCart = (producto) => {
+  const productoExistente = carrito.find((item) => item.nombre === producto.nombre);
+
+  if (productoExistente) {
+    productoExistente.cantidad += 1;
+  } else {
+    carrito.push({ ...producto, cantidad: 1 });
+  }
+
+  guardarCarrito();
+  renderCarrito();
+  addToast(`${producto.nombre} agregado al carrito`);
+};
+
+// Incrementar la cantidad de un producto
+const incrementarCantidad = (nombreProducto) => {
+  const producto = carrito.find((item) => item.nombre === nombreProducto);
+  if (producto) {
+    producto.cantidad += 1;
+    guardarCarrito();
+    renderCarrito();
+  }
+};
+
+// Decrementar la cantidad de un producto
+const decrementarCantidad = (nombreProducto) => {
+  const producto = carrito.find((item) => item.nombre === nombreProducto);
+  if (producto) {
+    producto.cantidad -= 1;
+    if (producto.cantidad === 0) {
+      carrito = carrito.filter((item) => item.nombre !== nombreProducto);
+    }
+    guardarCarrito();
+    renderCarrito();
+  }
 };
 
 // Vaciar el carrito
 const vaciarCarrito = () => {
   carrito = [];
-  guardarCarrito(); // Guardar carrito vacío en localStorage
-  contenedorCarrito.innerHTML = "";
+  guardarCarrito();
+  renderCarrito();
   totalPrecio.textContent = "Total: $0.00";
 };
 
-// Delegación de eventos para los botones del carrito
+// Mostrar un mensaje en pantalla
+const addToast = (message) => {
+  const nuevoToast = document.createElement("div");
+  nuevoToast.classList.add("toast");
+  nuevoToast.innerHTML = `<h4>${message}</h4>`;
+  toast.appendChild(nuevoToast);
+
+  setTimeout(() => {
+    nuevoToast.remove();
+  }, 3000);
+};
+
+// Delegación de eventos en el catálogo
 contenedorCatalogo.addEventListener("click", (event) => {
   if (event.target.closest(".carrito-btn")) {
-    // Encontrar el elemento padre (artículo) para obtener los datos del producto
     const articulo = event.target.closest(".producto-catalogo");
     const producto = {
       nombre: articulo.querySelector("h3").textContent,
@@ -86,10 +128,20 @@ contenedorCatalogo.addEventListener("click", (event) => {
       ),
     };
 
-    // Agregar el producto al carrito
     addToCart(producto);
-    actualizarContadorCarrito();
-    addToast(`${producto.nombre} agregado al carrito`);
+  }
+});
+
+// Delegación de eventos en el carrito
+contenedorCarrito.addEventListener("click", (event) => {
+  if (event.target.classList.contains("btn-incrementar")) {
+    const nombreProducto = event.target.dataset.nombre;
+    incrementarCantidad(nombreProducto);
+  }
+
+  if (event.target.classList.contains("btn-decrementar")) {
+    const nombreProducto = event.target.dataset.nombre;
+    decrementarCantidad(nombreProducto);
   }
 });
 
@@ -97,23 +149,9 @@ contenedorCatalogo.addEventListener("click", (event) => {
 btnVaciar.addEventListener("click", (event) => {
   event.preventDefault();
   vaciarCarrito();
-  actualizarContadorCarrito();
 });
 
-// Cargar los productos del carrito cuando la página se recarga
+// Renderizar el carrito al cargar la página
 window.addEventListener("load", () => {
-  carrito.forEach((producto) => {
-    contenedorCarrito.innerHTML += `
-      <div class="carrito-item">
-        <img src="${producto.img}" alt="${producto.nombre}" />
-        <div>
-          <h4>${producto.nombre}</h4>          
-          <h5>${formatoPesos.format(producto.precio)}</h5>
-        </div>
-      </div>
-    `;
-  });
-
-  actualizarContadorCarrito();
-  actualizarTotal();
+  renderCarrito();
 });
