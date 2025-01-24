@@ -393,3 +393,23 @@ article {
     opacity: 0;
   }
 }
+@media (max-width: 322px) {
+  @keyframes slide-in {
+    from {
+      transform: translateX(80%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .toast-container {
+    margin-right: 0;
+    margin-left: 0;
+    right: 0.1rem;
+    max-width: 80%;
+    width: 100px;
+  }
+  .toast {
+    font-size: 0rem;
+  }
+}
