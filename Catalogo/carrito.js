@@ -8,7 +8,8 @@ document.getElementById("abrir-carrito").addEventListener("click", () => {
     document.getElementById("carrito-modal").style.display = "none";
   });
   
-  document.getElementById("vaciar-carrito").addEventListener("click", () => {
+  document.getElementById("vaciar-carrito").addEventListener("click", (event) => {
+    event.preventDefault();
     localStorage.removeItem("carrito"); // Limpiar carrito en localStorage
     location.reload(); // Recargar la página para actualizar el estado del carrito
   });

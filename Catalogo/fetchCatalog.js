@@ -15,9 +15,18 @@ fetch('catalogo.json')
     console.error('Hubo un problema con la solicitud fetch:', error);
   });
 
+
+  // Formateador para pesos colombianos
+const formatoPesos = new Intl.NumberFormat("es-CO", {
+  style: "currency",
+  currency: "COP",
+  maximumFractionDigits: 0,
+});
+
   // Función para agregar un producto al contenedor
  export const addProducts = (producto) => {
-    contenedor.innerHTML += `
+    
+  contenedor.innerHTML += `
     <article class="producto-catalogo" data-id="${producto.nombre}">
             <a href="#">
               <img src="${producto.img}" alt="${producto.nombre}" />
@@ -34,7 +43,7 @@ fetch('catalogo.json')
               </div>
             </div>
             <p class="descripcion-producto">${producto.descripcion}</p> 
-            <h4>$${producto.precio.toFixed(3)}</h4>
+            <h4>${formatoPesos.format(producto.precio)}</h4>
           </article>
   `;
  }

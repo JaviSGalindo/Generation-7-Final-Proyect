@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="carrito.css" />
   </head>
   <body>
+    <div id="toast-container">
+
+    </div>
     <!--  Navbar -->
     <nav class="navBar">
       <div class="logo">
@@ -47,6 +50,7 @@
         </a>
         <a id="abrir-carrito" class="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
+          <span id="contadorCarrito">0</span>
         </a>
         <a href="#login" class="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
@@ -238,7 +242,7 @@
     </footer>
     <script src="carrito.js"></script>
     <script type="module" src="fetchCatalog.js"></script>
-    <script type="module" src="fetchCarrito.js"></script>
+    <script src="fetchCarrito.js"></script>
     <script src="../funcionalities/nav.js"></script>
   </body>
 </html>
