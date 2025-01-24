@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
     <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="catalog.css" />
+    <link rel="stylesheet" href="carrito.css">
   </head>
   <body>
     <!--  Navbar -->
@@ -46,7 +47,7 @@
           <i class="fa fa-heart"></i>
           
         </a>
-        <a href="#cart" class="cart" title="Carrito">
+        <a id="abrir-carrito" class="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
          
         </a>
@@ -62,6 +63,25 @@
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+
+    <!--------- Contenedor del carrito de compras---- -->
+<div id="carrito-modal" class="carrito-modal">
+  <div class="carrito-header">
+    <h2>Tu Carrito</h2>
+    <button id="cerrar-carrito" class="cerrar-carrito">&times;</button>
+  </div>
+  <div id="carrito-items" class="carrito-items">
+    <!-- Aquí se agregarán los productos dinámicamente -->
+  </div>
+  <div class="carrito-footer">
+    <p id="total-precio">Total: $0.00</p>
+    <button id="vaciar-carrito" class="vaciar-carrito">Vaciar Carrito</button>
+  </div>
+</div>
+
+    <!--------- FIN Contenedor del carrito de compras---- -->
+
+
     <main>
       <!-- Hero Section -->
       <section id="banner-container">
@@ -229,5 +249,6 @@
     </footer>
     <script src="fetchCatalog.js"></script>
     <script src="../funcionalities/nav.js"></script>
+    <script src="carrito.js"></script>
   </body>
 </html>

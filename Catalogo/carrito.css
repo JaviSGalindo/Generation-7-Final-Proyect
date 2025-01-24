@@ -1,0 +1,58 @@
+/* Estilos del modal del carrito */
+.carrito-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+  }
+  
+  .carrito-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  
+  .carrito-items {
+    background-color: white;
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 300px;
+  }
+  
+  .carrito-footer {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .carrito-footer button {
+    background-color: #ff6b6b;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .carrito-footer button:hover {
+    background-color: #ff4d4d;
+  }
+  
+  .carrito-item {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .carrito-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
