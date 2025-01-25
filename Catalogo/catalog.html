@@ -18,9 +18,13 @@
     />
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
     <link rel="stylesheet" href="../styles/nav.css" />
-    <link rel="stylesheet" href="catalog.css" />
+    <link rel="stylesheet" href="carrito.css"/>
+    <link rel="stylesheet" href="catalog.css"/>
   </head>
   <body>
+    <div id="toast-container">
+
+    </div>
     <!--  Navbar -->
     <nav class="navBar">
       <div class="logo">
@@ -40,19 +44,16 @@
       <div class="actionIcons">
         <a href="#search" class="search" title="Buscar">
           <i class="fa fa-search"></i>
-          
         </a>
         <a href="#wishlist" class="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
-          
         </a>
-        <a href="#cart" class="cart" title="Carrito">
+        <a id="abrir-carrito" class="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
-         
+          <span id="contadorCarrito">0</span>
         </a>
         <a href="#login" class="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
-          
         </a>
       </div>
       <div class="search-bar">
@@ -62,6 +63,26 @@
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+
+    <!--------- Contenedor del carrito de compras---- -->
+<div id="cerrar-carrito" class="carrito-modal">
+  <div id="carrito-modal" class="carrito-modal">
+    <div class="carrito-header">
+      <h2>Tu Carrito</h2>
+      <button class="cerrar-carrito">X</button>
+    </div>
+    <div id="carrito-items" class="carrito-items">
+     <!-- Seran agregados desde js -->
+    </div>
+    <div class="carrito-footer">
+      <p id="total-precio">Total: $0.00</p>
+      <button id="vaciar-carrito" class="vaciar-carrito">Vaciar Carrito</button>
+    </div>
+  </div>
+</div>
+
+    <!--------- FIN Contenedor del carrito de compras---- -->
+
     <main>
       <!-- Hero Section -->
       <section id="banner-container">
@@ -80,29 +101,21 @@
         <div class="destacados-container">
           <article class="producto-destacado">
             <a href="#">
-              <img
-                src="../images/imgAccesorios1.webp"
-                alt=""
-              />
+              <img src="../images/imgAccesorios1.webp" alt="" />
             </a>
             <div class="main-destacados-text">
-              <h1>CONFIANZA</h1>                
+              <h1>CONFIANZA</h1>
             </div>
           </article>
-          
+
           <article class="producto-destacado">
             <a href="#">
-              <img
-                src="../images/imgAccesorios2.webp"
-                alt=""
-              />
+              <img src="../images/imgAccesorios2.webp" alt="" />
             </a>
             <div class="main-destacados-text">
               <h1>COQUETA</h1>
-                
             </div>
           </article>
-          
         </div>
       </section>
 
@@ -112,9 +125,7 @@
           <h1 id="title-catalogo">Catálogo</h1>
         </header>
         <div class="productos-container">
-          
           <!--Productos agregados dinamicamente-->
-          
         </div>
       </section>
     </main>
@@ -145,17 +156,6 @@
           </p>
         </div>
       </section>
-
-      <!-- Seccion de Suscripcion a noticias e informacion de Elevia -->
-      <!-- <section class="footer-newsletter-section">
-          <div class="footer-newsletter-container">
-              <form action="subscribe.php" method="post">
-                  <p>Suscribete a información y promociones especiales de Elevia</p>
-                  <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
-                  <button type="submit">Suscribirse</button>
-              </form>
-          </div>
-      </section> -->
 
       <!-- Seccion de logo - informacion respecto a la marca -->
       <section class="footer-final-section">
@@ -227,7 +227,9 @@
         </div>
       </section>
     </footer>
-    <script src="fetchCatalog.js"></script>
+    <script src="carrito.js"></script>
+    <script type="module" src="fetchCatalog.js"></script>
+    <script src="fetchCarrito.js"></script>
     <script src="../funcionalities/nav.js"></script>
   </body>
 </html>

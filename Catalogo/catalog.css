@@ -56,6 +56,10 @@ p {
   backdrop-filter: blur(4px);
 }
 
+#abrir-carrito {
+  cursor: pointer;
+}
+
 /* Estilos banner */
 
 .banner-img {
@@ -320,6 +324,7 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .action-btns button {
@@ -350,4 +355,65 @@ article {
 .action-btns button:active i {
   color: #7ca0c080;
   transform: scale(1);
+}
+
+/*toast*/
+
+#toast-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.toast {
+  background-color: #7ca0c0;
+  color: #00003b;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.5rem;
+  opacity: 0.85;
+  animation: slide-in 0.5s, fade-out 0.5s 2.5s forwards; 
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@media (max-width: 322px) {
+  @keyframes slide-in {
+    from {
+      transform: translateX(80%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .toast-container {
+    margin-right: 0;
+    margin-left: 0;
+    right: 0.1rem;
+    max-width: 80%;
+    width: 100px;
+  }
+  .toast {
+    font-size: 0rem;
+  }
 }
