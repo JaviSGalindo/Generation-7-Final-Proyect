@@ -5,6 +5,7 @@ const totalPrecio = document.getElementById("total-precio");
 const contadorCarrito = document.getElementById("contadorCarrito");
 const toast = document.getElementById("toast-container");
 
+
 // Cargar carrito desde localStorage si existe
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -28,7 +29,7 @@ const renderCarrito = () => {
     contenedorCarrito.innerHTML += `
       <div class="carrito-item">
         <img src="${producto.img}" alt="${producto.nombre}" />
-        <div>
+        <div id="items-container">
           <h4>${producto.nombre}</h4>
           <h5>${formatoPesos.format(producto.precio)}</h5>
           <div class="cantidad-container">
@@ -144,6 +145,8 @@ contenedorCarrito.addEventListener("click", (event) => {
     decrementarCantidad(nombreProducto);
   }
 });
+
+
 
 // Vaciar el carrito al hacer clic en el botón
 btnVaciar.addEventListener("click", (event) => {

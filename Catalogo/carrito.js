@@ -2,6 +2,7 @@
 const openCartButton = document.getElementById("abrir-carrito");
 const cerrarCarrito = document.getElementById("cerrar-carrito");
 const carritoModal = document.getElementById("carrito-modal");
+const btnCerrar = document.querySelector(".cerrar-carrito");
 
 // Abrir el carrito y mostrar el fondo oscuro
 openCartButton.addEventListener("click", () => {
@@ -15,6 +16,10 @@ cerrarCarrito.addEventListener("click", (e) => {
         cerrarCarrito.style.display = "none";
     }
 });
+
+btnCerrar.addEventListener("click", (e) => {
+  cerrarCarrito.style.display = "none";
+})
 
 // Cerrar el carrito al hacer clic en un botón específico (opcional)
 document.getElementById("vaciar-carrito").addEventListener("click", () => {
