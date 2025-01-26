@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="../styles/stylesFooter.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="registration.css">
+        <!-- Fuentes -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
+  
+      <!-- Iconos font-awesome -->
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        rel="stylesheet"
+      />
+</head>
+<body>
+    <div class="background">
+        <!--  Navbar -->
+        <nav class="navBar">
+            <div class="logo">
+                <img src="../img/Elevia-ícono-1.png" alt="logo" />
+            </div>
+        
+            <div class="barSections">
+                <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Catálogo</a></li>
+                <li><a href="#blog">Empodérate</a></li>
+                <li><a href="#AboutUs">¿Quiénes somos?</a></li>
+                <li><a href="#contact">Contáctanos</a></li>
+                </ul>
+            </div>
+        
+            <div class="actionIcons">
+                <a href="#search" class="search" title="Buscar">
+                <i class="fa fa-search"></i>
+                </a>
+                <a href="#wishlist" class="wishlist" title="Deseos">
+                <i class="fa fa-heart"></i>
+                </a>
+                <a id="abrir-carrito" class="cart" title="Carrito">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="contadorCarrito">0</span>
+                </a>
+                <a href="#login" class="login" title="Iniciar sesión">
+                <i class="fa fa-user"></i>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar..." />
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+    
+     <!----Sección inicial Logo y escolagan--- -->
+        <section class="initial">
+            <img src="/img/Elevia-ícono-1.png" alt="Logo Elevia" class="logo">
+            <div class="text-content">
+                <h1>Elevia</h1>
+                <p class="slogan">Tu esencia, tu belleza</p>
+                <p class="categories">Ropa | Accesorios</p>
+            </div>
+        </section>
+
+    <!----Formulario de registro ------>
+    <div class="form-container">
+
+        <form>
+            <div class="form-group">
+                <div>
+                    <label for="name">Nombre *</label>
+                    <input type="text" id="name" name="name" required >
+                    <span id="nameError" class="error-message"></span>
+
+                </div>
+                <div>
+                    <label for="apellido">Apellido *</label>
+                    <input type="text" id="apellido" name="apellido" required >
+                    <span id="lasNameError" class="error-message"></span>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required >
+                    <span id="emailError" class="error-message"></span>
+
+                </div>
+                <div>
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required >
+                    <span id="addressError" class="error-message"></span>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="telefono">Número de Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" required >
+                    <span id="numberError" class="error-message"></span>
+
+                </div>
+                <div>
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" name="password" required >
+                    <span id="passwordError" class="error-message"></span>
+
+                </div>
+            </div>
+            <div class="form-footer">
+                <p>Creando tu cuenta aceptas los <a href="#">términos y condiciones</a>.</p>
+                <button type="submit">Crear Cuenta</button>
+            </div>
+        </form>
+        <div class="login-footer">
+            <p>¿Ya tienes una cuenta? <a href="#">¡Ingresa Aquí!</a></p>
+            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        </div>
+        <div class="social-login">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="url(#a)" height="20" width="20"><defs><linearGradient x1="50%" x2="50%" y1="97.078%" y2="0%" id="a"><stop offset="0%" stop-color="#0062E0"/><stop offset="100%" stop-color="#19AFFF"/></linearGradient></defs><path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"/><path fill="#FFF" d="m25 23 .8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"/></svg>
+                <span>Inicia sesión con Facebook</span>
+            </div>
+            <div>
+                <svg width="256" height="262" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/></svg>
+                <span>Inicia sesión con Google</span>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer -->
+    <footer class="footer-section">
+        <!-- Section de informacion de footer -->
+        <section class="footer-info-section">
+            <div class="footer-info-title">
+            <p id="redes">Nuestras Redes Sociales</p>
+            </div>
+            <div class="footer-info-container">
+            <p>
+                <a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
+                ><i class="fab fa-instagram" target="_blank"></i
+                ></a>
+            </p>
+            <p>
+                <a href="" target="_blank"><i class="fab fa-facebook"></i> </a>
+            </p>
+            <p>
+                <a href="" target="_blank"><i class="fab fa-whatsapp"></i> </a>
+            </p>
+            <p>
+                <a href="mailto:elevia.contact@gmail.com" target="_blank"
+                ><i class="fas fa-envelope"></i
+                ></a>
+            </p>
+            </div>
+        </section>
+    
+        <!-- Seccion de logo - informacion respecto a la marca -->
+        <section class="footer-final-section">
+            <!-- Logo y Nombre de la Marca -->
+            <div class="footer-logo-container">
+            <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia" />
+            </div>
+            <!-- Opciones de Ayuda -->
+            <div class="footer-elements-container">
+            <div id="ayuda-footer" class="footer-elements">
+                <p>Ayuda</p>
+                <ul class="footer-elements-list">
+                <li>
+                    <a href="mailto:devoluciones.elevia@gmail.com" target="_blank"
+                    >Devoluciones</a
+                    >
+                </li>
+                <li>
+                    <a href="mailto:atencion.elevia@gmail.com" target="_blank"
+                    >Atención al cliente</a
+                    >
+                </li>
+                <li>
+                    <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                    >Peticiones</a
+                    >
+                </li>
+                <li>
+                    <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                    >Quejas y Reclamos</a
+                    >
+                </li>
+                </ul>
+            </div>
+            </div>
+            <!-- Acceso a las secciones de la pagina de Elevia -->
+            <div class="footer-elements-container">
+            <div id="nosotros-footer" class="footer-elements">
+                <p>Nosotros</p>
+                <ul class="footer-elements-list">
+                <li><a href="#contact-section">Productos</a></li>
+                <li><a href="#contact-section">Quiénes Somos</a></li>
+                <li><a href="#contact-section">Contáctanos</a></li>
+                <li><a href="#redes">Redes Sociales</a></li>
+                </ul>
+            </div>
+            </div>
+    
+            <!-- Suscripcion a noticias e informacion de Elevia -->
+            <div class="footer-newsletter-container">
+            <form action="subscribe.php" method="post">
+                <p>Suscribete a información y promociones especiales de Elevia</p>
+                <input
+                type="email"
+                id="email-newsletter"
+                name="email"
+                placeholder="Tu correo electrónico"
+                required
+                />
+                <button type="submit">Suscribirse</button>
+            </form>
+            </div>
+    
+            <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+        </section>
+        <section class="footer-bottom-section">
+            <div>
+            <p>&copy; 2025 Elevia - Todos los derechos reservados.</p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="../funcionalities/nav.js"></script>
+
+</body>
+</html>
