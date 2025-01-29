@@ -10,6 +10,18 @@ export function validateName() {
     hasErrors = true;
   }
 }
+export function validateLastName() {
+  const lastName = document.getElementById("lastName").value.trim();
+  const lastNameError = document.getElementById("lastNameError");
+
+  if (lastName === "") {
+    lastNameError.textContent = "Por favor, ingresa tu apellido.";
+    hasErrors = true;
+  } else if (!/^[a-zA-Z\s]+$/.test(lastName)) {
+    lastNameError.textContent = "El apellido solo debe contener letras y espacios.";
+    hasErrors = true;
+  }
+}
 
 export function validateEmail() {
   const email = document.getElementById("email").value.trim();

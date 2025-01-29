@@ -74,6 +74,37 @@ span{
     text-decoration: underline;
 }
 
+/* mensajes de errores */
+
+.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  #successMessage {
+    justify-content: center;
+    color: green;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .sm {
+    display: flex;
+    justify-self: center !important;
+    justify-content: center !important;
+  }
+  
+  input:invalid,
+  textarea:invalid {
+    border: 1px solid red;
+  }
+  
+  input:focus:invalid,
+  textarea:focus:invalid {
+    background-color: #b1d1eea0;
+  }
 
 @media (max-width: 768px) {
     .logo{

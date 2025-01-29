@@ -64,7 +64,10 @@
     <div class="form-container">
         <h1>Formulario de registro</h1>
 
-        <form>
+        <form action="https://formspree.io/f/meoonydk"
+        method="POST"
+        id="registerForm"
+        novalidate class="formulario">
             <div class="form-group">
 
                 <div>
@@ -75,8 +78,8 @@
                 </div>
                 <div>
                     <label for="apellido">Apellido *</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required >
-                    <span id="lasNameError" class="error-message"></span>
+                    <input type="text" id="lastName" name="lastName" placeholder="Ingresa tu apellido" required >
+                    <span id="lastNameError" class="error-message"></span>
 
                 </div>
             </div>
@@ -89,7 +92,7 @@
                 </div>
                 <div>
                     <label for="telefono">Teléfono *</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required >
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required >
                     <span id="numberError" class="error-message"></span>
 
                 </div>
@@ -219,6 +222,7 @@
     </footer>
 
     <script src="../funcionalities/nav.js"></script>
+    <script src="/validaciones/validationRegister.js"></script>
 
 </body>
 </html>
