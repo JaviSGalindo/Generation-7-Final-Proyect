@@ -40,6 +40,9 @@ h1{
     border: 1px solid #ccc;
     border-radius: 20px;
 }
+span{
+    height: 10px;
+}
 
 .form-footer {
     text-align: center;
@@ -58,6 +61,10 @@ h1{
     cursor: pointer;
     font-size: 16px;
 }
+.form-footer p a{
+    color: #00003D;
+
+}
 .form-footer button:hover {
     background-color: #7CA0C0;
 }
@@ -67,7 +74,6 @@ h1{
     font-size: 14px;
 }
 .login-footer a {
-    text-decoration: none;
     color: #00003D;
 }
 .login-footer a:hover {
@@ -112,12 +118,26 @@ input:focus:invalid,
 }
 
 @media (max-width: 768px) {
+    h1{
+        font-size: medium;
+
+    }
     .form-container {
         padding: 50px;
         width: 500px;
+        height: 530px;
     }
+    .form-group {
+        width: 500px;
+    }
+    span{
+        height: 20px;
+    }
+
     .form-group input {
         width: 210px;
+        padding: 5px;
+        
     }
 
     input::placeholder{
@@ -125,7 +145,7 @@ input:focus:invalid,
 
     }
     .error-message {
-        width: 200px;
+        width: 210px;
         font-size: 9px;
         padding: 10px;
     }
@@ -136,23 +156,35 @@ input:focus:invalid,
     .form-container {
         padding: 20px;
         width: 300px;
+        height: 460px;
+
     }
     .form-group {
         width: 200px;
+        justify-content: space-between;
+        margin-left: 15px;
+        gap: 8px;
     }
     .form-group input {
         width: 150px;
-        height: 15px;
-        padding: 8px;
+        height: 14px;
+        padding: 1px;
+        font-size: 10px;
     }
     label, p{
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .error-message {
-        width: 110px;
-        font-size: 9px;
-        padding: 10px;
+        width: 100px;
+        font-size: 5px;
+        padding: 5px;
+        margin-top: 0px;
+
+    }
+    .form-footer button{
+        font-size: 10px;
+        padding: 8px 18px;
     }
 
 }
@@ -161,6 +193,7 @@ input:focus:invalid,
     .form-container {
         padding: 15px;
         width: 250px;
+        height: 410px;
     }
     .form-group input {
         width: 90px;
