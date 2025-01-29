@@ -7,4 +7,4 @@ const handleSubmit = (event) => {
   validator.sendRegisterForm(event); // Llama a la validación
 };
 
-form.addEventListener("submit", handleSubmit); // Solo este es necesario
+form.addEventListener("submit", handleSubmit); 
