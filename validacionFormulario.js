@@ -115,8 +115,8 @@ export function validateName() {
     successMessage.style.display = "block";
     setTimeout(() => {
       successMessage.style.display = "none";
-    }, 2000); // Oculta el mensaje después de 2 segundos
-    document.getElementById("registerForm").reset(); // Limpiar el formulario
+    }, 2000); 
+    document.querySelectorAll(".formulario").reset(); 
   }
   
   export function sendContactForm(event) {
