@@ -153,3 +153,18 @@ export function sendRegisterForm(event) {
     return false;
   }
 }
+
+export function sendLoginForm(event) {
+  let hasErrors = false;
+  clearErrorMessages();
+
+  if (validateEmail()) hasErrors = true;  
+
+  if (!hasErrors) {
+    
+    return true;
+  } else {
+    event.preventDefault();
+    return false;
+  }
+}

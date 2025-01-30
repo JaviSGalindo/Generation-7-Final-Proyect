@@ -63,19 +63,25 @@
           <h1>Bienvenida de nuevo</h1>
           <h2>Introduce tus datos para iniciar sesión</h2>
         </header>
-        <form action="https://formspree.io/f/meoonydk" method="POST">
+        <form
+          id="loginForm"
+          novalidate
+          class="formulario"
+          action="https://formspree.io/f/xjkgwnnv"
+          method="POST"
+        >
           <div class="form-group">
             <label class="textUser" for="username">Usuario:</label>
             <input
               type="text"
-              id="username"
-              name="username"
+              id="email"
+              name="email"
               placeholder="Ingresa tu e-mail o número telefónico"
               required
               aria-describedby="userError"
             />
             <span
-              id="userError"
+              id="emailError"
               class="error-message"
               aria-hidden="true"
             ></span>
@@ -102,7 +108,7 @@
               >¿Olvidaste tu contraseña?</a
             >
           </div>
-          <span class="error-message" style="display: none" id="accessError">
+          <span class="error-message" style="display: none" id="passwordError">
             Datos de acceso no válidos
           </span>
           <!-- Botón de envío -->
@@ -211,5 +217,6 @@
       </section>
     </footer>
     <script src="../funcionalities/login.js"></script>
+    <script type="module" src="./validationLogin.js"></script>
   </body>
 </html>
