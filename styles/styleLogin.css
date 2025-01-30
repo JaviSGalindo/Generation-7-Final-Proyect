@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #00003d;
+}
+main {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 3rem; /* Mueve el contenido hacia abajo */
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  padding: inherit;
+  background-color: #00003d;
+}
+
+.login-container {
+  background-color: #e8e1d9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+}
+
+.section-title h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 24px;
+  color: #00003d;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.section-title h2 {
+  font-weight: normal;
+  font-size: 16px;
+  color: #7ca0c0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #00003d;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #00003d;
+  outline: none;
+}
+
+.password-container {
+  position: relative;
+}
+.textUser,
+.textPassword {
+  font-family: "Poppins", sans-serif;
+  color: #00003d;
+  font-weight: normal;
+}
+#togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #00003d;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #00003d;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Submit Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00003d;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 0.5rem;
+}
+
+.login-button:hover {
+  background-color: #7ca0c0;
+}
+
+.register {
+  font-size: 14px;
+  color: #00003d;
+  text-decoration: none;
+  display: flex;
+  margin-top: 10px;
+  text-align: right;
+  justify-content: center;
+}
+
+/* Para pantallas de 320px */
+@media (max-width: 320px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140vh; /* Usa toda la altura de la pantalla */
+    overflow: hidden; /* Evita el desbordamiento */
+  }
+
+  .login-container {
+    padding: 5px;
+    max-width: 90%;
+  }
+
+  .section-title h1 {
+    font-size: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 14px; /* Ajusta el tamaño del texto ingresado */
+  }
+
+  /* Reducir tamaño del placeholder */
+  input::placeholder {
+    font-size: 12px; /* Disminuye el tamaño del placeholder */
+    color: gray; /* Cambia el color si es necesario */
+    opacity: 0.7; /* Ajusta la opacidad */
+  }
+
+  .login-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .forgot-password,
+  .register {
+    font-size: 13px;
+  }
+}
+
+/* Para pantallas de 425px */
+@media (max-width: 425px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh; /* Usa toda la altura de la pantalla */
+    overflow: hidden; /* Evita el desbordamiento */
+    margin-top: 3rem;
+  }
+  */ .login-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .section-title h1 {
+    font-size: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  input::placeholder {
+    font-size: 12px; /* Disminuye el tamaño del placeholder */
+    color: gray; /* Cambia el color si es necesario */
+    opacity: 0.7; /* Ajusta la opacidad */
+  }
+
+  .login-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .forgot-password,
+  .register {
+    font-size: 13px;
+  }
+}
+
+/* Para pantallas de 768px */
+@media (max-width: 768px) {
+  .login-container {
+    margin-top: 7rem;
+    padding: 25px;
+    max-width: 80%;
+  }
+
+  .section-title h1 {
+    font-size: 22px;
+  }
+
+  .section-title h2 {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 15px;
+  }
+
+  .login-button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .forgot-password,
+  .register {
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas de 1024px */
+@media (max-width: 1024px) {
+  .login-container {
+    padding: 30px;
+    max-width: 70%;
+  }
+
+  .section-title h1 {
+    font-size: 24px;
+  }
+
+  .section-title h2 {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 16px;
+  }
+
+  .login-button {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .forgot-password,
+  .register {
+    font-size: 14px;
+  }
+}
