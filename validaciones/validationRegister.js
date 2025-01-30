@@ -8,3 +8,6 @@ const handleSubmit = (event) => {
 };
 
 form.addEventListener("submit", handleSubmit); 
+
+// Guardar los datos en el localStorage
+
