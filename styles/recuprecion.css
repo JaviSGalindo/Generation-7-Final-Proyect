@@ -1,0 +1,136 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #00003d;
+}
+
+main {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 3rem; /* Mueve el contenido hacia abajo */
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  padding: inherit;
+  background-color: #00003d;
+}
+
+.restore-container {
+  background-color: #e8e1d9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  text-align: center;
+  margin-top: -4rem;
+}
+
+.section-title h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 24px;
+  color: #00003d;
+  margin-bottom: 0.6rem;
+}
+
+.section-title h2 {
+  font-weight: normal;
+  font-size: 16px;
+  color: #7ca0c0;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tittle-email {
+  display: block;
+  font-weight: bold;
+  color: #00003d;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #00003d;
+  box-sizing: border-box;
+}
+
+input[type="email"]:focus {
+  border-color: #00003d;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00003d;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #7ca0c0;
+}
+
+.return-to-login {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00003d;
+  text-decoration: none;
+}
+
+.return-to-login:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 425px) {
+  .restore-container {
+    padding: 20px;
+    max-width: 90%;
+    margin-top: 3rem;
+  }
+  .section-title h1 {
+    font-size: 20px;
+  }
+  .section-title h2 {
+    font-size: 15px;
+  }
+  input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .login-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .return-to-login {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restore-container {
+    padding: 25px;
+    max-width: 80%;
+    margin-top: 3rem;
+  }
+}
