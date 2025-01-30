@@ -104,6 +104,17 @@ export function validatePassword() {
   return false;
 }
 
+export function validateEmptyPassword() {
+  const password = document.getElementById("password").value.trim();
+  const passwordError = document.getElementById("passwordError");
+
+  if (password === "") {
+    passwordError.style.display = "block";
+    passwordError.textContent = "Ingresa tu contraseña";
+    return true;
+  }
+}
+
 export function clearErrorMessages() {
   const errorMessages = document.querySelectorAll(".error-message");
   errorMessages.forEach((error) => (error.textContent = ""));
@@ -158,10 +169,10 @@ export function sendLoginForm(event) {
   let hasErrors = false;
   clearErrorMessages();
 
-  if (validateEmail()) hasErrors = true;  
+  if (validateEmail()) hasErrors = true;
+  if (validateEmptyPassword()) hasErrors = true;  
 
   if (!hasErrors) {
-    
     return true;
   } else {
     event.preventDefault();

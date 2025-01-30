@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
     <link rel="stylesheet" href="../styles/styleLogin.css" />
 
-    <title>Contacto</title>
+    <title>Login</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -96,6 +96,7 @@
                 placeholder="Ingresa tu contraseña"
                 required
               />
+              <span class="error-message" style="display: none" id="passwordError"></span>
               <!-- Ícono para mostrar/ocultar la contraseña -->
               <i
                 class="fa fa-eye"
@@ -108,7 +109,7 @@
               >¿Olvidaste tu contraseña?</a
             >
           </div>
-          <span class="error-message" style="display: none" id="passwordError">
+          <span class="error-message" style="display: none" id="accessError">
             Datos de acceso no válidos
           </span>
           <!-- Botón de envío -->

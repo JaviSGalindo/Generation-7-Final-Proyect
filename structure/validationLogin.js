@@ -8,8 +8,8 @@ const handleSubmit = (event) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const userEmail = localStorage.getItem("email");
-    const userPassword = localStorage.getItem("password");
+    const userEmail = atob(localStorage.getItem("email"));
+    const userPassword = atob(localStorage.getItem("password"));
 
     if (email !== userEmail || password !== userPassword) {
       alert("Email o contraseña incorrectos");
