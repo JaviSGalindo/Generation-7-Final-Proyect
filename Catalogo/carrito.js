@@ -24,14 +24,14 @@ btnCerrar.addEventListener("click", (e) => {
 // Cerrar el carrito al hacer clic en un botón específico (opcional)
 document.getElementById("vaciar-carrito").addEventListener("click", () => {
     localStorage.removeItem("carrito"); // Limpia el carrito en localStorage
-    location.reload(); // Recarga la página para reflejar los cambios
+    
 });
 
   
   document.getElementById("vaciar-carrito").addEventListener("click", (event) => {
     event.preventDefault();
     localStorage.removeItem("carrito"); // Limpiar carrito en localStorage
-    location.reload(); // Recargar la página para actualizar el estado del carrito
+    
   });
 
   
