@@ -10,6 +10,7 @@ export function validateName() {
     return true;
   }
   return false;
+  
 }
 
 export function validateLastName() {

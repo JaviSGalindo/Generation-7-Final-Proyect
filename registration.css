@@ -1,3 +1,9 @@
+
+body {
+font-family: "Poppins", sans-serif;
+position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
+}
+
 h1{
     font-size: xx-large;
     text-align: center;
@@ -33,7 +39,7 @@ h1{
     display: block;
     margin-bottom: 5px;
 }
-.form-group input {
+input {
     width: 250px;
     height: 25px;
     padding: 8px;
@@ -94,22 +100,15 @@ span{
     margin-top: 5px;
 }
   
-#successMessage {
+/* #successMessage {
     justify-content: center;
     color: green;
     font-size: 12px;
     margin-top: 5px;
-}
+} */
   
-.sm {
-    display: flex;
-    justify-self: center !important;
-    justify-content: center !important;
-}
-  
-input:invalid,
-  textarea:invalid {
-    border: 1px solid red;
+input:invalid {
+    /* border: 1px solid red; */
 }
   
 input:focus:invalid,
