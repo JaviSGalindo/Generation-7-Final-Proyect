@@ -84,7 +84,12 @@ input[type="email"]:focus {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
 .login-button:hover {
   background-color: #7ca0c0;
 }

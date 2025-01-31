@@ -179,3 +179,17 @@ export function sendLoginForm(event) {
     return false;
   }
 }
+
+export function sendRecoveryForm(event) {
+  let hasErrors = false;
+  clearErrorMessages();
+
+  if (validateEmail()) hasErrors = true;  
+
+  if (!hasErrors) {
+    return true;
+  } else {
+    event.preventDefault();
+    return false;
+  }
+}

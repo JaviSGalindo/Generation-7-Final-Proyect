@@ -107,10 +107,10 @@ span{
     justify-content: center !important;
 }
   
-input:invalid,
+/* input:focus:invalid,
   textarea:invalid {
     border: 1px solid red;
-}
+} */
   
 input:focus:invalid,
   textarea:focus:invalid {

@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="../styles/nav.css" />
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
-    <link rel="stylesheet" href="../styles/recuprecion.css" />
+    <link rel="stylesheet" href="../styles/styleRecovery.css" />
 
     <title>Contacto</title>
     <link
@@ -67,9 +67,11 @@
         </header>
 
         <form
-          id="forgot-password-form"
-          action="https://formspree.io/f/meoonydk"
-          method="POST"
+        id="recoveryForm"
+        novalidate
+        class="formulario"
+        action="https://formspree.io/f/xjkgwnnv"
+        method="POST"
         >
           <div class="form-group">
             <label class="tittle-email" for="email">Correo electrónico:</label>
@@ -81,7 +83,7 @@
               required
             />
             <span
-              id="userError"
+              id="emailError"
               class="error-message"
               aria-hidden="true"
             ></span>
@@ -195,6 +197,7 @@
         </div>
       </section>
     </footer>
-    <script src="../funcionalities/recupercaion.js"></script>
+    <script src="../funcionalities/recovery.js"></script>
+    <script type="module" src="validationRecovery.js"></script>
   </body>
 </html>
