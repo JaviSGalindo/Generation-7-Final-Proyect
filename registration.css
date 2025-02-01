@@ -107,9 +107,16 @@ span{
     margin-top: 5px;
 } */
   
-input:invalid {
-    /* border: 1px solid red; */
+.sm {
+    display: flex;
+    justify-self: center !important;
+    justify-content: center !important;
 }
+  
+/* input:focus:invalid,
+  textarea:invalid {
+    border: 1px solid red;
+} */
   
 input:focus:invalid,
   textarea:focus:invalid {
