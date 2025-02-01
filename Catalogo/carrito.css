@@ -14,7 +14,7 @@
 /*btn*/
 .cerrar-carrito {
   font-size: 1rem;
-  font-weight: bolder;
+  font-weight: bold;
   cursor: pointer;
   color: #00003b;
   background-color: transparent;
@@ -95,6 +95,7 @@
 }
 
 .carrito-item {
+  position: relative;
   display: flex; /* Usamos flexbox */
   justify-content: space-around; /* Espacio entre elementos */
   align-items: center; /* Alinea verticalmente los elementos */
@@ -104,20 +105,29 @@
   flex-wrap: nowrap; /* Evita que los elementos se rompan en varias líneas */
 }
 
+.cerrar-producto {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ac9c9c;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
 .carrito-item img {
   width: 120px;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain;
   margin: 5px;
   border-radius: 4px; /* Bordes redondeados opcionales */
 }
 
 .carrito-item h4 {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
-  white-space: nowrap; /* Evita saltos de línea */
-  overflow: hidden; /* Esconde el texto desbordado */
-  text-overflow: ellipsis; /* Agrega puntos suspensivos para nombres largos */
+
 }
 
 .carrito-item h5 {
@@ -187,8 +197,6 @@
     width: 95%;
   }
 }
-
-
 
 @media (max-width: 320px) {
   .carrito-items {

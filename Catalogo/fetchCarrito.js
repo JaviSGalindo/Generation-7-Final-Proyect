@@ -5,7 +5,6 @@ const totalPrecio = document.getElementById("total-precio");
 const contadorCarrito = document.getElementById("contadorCarrito");
 const toast = document.getElementById("toast-container");
 
-
 // Cargar carrito desde localStorage si existe
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -30,13 +29,20 @@ const renderCarrito = () => {
       <div class="carrito-item">
         <img src="${producto.img}" alt="${producto.nombre}" />
         <div id="items-container">
+          <button class="cerrar-producto" data-nombre="${
+              producto.nombre}">X</button>
           <h4>${producto.nombre}</h4>
           <h5>${formatoPesos.format(producto.precio)}</h5>
           <div class="cantidad-container">
-            <button class="btn-decrementar" data-nombre="${producto.nombre}">-</button>
+            <button class="btn-decrementar" data-nombre="${
+              producto.nombre
+            }">-</button>
             <span class="cantidad">${producto.cantidad}</span>
-            <button class="btn-incrementar" data-nombre="${producto.nombre}">+</button>
+            <button class="btn-incrementar" data-nombre="${
+              producto.nombre
+            }">+</button>            
           </div>
+          
         </div>
       </div>
     `;
@@ -48,7 +54,10 @@ const renderCarrito = () => {
 
 // Actualizar el total del carrito
 const actualizarTotal = () => {
-  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+  const total = carrito.reduce(
+    (acc, item) => acc + item.precio * item.cantidad,
+    0
+  );
   totalPrecio.textContent = `Total: ${formatoPesos.format(total)}`;
 };
 
@@ -60,7 +69,9 @@ const actualizarContadorCarrito = () => {
 
 // Agregar un producto al carrito
 const addToCart = (producto) => {
-  const productoExistente = carrito.find((item) => item.nombre === producto.nombre);
+  const productoExistente = carrito.find(
+    (item) => item.nombre === producto.nombre
+  );
 
   if (productoExistente) {
     productoExistente.cantidad += 1;
@@ -94,6 +105,13 @@ const decrementarCantidad = (nombreProducto) => {
     guardarCarrito();
     renderCarrito();
   }
+};
+
+// Quitar un producto
+const quitarProducto = (nombreProducto) => {
+  carrito = carrito.filter((item) => item.nombre !== nombreProducto);
+  guardarCarrito();
+  renderCarrito();
 };
 
 // Vaciar el carrito
@@ -144,9 +162,12 @@ contenedorCarrito.addEventListener("click", (event) => {
     const nombreProducto = event.target.dataset.nombre;
     decrementarCantidad(nombreProducto);
   }
+
+  if (event.target.classList.contains("cerrar-producto")) {
+    const nombreProducto = event.target.dataset.nombre;
+    quitarProducto(nombreProducto);
+  }
 });
-
-
 
 // Vaciar el carrito al hacer clic en el botón
 btnVaciar.addEventListener("click", (event) => {
