@@ -4,6 +4,7 @@ font-family: "Poppins", sans-serif;
 position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
 }
 
+
 h1{
     font-size: xx-large;
     text-align: center;
@@ -61,12 +62,13 @@ input {
     top: 28%;
     right: 18px;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 20px;
     color: #00003d;
+    cursor: pointer;
 }
 
 span{
-    height: 10px;
+    height: 15px;
 }
 
 .form-footer {

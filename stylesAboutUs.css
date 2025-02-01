@@ -8,6 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #e8e1d9;
   position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
+
 }
 
 body::before {
@@ -27,20 +28,21 @@ body::before {
 
 /* Seccion de quienes somos */
 .quienes-somos-section {
-  margin-top: 80px;
-  padding: 20px;
-  background-color: #00003B;
+  margin-top: 100px;
+  /* padding: 20px; */
+  /* background-color: #00003B; */
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300PX;
+  height: 80%;
 }
 
 .quienes-somos-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  color: white;
+  justify-content: center;
+  color: #00003B;
   justify-items: center;
+  height: 30rem;
 }
 
 .quienes-somos-info {
@@ -67,8 +69,8 @@ body::before {
 }
 
 .imagen1 {
-  flex: 1 1 auto;
-  max-width: 400px;
+  /* flex: 1 1 auto; */
+  max-width: 500px;
   margin-left: 20px;
   padding-right: 80px;
   padding-left: 30px;
@@ -77,7 +79,7 @@ body::before {
 }
 
 .imagen1 img {
-  border-radius: 15px;
+  border-radius: 10px;
   width: 100%;
   height: auto;
 }
@@ -118,17 +120,26 @@ body::before {
 #mision-vision-valores {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  margin-top: 60px;
-  background-color: #00003b;
+  margin: 50px;
+  background: radial-gradient(#7ca0c0, #00003B);
   color: #ffffff;
+  padding: 6em;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px gray;
+
+}
+#mision, #vision{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
 }
 #mision header,
 #vision header{
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 #mision-vision-valores section {
   padding: 20px;
@@ -161,10 +172,11 @@ body::before {
 #mision-vision-valores p,
 #cita {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   text-align: center;
+  width: 400px;
 }
 
 
@@ -183,6 +195,7 @@ body::before {
 
   }
 }
+
 
 /* Seccion de nuestro equipo */
 
