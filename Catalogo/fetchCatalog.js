@@ -37,12 +37,12 @@ const formatoPesos = new Intl.NumberFormat("es-CO", {
                 <button class="wishlist-btn" aria-label="Agregar a wishlist">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="carrito-btn" aria-label="Agregar al carrito">
+                <button class="tooltip carrito-btn"  aria-label="Agregar al carrito">
                   <i class="fas fa-shopping-cart"></i>
+                  <span class="tooltiptext">Haz clic para agregar al carrito</span>
                 </button>
               </div>
-            </div>
-            <p class="descripcion-producto">${producto.descripcion}</p> 
+            </div> 
             <h4>${formatoPesos.format(producto.precio)}</h4>
           </article>
   `;

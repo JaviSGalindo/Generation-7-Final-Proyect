@@ -29,8 +29,10 @@ const renderCarrito = () => {
       <div class="carrito-item">
         <img src="${producto.img}" alt="${producto.nombre}" />
         <div id="items-container">
+
           <button class="cerrar-producto" data-nombre="${
-              producto.nombre}">X</button>
+            producto.nombre
+          }">X</button>
           <h4>${producto.nombre}</h4>
           <h5>${formatoPesos.format(producto.precio)}</h5>
           <div class="cantidad-container">
@@ -141,7 +143,6 @@ contenedorCatalogo.addEventListener("click", (event) => {
     const producto = {
       nombre: articulo.querySelector("h3").textContent,
       img: articulo.querySelector("img").src,
-      descripcion: articulo.querySelector(".descripcion-producto").textContent,
       precio: parseFloat(
         articulo.querySelector("h4").textContent.replace(/[^\d]/g, "")
       ),
@@ -153,18 +154,16 @@ contenedorCatalogo.addEventListener("click", (event) => {
 
 // Delegación de eventos en el carrito
 contenedorCarrito.addEventListener("click", (event) => {
+  const nombreProducto = event.target.dataset.nombre;
   if (event.target.classList.contains("btn-incrementar")) {
-    const nombreProducto = event.target.dataset.nombre;
     incrementarCantidad(nombreProducto);
   }
 
   if (event.target.classList.contains("btn-decrementar")) {
-    const nombreProducto = event.target.dataset.nombre;
     decrementarCantidad(nombreProducto);
   }
 
   if (event.target.classList.contains("cerrar-producto")) {
-    const nombreProducto = event.target.dataset.nombre;
     quitarProducto(nombreProducto);
   }
 });
