@@ -7,23 +7,39 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #e8e1d9;
-  position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
 
 }
+.inicial-banner{
+  color: #e8e1d9;
+  position: static;
+}
 
-body::before {
-  content: ""; /* Necesario para crear el pseudo-elemento */
-  position: absolute;
-  top: 0;
-  left: 0;
+.inicial-banner img {
+  display: block;
   width: 100%;
-  height: 100%; /* Asegura que cubra toda el área visible */
-  background-image: url("../imagenes/sombras1.png");
-  background-size: cover; /* Asegura que la imagen cubra todo el área */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  opacity: 0.5; /* Controla la transparencia */
-  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  height: 500px;
+}
+
+.inicial-banner h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Ajusta el color del texto */
+  font-size: 5em; /* Ajusta el tamaño del texto */
+  text-align: center; /* Centra el texto */
+  text-shadow: 5px 5px 10px black;
+  border: 3px solid #fff;
+  padding: 4rem 4rem;
+  box-shadow: 0 0 25px #222;
+}
+.inicial-banner p{
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.4rem;
 }
 
 /* Seccion de quienes somos */
@@ -64,7 +80,7 @@ body::before {
 }
 
 .quienes-somos-info p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
@@ -74,14 +90,13 @@ body::before {
   margin-left: 20px;
   padding-right: 80px;
   padding-left: 30px;
-  display: flex;
-  justify-content: center; /* Centra la imagen en pantallas grandes */
 }
 
 .imagen1 img {
   border-radius: 10px;
   width: 100%;
   height: auto;
+  box-shadow: 0 0 15px #ddd;
 }
 
 /* Estilos para pantallas pequeñas */
@@ -120,26 +135,17 @@ body::before {
 #mision-vision-valores {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 50px;
-  background: radial-gradient(#7ca0c0, #00003B);
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  background-color: #00003b;
   color: #ffffff;
-  padding: 6em;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px gray;
-
-}
-#mision, #vision{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
 }
 #mision header,
 #vision header{
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 #mision-vision-valores section {
   padding: 20px;
@@ -172,11 +178,10 @@ body::before {
 #mision-vision-valores p,
 #cita {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   text-align: center;
-  width: 400px;
 }
 
 
