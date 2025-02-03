@@ -15,14 +15,14 @@ body {
 }
 
 .inicial-banner img {
-  display: block;
+  display: grid;
   width: 100%;
-  height: 500px;
+  height: auto;
 }
 
 .inicial-banner h1 {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Ajusta el color del texto */
@@ -94,28 +94,58 @@ body {
 
 .imagen1 img {
   border-radius: 10px;
-  width: 100%;
+  width: 80%;
   height: auto;
   box-shadow: 0 0 15px #ddd;
 }
 
+.imagen1 img:hover{
+  transform: scale(1.2);
+
+}
+
 /* Estilos para pantallas pequeñas */
+@media (max-width: 1440px){
+
+  .inicial-banner h1 {
+    top: 40%;
+    left: 80%;
+    padding: 2rem 3rem;
+    font-size: 3em;
+  }
+}
+
 @media (max-width: 768px) {
+
+  .inicial-banner h1 {
+    top: 30%;
+    left: 50%;
+    padding: 1rem 2rem;
+    font-size: 2em;
+  }
+
   .quienes-somos-container {
-      flex-direction: column; /* Hace que los elementos se apilen */
+      display: grid;
       justify-content: center;
       padding-right: 30px;
       padding-left: 10px;
+      height: 25rem;
   }
 
   .quienes-somos-info {
       padding-left: 0; /* Elimina el padding a la izquierda */
       text-align: center; /* Asegura que el texto esté centrado */
+      max-width: 500px;
+  }
+
+  .quienes-somos-info p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
   }
 
   .imagen1 {
       margin-left: 0;
-      margin-top: 20px;
       margin-left: 30px;
       padding-right: 30px;
       padding-bottom: 30px;
@@ -126,8 +156,27 @@ body {
   }
 
   .imagen1 img {
-      width: 100%;
+      width: 40%;
   }
+}
+
+@media (max-width: 425px){
+
+  .inicial-banner h1 {
+    top: 20%;
+    left: 50%;
+    padding: 1rem 2rem;
+    font-size: 1.3em;
+  }
+  .quienes-somos-info p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
+  }
+  .imagen1 img {
+    width: 55%;
+}
+
 }
 
 
@@ -142,6 +191,7 @@ body {
   margin-top: 60px;
   background-color: #00003b;
   color: #ffffff;
+  padding: 5%;
 }
 #mision header,
 #vision header{
