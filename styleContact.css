@@ -13,15 +13,52 @@ main {
   padding-bottom: 4rem;
   background-color: #00003d;
 }
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+  box-shadow: 3px 1px 10px 0.5px gray;
+  height: 504.1px;
+  background-color: #e8e1d9;
+  width: 300px;
+}
+.info-section p{
+  text-align: center;
+  padding: 10px 20px;
+
+}
+
+.info-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #00003d;
+  padding: 2rem 3rem;
+}
+
+.svg-container svg {
+  padding-top: 20%;
+  width: 100px;
+  height: 100px;
+  fill: #00003d;
+}
 .mainformulario {
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   display: flex;
   justify-content: center;
   padding: 3rem;
   width: 400px;
   height: 450px;
   background-color: #e8e1d9;
-  box-shadow: 3px 1px 10px 0.5px gray;
 }
 
 main .formulario {
