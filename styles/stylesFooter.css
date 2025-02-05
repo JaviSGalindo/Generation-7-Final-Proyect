@@ -17,22 +17,32 @@
   }
   
   /* Seccion de informacion de redes sociales */
-  .footer-info-section {
+  .footer-info-section, .footer-info-section-contact {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
     background-color: #7CA0C0;
     font-family: 'Poppins', sans-serif;
   }
   
-  .footer-info-title {
-    font-size: 50px;
-    padding-bottom: 10px;
+  .footer-info-title  {
+    font-size: 2.3rem;
+    padding-bottom: 18px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+  }
+  .footer-info-title-contact{
+    font-size: 2.3rem;
+    padding-bottom: 18px;
     padding-right: 25px;
     padding-left: 25px;
     font-family: "Playfair Display", sans-serif;
@@ -41,21 +51,32 @@
     text-align: center;
   }
   
-  .footer-info-container {
+  .footer-info-container, .footer-info-container-contact {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 25%;
+    grid: 1rem;
   }
   
-  .footer-info-container a {
+  .footer-info-container a, .footer-info-container-contact a {
     color: inherit;
-    font-size: 80px;
+    font-size: 25px;
     text-decoration: none;
+    padding: 1rem;
+    transition: 0.2s;
+  }
+  .footer-info-container-contact a {
+    font-size: 2.8rem;
   }
   
   .footer-info-container a:hover {
+    color: #7CA0C0;
+    transform: scale(1.15);
+  }
+  .footer-info-container-contact a:hover {
     color: #00003B;
+    transform: scale(1.15);
   }
   
   /* Secccion de newsletter - suscripcion a informacion */
@@ -72,7 +93,7 @@
   }
   
   .footer-newsletter-container form p {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 10px;
   }
   
@@ -83,19 +104,19 @@
     max-width: 100%;
     border-radius: 8px;
     border: 1px solid #ccc; /* Borde estándar */
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   
   /* Asegurarse de que el borde rojo no afecte al input de la newsletter */
   #email-newsletter:focus:invalid {
-    border: 1px solid #ccc; /* Establecer un borde normal al hacer foco */
-    background-color: #fff; /* Fondo normal */
+    border: 1px solid #ccc;
+    background-color: #fff;
   }
   
   /* Si el input es válido, establecer borde normal */
   #email-newsletter:valid {
     border: 1px solid #ccc;
-    background-color: #e8e1d9; /* Fondo normal */
+    background-color: #e8e1d9;
   }
   
   /* Estilo del boton */
@@ -107,6 +128,7 @@
     width: 100%;
     color: #E8E1D9;
     border-radius: 8px;
+    height: 2rem;
   }
   
   .footer-newsletter-container button:hover {
@@ -164,7 +186,7 @@
   }
   
   .footer-elements p {
-    font-size: 50px;
+    font-size: 36px;
     font-family: "Playfair Display", sans-serif;
     font-weight: 700;
     margin: 0;
@@ -186,10 +208,14 @@
   
   /* Seccion todos los derechos reservados */
   .footer-bottom-section {
-    width: 100%;
+    display: flex;
+    width: 80%;
+    justify-self: center;
     text-align: center;
+    align-items: center;
+    justify-content: space-around;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
   
   .back-to-top-button {
@@ -217,11 +243,21 @@
       align-items: center;
       justify-items: center;
     }
+    .footer-info-container-contact a {
+      font-size: 2.5rem;
+    }
   }
   
   @media (max-width: 550px) {
+    .footer-info-container{
+      grid-template-columns: repeat(4, 1fr);
+
+    }
     .footer-info-container a {
-      font-size: 55px;
+      font-size: 2rem;
+    }
+    .footer-info-container-contact a {
+      font-size: 2rem;
     }
   
     .footer-final-section {
@@ -239,6 +275,9 @@
     .footer-info-container {
       flex-direction: column;
       align-items: center;
+    }
+    .footer-bottom-section{
+      flex-direction: column;
     }
   }
   
