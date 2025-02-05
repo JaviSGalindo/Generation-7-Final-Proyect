@@ -17,6 +17,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 0px;
 }
 
 .info-section {
@@ -27,14 +28,14 @@ main {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px 0px 0px 10px;
-  box-shadow: 3px 1px 10px 0.5px gray;
-  height: 504.1px;
+  height: 31.6em;
   background-color: #e8e1d9;
   width: 300px;
 }
 .info-section p{
   text-align: center;
   padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
 
 }
 
@@ -43,6 +44,7 @@ main {
   text-align: center;
   color: #00003d;
   padding: 2rem 3rem;
+  font-family: "Playfair Display", sans-serif;
 }
 
 .svg-container svg {
@@ -197,6 +199,16 @@ button:hover {
     padding: 20px;
   }
 
+  .info-section {
+    padding: 15px;
+    height: 29.2em;
+    width: 300px;
+  }
+
+  .info-section p{
+    padding: 5px;  
+  }
+
   #name,
   #email,
   #message,
@@ -218,7 +230,7 @@ button:hover {
   }
   .mainformulario {
     padding: 1rem;
-    width: 95%;
+    width: 90%;
   }
 
   main .formulario {
@@ -255,4 +267,56 @@ button:hover {
   .politica-datos label {
     font-size: 10px;
   }
+}
+
+@media (max-width: 480px){
+  .info-section {
+    padding: 5px;
+    height: 29.5em;
+    width: 150px;
+  }
+  .info-section p{
+    padding: 3px; 
+    font-size: 12px; 
+  }
+  .info-title {
+    font-size: 1.2rem;
+
+  }
+  .svg-container svg {
+    padding-top: 30%;
+    width: 70px;
+    height: 70px;
+  }
+
+}
+
+@media (max-width: 320px){
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .info-section {
+    width: 290px;
+    height: 15rem;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .info-section p{
+    padding: 3px; 
+    font-size: 10px; 
+  }
+  .info-title {
+    font-size: 1rem;
+
+  }
+  
+  .svg-container svg {
+    padding-top: 30%;
+    width: 60px;
+    height: 60px;
+  }
+
 }
