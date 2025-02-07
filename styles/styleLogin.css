@@ -59,7 +59,7 @@ input[type="password"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 20px;
   font-size: 16px;
   color: #00003d;
   box-sizing: border-box;
@@ -73,12 +73,16 @@ input[type="password"]:focus {
 
 .password-container {
   position: relative;
+  height: 45px; /* Ajusta la altura según el tamaño de tu input */
+  display: flex;
+  align-items: center;
 }
 .textUser,
 .textPassword {
   font-family: "Poppins", sans-serif;
   color: #00003d;
   font-weight: normal;
+  font-size: 14px;
 }
 
 #togglePassword {
@@ -90,36 +94,24 @@ input[type="password"]:focus {
   color: #00003d;
 }
 
-.forgot-password {
-  font-size: 14px;
-  color: #00003d;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  text-align: right;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
 .error-message {
   color: #e74c3c;
   font-size: 12px;
   display: block;
   margin-top: 5px;
+  min-height: 16px;
 }
 
 /* Submit Button */
 .login-button {
+  margin-top: -8rem;
   width: 100%;
   padding: 12px;
   background-color: #00003d;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-bottom: 0.5rem;
@@ -129,6 +121,19 @@ input[type="password"]:focus {
   background-color: #7ca0c0;
 }
 
+.forgot-password a {
+  padding-top: 0.5rem;
+  font-size: 14px;
+  color: #00003d;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
 .register {
   font-size: 14px;
   color: #00003d;
@@ -145,13 +150,13 @@ input[type="password"]:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 140vh; /* Usa toda la altura de la pantalla */
+    height: 100%; /* Usa toda la altura de la pantalla */
     overflow: hidden; /* Evita el desbordamiento */
   }
 
   .login-container {
     padding: 5px;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .section-title h1 {
@@ -178,11 +183,6 @@ input[type="password"]:focus {
   .login-button {
     padding: 12px;
     font-size: 14px;
-  }
-
-  .forgot-password,
-  .register {
-    font-size: 13px;
   }
 }
 
@@ -236,7 +236,7 @@ input[type="password"]:focus {
   .login-container {
     margin-top: 7rem;
     padding: 25px;
-    max-width: 80%;
+    width: 60%;
   }
 
   .section-title h1 {
@@ -267,7 +267,7 @@ input[type="password"]:focus {
 @media (max-width: 1024px) {
   .login-container {
     padding: 30px;
-    max-width: 70%;
+    width: 100%;
   }
 
   .section-title h1 {
