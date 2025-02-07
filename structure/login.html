@@ -7,11 +7,11 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/nav2.css" />
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
     <link rel="stylesheet" href="../styles/styleLogin.css" />
 
-    <title>Contacto</title>
+    <title>Login</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -21,7 +21,9 @@
   <body>
     <nav class="navBar">
       <div class="logo">
-        <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        <a href="#home">
+          <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        </a>
       </div>
 
       <div class="barSections">
@@ -35,27 +37,22 @@
       </div>
 
       <div class="actionIcons">
-        <a href="#search" class="search" title="Buscar">
-          <i class="fa fa-search"></i>
-        </a>
-        <a href="#wishlist" class="wishlist" title="Deseos">
+        <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
         </a>
-        <a href="#cart" class="cart" title="Carrito">
+        <a href="#cart" class="cart" id="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
+          <span class="contadorCarrito">2</span>
         </a>
-        <a href="#login" class="login" title="Iniciar sesión">
+        <a href="#login" class="login" id="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
         </a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar..." />
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
+
+      <div class="hamburger">
         <i class="fa fa-bars"></i>
       </div>
     </nav>
-
     <!-- formulario login-->
     <main class="row">
       <article class="login-container">
@@ -63,19 +60,25 @@
           <h1>Bienvenida de nuevo</h1>
           <h2>Introduce tus datos para iniciar sesión</h2>
         </header>
-        <form action="https://formspree.io/f/meoonydk" method="POST">
+        <form
+          id="loginForm"
+          novalidate
+          class="formulario"
+          action="https://formspree.io/f/xjkgwnnv"
+          method="POST"
+        >
           <div class="form-group">
             <label class="textUser" for="username">Usuario:</label>
             <input
               type="text"
-              id="username"
-              name="username"
+              id="email"
+              name="email"
               placeholder="Ingresa tu e-mail o número telefónico"
               required
               aria-describedby="userError"
             />
             <span
-              id="userError"
+              id="emailError"
               class="error-message"
               aria-hidden="true"
             ></span>
@@ -90,6 +93,11 @@
                 placeholder="Ingresa tu contraseña"
                 required
               />
+              <span
+                class="error-message"
+                style="display: none"
+                id="passwordError"
+              ></span>
               <!-- Ícono para mostrar/ocultar la contraseña -->
               <i
                 class="fa fa-eye"
@@ -98,9 +106,11 @@
               ></i>
             </div>
             <!-- recuperar contraseña -->
-            <a href="../structure/recuperacion.html" class="forgot-password"
-              >¿Olvidaste tu contraseña?</a
-            >
+            <div class="forgot-password">
+              <a href="../structure/recuperacion.html"
+                >¿Olvidaste tu contraseña?</a
+              >
+            </div>
           </div>
           <span class="error-message" style="display: none" id="accessError">
             Datos de acceso no válidos
@@ -211,5 +221,6 @@
       </section>
     </footer>
     <script src="../funcionalities/login.js"></script>
+    <script type="module" src="../validacionFormulario.js"></script>
   </body>
 </html>
