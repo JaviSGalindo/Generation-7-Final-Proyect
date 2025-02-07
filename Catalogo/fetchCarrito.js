@@ -5,7 +5,6 @@ const totalPrecio = document.getElementById("total-precio");
 const contadorCarrito = document.getElementById("contadorCarrito");
 const toast = document.getElementById("toast-container");
 
-
 // Cargar carrito desde localStorage si existe
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -30,13 +29,22 @@ const renderCarrito = () => {
       <div class="carrito-item">
         <img src="${producto.img}" alt="${producto.nombre}" />
         <div id="items-container">
+
+          <button class="cerrar-producto" data-nombre="${
+            producto.nombre
+          }">X</button>
           <h4>${producto.nombre}</h4>
           <h5>${formatoPesos.format(producto.precio)}</h5>
           <div class="cantidad-container">
-            <button class="btn-decrementar" data-nombre="${producto.nombre}">-</button>
+            <button class="btn-decrementar" data-nombre="${
+              producto.nombre
+            }">-</button>
             <span class="cantidad">${producto.cantidad}</span>
-            <button class="btn-incrementar" data-nombre="${producto.nombre}">+</button>
+            <button class="btn-incrementar" data-nombre="${
+              producto.nombre
+            }">+</button>            
           </div>
+          
         </div>
       </div>
     `;
@@ -48,7 +56,10 @@ const renderCarrito = () => {
 
 // Actualizar el total del carrito
 const actualizarTotal = () => {
-  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+  const total = carrito.reduce(
+    (acc, item) => acc + item.precio * item.cantidad,
+    0
+  );
   totalPrecio.textContent = `Total: ${formatoPesos.format(total)}`;
 };
 
@@ -60,7 +71,9 @@ const actualizarContadorCarrito = () => {
 
 // Agregar un producto al carrito
 const addToCart = (producto) => {
-  const productoExistente = carrito.find((item) => item.nombre === producto.nombre);
+  const productoExistente = carrito.find(
+    (item) => item.nombre === producto.nombre
+  );
 
   if (productoExistente) {
     productoExistente.cantidad += 1;
@@ -96,6 +109,13 @@ const decrementarCantidad = (nombreProducto) => {
   }
 };
 
+// Quitar un producto
+const quitarProducto = (nombreProducto) => {
+  carrito = carrito.filter((item) => item.nombre !== nombreProducto);
+  guardarCarrito();
+  renderCarrito();
+};
+
 // Vaciar el carrito
 const vaciarCarrito = () => {
   carrito = [];
@@ -123,7 +143,6 @@ contenedorCatalogo.addEventListener("click", (event) => {
     const producto = {
       nombre: articulo.querySelector("h3").textContent,
       img: articulo.querySelector("img").src,
-      descripcion: articulo.querySelector(".descripcion-producto").textContent,
       precio: parseFloat(
         articulo.querySelector("h4").textContent.replace(/[^\d]/g, "")
       ),
@@ -135,18 +154,19 @@ contenedorCatalogo.addEventListener("click", (event) => {
 
 // Delegación de eventos en el carrito
 contenedorCarrito.addEventListener("click", (event) => {
+  const nombreProducto = event.target.dataset.nombre;
   if (event.target.classList.contains("btn-incrementar")) {
-    const nombreProducto = event.target.dataset.nombre;
     incrementarCantidad(nombreProducto);
   }
 
   if (event.target.classList.contains("btn-decrementar")) {
-    const nombreProducto = event.target.dataset.nombre;
     decrementarCantidad(nombreProducto);
   }
+
+  if (event.target.classList.contains("cerrar-producto")) {
+    quitarProducto(nombreProducto);
+  }
 });
-
-
 
 // Vaciar el carrito al hacer clic en el botón
 btnVaciar.addEventListener("click", (event) => {
