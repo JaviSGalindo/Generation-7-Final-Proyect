@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
-    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/nav2.css" />
     <link rel="stylesheet" href="carrito.css"/>
     <link rel="stylesheet" href="catalog.css"/>
   </head>
@@ -25,10 +25,12 @@
     <div id="toast-container">
 
     </div>
-    <!--  Navbar -->
+    <!-- NavBar -->
     <nav class="navBar">
       <div class="logo">
-        <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        <a href="#home">
+          <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        </a>
       </div>
 
       <div class="barSections">
@@ -42,27 +44,23 @@
       </div>
 
       <div class="actionIcons">
-        <a href="#search" class="search" title="Buscar">
-          <i class="fa fa-search"></i>
-        </a>
-        <a href="#wishlist" class="wishlist" title="Deseos">
+        <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
         </a>
-        <a id="abrir-carrito" class="cart" title="Carrito">
+        <a class="cart" id="abrir-carrito" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
-          <span id="contadorCarrito">0</span>
+          <span id="contadorCarrito"></span>
         </a>
-        <a href="#login" class="login" title="Iniciar sesión">
+        <a href="#login" class="login" id="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
         </a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar..." />
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
+
+      <div class="hamburger">
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+  <!-- Fin NavBar -->
 
     <!--------- Contenedor del carrito de compras---- -->
 <div id="cerrar-carrito" class="carrito-modal">

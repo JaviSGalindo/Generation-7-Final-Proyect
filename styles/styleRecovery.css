@@ -13,9 +13,9 @@ main {
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  margin-top: 3rem; /* Mueve el contenido hacia abajo */
-  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
   padding: inherit;
+  padding-top: 50px;  
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
   background-color: #00003d;
   margin-bottom: 20px;
 }

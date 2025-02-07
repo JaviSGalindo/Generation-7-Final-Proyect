@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="stylesAboutUs.css" />
     <link rel="stylesheet" href="styles/stylesFooter.css">
-    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/nav2.css" />
     
     <!-- Fuentes -->
     <link
@@ -35,10 +35,12 @@
   </head>
 
   <body>
-    <!--  Navbar -->
+    <!-- NavBar -->
     <nav class="navBar">
       <div class="logo">
-        <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        <a href="#home">
+          <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        </a>
       </div>
 
       <div class="barSections">
@@ -52,37 +54,32 @@
       </div>
 
       <div class="actionIcons">
-        <a href="#search" class="search" title="Buscar">
-          <i class="fa fa-search"></i>
-          
-        </a>
-        <a href="#wishlist" class="wishlist" title="Deseos">
+        <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
-          
         </a>
-        <a href="#cart" class="cart" title="Carrito">
+        <a href="#cart" class="cart" id="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
-         
+          <span class="contadorCarrito"></span>
         </a>
-        <a href="#login" class="login" title="Iniciar sesión">
+        <a href="#login" class="login" id="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
-          
         </a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar..." />
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
+
+      <div class="hamburger">
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+    <!-- Fin NavBar -->
+
+
     <main>
       <!-- Quienes somos - Seccion -->
       <section class="quienes-somos-section">
         <div class="inicial-banner">
           <img src="/images/Leaves-Banner.jpg" alt="">
           <h1 class="quienes-somos-title">¿Quiénes somos?</h1>
-          <p>¡Conoce más sobre notros!</p>
+          <p>¡Conoce más sobre nosotros!</p>
         </div>
         <div class="quienes-somos-container">
 
