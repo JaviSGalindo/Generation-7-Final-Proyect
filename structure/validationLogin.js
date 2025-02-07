@@ -5,8 +5,10 @@ const form = document.getElementById("loginForm");
 const handleSubmit = (event) => {
   event.preventDefault();
   if (validator.sendLoginForm(event)) {
+      
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
     const userEmail = atob(localStorage.getItem("email"));
     const userPassword = atob(localStorage.getItem("password"));

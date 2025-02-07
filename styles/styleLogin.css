@@ -80,6 +80,7 @@ input[type="password"]:focus {
   color: #00003d;
   font-weight: normal;
 }
+
 #togglePassword {
   position: absolute;
   top: 50%;

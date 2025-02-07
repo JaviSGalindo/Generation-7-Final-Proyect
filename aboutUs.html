@@ -79,21 +79,29 @@
     <main>
       <!-- Quienes somos - Seccion -->
       <section class="quienes-somos-section">
+        <div class="inicial-banner">
+          <img src="/images/Leaves-Banner.jpg" alt="">
+          <h1 class="quienes-somos-title">¿Quiénes somos?</h1>
+          <p>¡Conoce más sobre notros!</p>
+        </div>
         <div class="quienes-somos-container">
+
           <div class="quienes-somos-info">
-            <h1 class="quienes-somos-title">¿Quiénes somos?</h1>
+
             <p>
               Nuestro propósito es envolverte en una experiencia única, donde
               cada producto y detalle están impregnados de un amor
               incondicional. Queremos que te sientas amada, apreciada y radiante
-              en cada paso que des. Somos testigo de tus sueños más profundos y
+              en cada paso que des. <span id="content"> Somos testigo de tus sueños más profundos y
               la compañera en tu viaje hacia el empoderamiento y la
               autenticidad. Juntas, descubriremos el poder que yace en tu
-              interior y lo elevaremos hasta lo más alto.
+              interior y lo elevaremos hasta lo más alto.</span>
             </p>
+              <button onclick="showtext()" id="know-more">Saber más</button>
           </div>
-          <div class="imagen1">
-            <img src="img/logo 1.jpg" alt="Imagen de quienes somos" />
+          <div class="imagen1"> 
+            <img src="/images/anillo.png" alt="Imagen de quienes somos" />
+
           </div>
         </div>
       </section>
@@ -344,5 +352,6 @@
     crossorigin="anonymous"
     ></script>
     <script src="funcionalities/nav.js"></script>
+    <script src="/funcionalities/showtext.js"></script>
   </body>
 </html>

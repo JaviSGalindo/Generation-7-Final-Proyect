@@ -1,3 +1,10 @@
+
+body {
+font-family: "Poppins", sans-serif;
+position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
+}
+
+
 h1{
     font-size: xx-large;
     text-align: center;
@@ -29,19 +36,39 @@ h1{
     justify-content: space-around;
     width: 600px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
 }
-.form-group input {
+
+input {
     width: 250px;
     height: 25px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    padding-left: 1.3em;
+
 }
+
+.password-container {
+    position: relative;
+  }
+
+#togglePassword {
+    position: absolute;
+    top: 28%;
+    right: 18px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #00003d;
+    cursor: pointer;
+}
+
 span{
-    height: 10px;
+    height: 15px;
 }
 
 .form-footer {
@@ -94,26 +121,7 @@ span{
     margin-top: 5px;
 }
   
-#successMessage {
-    justify-content: center;
-    color: green;
-    font-size: 12px;
-    margin-top: 5px;
-}
-  
-.sm {
-    display: flex;
-    justify-self: center !important;
-    justify-content: center !important;
-}
-  
-/* input:focus:invalid,
-  textarea:invalid {
-    border: 1px solid red;
-} */
-  
-input:focus:invalid,
-  textarea:focus:invalid {
+input:focus {
     background-color: #b1d1eea0;
 }
 
@@ -125,7 +133,7 @@ input:focus:invalid,
     .form-container {
         padding: 50px;
         width: 500px;
-        height: 530px;
+        height: 550px;
     }
     .form-group {
         width: 500px;
@@ -149,15 +157,19 @@ input:focus:invalid,
         font-size: 9px;
         padding: 10px;
     }
+    #togglePassword {
+        top: 23%;
+        right: 25px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 426px) {
 
     .form-container {
-        padding: 20px;
+        padding: 10px;
         width: 300px;
-        height: 460px;
-
+      
     }
     .form-group {
         width: 200px;
@@ -186,6 +198,17 @@ input:focus:invalid,
         font-size: 10px;
         padding: 8px 18px;
     }
+    
+    input::placeholder{
+        font-size: 5px;
+        padding-left: 0em;
+
+    }
+    #togglePassword {
+        top: 25%;
+        right: 10px;
+        font-size: 8px;
+    }
 
 }
 @media (max-width: 426px) {
@@ -202,6 +225,13 @@ input:focus:invalid,
     }
     .form-footer p{
         font-size: 8px;
+    }
+    #togglePassword {
+        font-size: 8px;
+    }
+    input::placeholder{
+        font-size: 7px;
+
     }
 
 }
