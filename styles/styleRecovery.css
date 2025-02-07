@@ -7,7 +7,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #00003d;
 }
 
 main {
@@ -18,6 +17,7 @@ main {
   height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
   padding: inherit;
   background-color: #00003d;
+  margin-bottom: 20px;
 }
 
 .restore-container {

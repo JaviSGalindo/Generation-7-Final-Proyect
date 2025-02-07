@@ -29,6 +29,9 @@
     background-color: #7CA0C0;
     font-family: 'Poppins', sans-serif;
   }
+  .footer-info-section-contact{
+    padding: 2rem;
+  }
   
   .footer-info-title  {
     font-size: 2.3rem;
@@ -82,7 +85,7 @@
   /* Secccion de newsletter - suscripcion a informacion */
   .footer-newsletter-container {
     padding: 20px;
-    max-width: 300px;
+    width: 10rem;
     margin-right: 20px;
   }
   
@@ -101,7 +104,7 @@
   #email-newsletter {
     margin-bottom: 10px;
     padding: 10px;
-    max-width: 100%;
+    width: 8rem;
     border-radius: 8px;
     border: 1px solid #ccc; /* Borde estándar */
     font-size: 0.8rem;
@@ -125,7 +128,7 @@
     box-shadow: none;
     border: none;
     padding: 5px;
-    width: 100%;
+    width: 10rem;
     color: #E8E1D9;
     border-radius: 8px;
     height: 2rem;
@@ -148,12 +151,6 @@
   
   
   /* Seccion de logo - informacion */
-  .footer-final-section {
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-  }
-  
   .footer-logo-container img {
     max-width: 200px;
     height: auto;
@@ -168,6 +165,7 @@
     justify-items: center;
     align-items: center;
     width: 100%;
+    padding-top: 20px;
   }
   
   .footer-elements-container {
@@ -193,6 +191,13 @@
     padding-bottom: 5px;
     text-align: center;
   }
+  #elevia-footer{
+    padding: 0px 20px;
+  }
+  #elevia-footer ul li{
+    word-break: keep-all;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #E8E1D9;  }
   
   .footer-elements-list li a {
     font-size: 15px;
@@ -215,7 +220,7 @@
     align-items: center;
     justify-content: space-around;
     padding-top: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
   
   .back-to-top-button {
@@ -229,7 +234,9 @@
     .footer-newsletter-container {
       margin-right: 10px;
     }
-  
+    .footer-logo-container img{
+      max-width: 150px;
+    }
     .footer-final-section {
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
@@ -254,10 +261,20 @@
 
     }
     .footer-info-container a {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     .footer-info-container-contact a {
       font-size: 2rem;
+    }
+    #rights-reserved {
+      font-size: 1rem;
+    }
+    .footer-elements-container{
+      padding-top: 10px;
+    }
+    .footer-logo-container img{
+      padding: 5px;
+      max-width: 140px;
     }
   
     .footer-final-section {
