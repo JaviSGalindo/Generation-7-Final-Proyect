@@ -18,6 +18,7 @@ main {
   flex-direction: row;
   justify-content: center;
   gap: 0px;
+
 }
 
 .info-section {
@@ -269,30 +270,8 @@ button:hover {
   }
 }
 
-@media (max-width: 480px){
-  .info-section {
-    padding: 5px;
-    height: 29.5em;
-    width: 150px;
-  }
-  .info-section p{
-    padding: 3px; 
-    font-size: 12px; 
-  }
-  .info-title {
-    font-size: 1.2rem;
-
-  }
-  .svg-container svg {
-    padding-top: 30%;
-    width: 70px;
-    height: 70px;
-  }
-
-}
-
-@media (max-width: 320px){
-
+@media (max-width: 425px){
+  
   .row {
     flex-direction: column;
     justify-content: center;
@@ -300,13 +279,17 @@ button:hover {
   }
 
   .info-section {
-    width: 290px;
-    height: 15rem;
+    width: 367px;
+    height: 9rem;
     border-radius: 10px 10px 0px 0px;
   }
+  .info-title {
+    font-size: 10rem;
+  }
+
   .info-section p{
     padding: 3px; 
-    font-size: 10px; 
+    font-size: 12px; 
   }
   .info-title {
     font-size: 1rem;
@@ -314,9 +297,12 @@ button:hover {
   }
   
   .svg-container svg {
-    padding-top: 30%;
-    width: 60px;
-    height: 60px;
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .mainformulario {
+    border-radius: 0px 0px 10px 10px;
   }
 
 }
