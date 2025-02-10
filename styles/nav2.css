@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para la barra de navegación */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e8e1d9;
+  padding: 10px 30px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo */
+.navBar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #00003b;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navBar .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-top: 3px;
+}
+
+/* Menú de navegación */
+.barSections {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  padding: 10px 0;
+}
+
+.barSections ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.barSections ul li {
+  margin: 0 15px;
+}
+
+.barSections ul li a {
+  text-decoration: none;
+  color: #00003b;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.barSections ul li a:hover {
+  color: #7ca0c0;
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+/* Íconos de acción */
+.actionIcons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.actionIcons a {
+  font-size: 20px;
+  color: #00003b;
+}
+
+.actionIcons a:hover {
+  color: #7ca0c0;
+  transform: scale(1.1);
+}
+
+/* Ícono del carrito */
+.cart {
+  font-size: 20px;
+  color: #00003b;
+  text-decoration: none;
+  position: relative; /* Permite que el contador se posicione sobre este */
+}
+
+/* Contador del carrito */
+.cart #contadorCarrito {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #7ca0c0;
+  color: #e8e1d9;
+  font-size: 12px;
+  font-weight: regular;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px; /* Asegura que el contador sea un círculo con cualquier número */
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+}
+
+/* Ajuste en móviles */
+@media (max-width: 767px) {
+  .navBar {
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* Ocultamos el menú en móviles por defecto */
+  .barSections {
+    display: none;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: #e8e1d9;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .barSections ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+  }
+
+  .barSections ul li {
+    transition: background-color 0.3s ease-in-out; /* Suaviza el cambio */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .barSections ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Cuando el menú hamburguesa está abierto */
+  .navBar.open .barSections {
+    display: flex;
+    top: calc(100% + 10px);
+  }
+
+  /* Estilo de iconos en pantalla pequeña */
+  .actionIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    width: 60%;
+  }
+
+  .actionIcons a {
+    font-size: 24px;
+    color: #00003b;
+  }
+
+  /* Mostrar el icono del menú en móviles */
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    height: 56px;
+  }
+
+  .hamburger i {
+    color: #00003b;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navBar {
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .barSections {
+    flex: 1; /* Reduce el ancho del menú */
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
+
+  .barSections ul {
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+  .barSections ul li {
+    margin: 0 10px; /* Reduce el espacio entre elementos */
+  }
+
+  .barSections ul li a {
+    font-size: 14px !important; /* Reduce el tamaño del texto */
+  }
+
+  .actionIcons {
+    flex: 0.1; /* Ajusta el ancho de los íconos */
+    justify-content: flex-end;
+  }
+
+  .actionIcons a {
+    font-size: 20px; /* Disminuye el tamaño de los iconos */
+  }
+}
+
+/* Asegurar que en pantallas grandes `.barSections` siempre esté visible */
+@media (min-width: 1024px) {
+  .barSections {
+    display: flex !important;
+    flex: 1; /* Ocupará más espacio */
+    justify-content: center;
+  }
+
+  .barSections ul {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Ajusta el ancho del menú */
+  }
+
+  .barSections ul li {
+    margin: 0 20px;
+    /* Espaciado uniforme */
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+
+  .actionIcons {
+    flex: 0.2; /* Ocupa menos espacio */
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .navBar {
+    max-width: 2560px; /* Limita el ancho para que no se extienda demasiado */
+    padding: 10px 30px; /* Mayor padding para que se vea más elegante */
+  }
+
+  .navBar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    width: 4vw;
+    height: 4vw;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #00003b;
+  }
+
+  /* Logo: imagen */
+  .navBar .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .barSections {
+    flex: 1.5;
+    justify-content: center;
+  }
+
+  .barSections ul {
+    width: 70%; /* Reduce un poco el ancho para evitar que los elementos se dispersen demasiado */
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .barSections ul li {
+    margin: 0 30px; /* Mayor espaciado */
+  }
+
+  .barSections ul li a {
+    font-size: 16px; /* Aumenta el tamaño del texto */
+  }
+
+  .actionIcons {
+    flex: 0.15; /* Reduce el espacio de los íconos */
+    justify-content: space-between;
+  }
+
+  .actionIcons a {
+    font-size: 22px; /* Aumenta el tamaño de los iconos */
+  }
+
+  .cart::after {
+    font-size: 14px; /* Aumenta el tamaño del contador */
+    padding: 4px 8px;
+  }
+}

@@ -1,13 +1,12 @@
-
 .logo-carrusel {
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #00003B;
-    color: white;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00003B;
+  color: white;
+  padding: 20px;
+  padding-top: 150px;
     gap: 20px;
   }
   
@@ -109,5 +108,10 @@
         border-width: 1px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
+  }
+  @media (max-width: 552px) {
+    
+    .logo {
+display: none;    }
   }
   

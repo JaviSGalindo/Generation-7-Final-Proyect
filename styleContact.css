@@ -29,7 +29,7 @@ main {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px 0px 0px 10px;
-  height: 31.6em;
+  height: 470px;
   background-color: #e8e1d9;
   width: 300px;
 }
@@ -60,7 +60,7 @@ main {
   justify-content: center;
   padding: 3rem;
   width: 400px;
-  height: 450px;
+  height: 470px;
   background-color: #e8e1d9;
 }
 
@@ -290,6 +290,9 @@ button:hover {
   .info-section p{
     padding: 3px; 
     font-size: 12px; 
+  }
+  .mainformulario{
+    border-radius: 0px 0px 10px 10px;
   }
   .info-title {
     font-size: 1rem;
