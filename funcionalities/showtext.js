@@ -4,9 +4,9 @@ function showtext(){
 
     if (contenido.style.display === "none") {
         contenido.style.display = "block";
-        button.textContent ="Saber menos";
+        button.textContent ="Mostrar menos";
     } else {
         contenido.style.display = "none";
-        button.textContent = "Saber más"
+        button.textContent = "Mostrar más"
     }
 }
