@@ -96,7 +96,7 @@ input[type="password"]:focus {
 }
 
 .error-message {
-  color: #e74c3c;
+  color: red;
   font-size: 12px;
   display: block;
   margin-top: 5px;
