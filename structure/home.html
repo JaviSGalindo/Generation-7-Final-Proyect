@@ -16,18 +16,60 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles/stylesFooter.css" />
+    <link rel="stylesheet" href="../styles/nav2.css" />
 
     <title>Home</title>
   </head>
   <body>
+    <!-- NavBar -->
+    <nav class="navBar">
+      <div class="logo">
+        <a href="#Home">
+          <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        </a>
+      </div>
+
+      <div class="barSections">
+        <ul>
+          <li><a href="home.html">Inicio</a></li>
+          <li><a href="Catalogo/catalog.html">Catálogo</a></li>
+          <li><a href="">Empodérate</a></li>
+          <li><a href="aboutUs.html">¿Quiénes somos?</a></li>
+          <li><a href="contact.html">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="actionIcons">
+        <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
+          <i class="fa fa-heart"></i>
+        </a>
+        <a href="#cart" class="cart" id="cart" title="Carrito">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="contadorCarrito"></span>
+        </a>
+        <a href="#login" class="login" id="login" title="Iniciar sesión">
+          <i class="fa fa-user"></i>
+        </a>
+      </div>
+
+      <div class="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+    </nav>
+    <!-- Fin NavBar -->
     <main class="main banner">
       <div class="slides">
-        <img src="../imagenes/banner1.jpg" alt="Slide 1" />
+        <a href="#destacados"
+          ><img src="../imagenes/banner1.jpg" alt="Slide 1"
+        /></a>
         <p class="ad">Nueva colección</p>
         <h1 class="name_colection">E M P Í R E A</h1>
       </div>
       <div class="slides">
-        <img src="../imagenes/banner2.png" alt="Slide 2" />
+        <a href="#Empoderate"
+          ><img src="../imagenes/banner2.png" alt="Slide 2"
+        /></a>
         <h1 class="head">Elevia</h1>
         <p class="slogan">Tu esencia, tu belleza.</p>
       </div>
@@ -48,7 +90,7 @@
       </header>
       <div class="destacados-container">
         <article class="producto-destacado">
-          <a href="#">
+          <a href="../Catalogo/catalog.html">
             <img src="../imagenes/vestuario5.jpg" alt="" />
           </a>
           <div class="main-destacados-text">
@@ -57,7 +99,7 @@
         </article>
 
         <article class="producto-destacado">
-          <a href="#">
+          <a href="#Accesorios">
             <img src="../imagenes/accesorios.jpg" alt="" />
           </a>
           <div class="main-destacados-text">
@@ -66,6 +108,111 @@
         </article>
       </div>
     </section>
+
+    <!--Footer -->
+    <footer class="footer-section">
+      <!-- Section de informacion de footer -->
+      <!-- <section class="footer-info-section">
+        <div class="footer-info-title">
+            <p id="redes">Nuestras Redes Sociales</p>
+        </div>
+        <div class="footer-info-container">
+            <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
+            <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
+            </a></p>
+            <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
+            </a></p>
+            <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
+        </div>
+    </section> -->
+
+      <!-- Seccion de logo - informacion respecto a la marca -->
+      <section class="footer-final-section">
+        <!-- Logo y Nombre de la Marca -->
+        <div class="footer-logo-container">
+          <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia" />
+        </div>
+        <!-- Opciones de Ayuda -->
+        <div class="footer-elements-container">
+          <div id="ayuda-footer" class="footer-elements">
+            <p>Ayuda</p>
+            <ul class="footer-elements-list">
+              <li>
+                <a href="mailto:devoluciones.elevia@gmail.com" target="_blank"
+                  >Devoluciones</a
+                >
+              </li>
+              <li>
+                <a href="mailto:atencion.elevia@gmail.com" target="_blank"
+                  >Atención al cliente</a
+                >
+              </li>
+              <li>
+                <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                  >Peticiones</a
+                >
+              </li>
+              <li>
+                <a href="/files/peticiones.pdf" download="peticiones.pdf"
+                  >Quejas y Reclamos</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Acceso a las secciones de la pagina de Elevia -->
+        <div class="footer-elements-container">
+          <div id="nosotros-footer" class="footer-elements">
+            <p>Nosotros</p>
+            <ul class="footer-elements-list">
+              <li><a href="#contact-section">Productos</a></li>
+              <li><a href="#contact-section">Quiénes Somos</a></li>
+              <li><a href="#contact-section">Contáctanos</a></li>
+              <li><a href="#redes">Redes Sociales</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-elements-container">
+          <div id="elevia-footer" class="footer-elements">
+            <p></p>
+            <ul class="footer-elements-list">
+              <li>
+                "Empoderamos tu estilo, realzamos tu esencia y reflejamos tu
+                belleza en cada detalle."
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+      </section>
+      <section class="footer-bottom-section">
+        <div>
+          <p id="rights-reserved">
+            &copy; 2025 Elevia - Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="footer-info-container">
+          <p>
+            <a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
+              ><i class="fab fa-instagram" target="_blank"></i
+            ></a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i> </a>
+          </p>
+          <p>
+            <a href="" target="_blank"><i class="fab fa-whatsapp"></i> </a>
+          </p>
+          <p>
+            <a href="mailto:elevia.contact@gmail.com" target="_blank"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+    </footer>
 
     <script src="../funcionalities/home.js"></script>
   </body>
