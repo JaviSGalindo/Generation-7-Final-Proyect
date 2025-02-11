@@ -72,6 +72,9 @@
     <div class="background">
       <div class="form-container">
         <h1>Regístrate con nosotros</h1>
+        <h2 id="introtext">
+          Introduce tus datos para crear tu cuenta en Elevia
+        </h2>
 
         <form
           id="registerForm"
@@ -81,7 +84,7 @@
           class="formulario"
         >
           <div class="form-group">
-            <div>
+            <div class="input-tittle">
               <label for="name">Nombre *</label>
               <input
                 type="text"
@@ -92,8 +95,8 @@
               />
               <span id="nameError" class="error-message"></span>
             </div>
-            <div>
-              <label for="apellido">Apellido *</label>
+            <div class="input-tittle">
+              <label for="lastName">Apellido *</label>
               <input
                 type="text"
                 id="lastName"
@@ -106,7 +109,7 @@
           </div>
 
           <div class="form-group">
-            <div>
+            <div class="input-tittle">
               <label for="email">Email *</label>
               <input
                 type="email"
@@ -117,7 +120,7 @@
               />
               <span id="emailError" class="error-message"></span>
             </div>
-            <div>
+            <div class="input-tittle">
               <label for="telefono">Teléfono *</label>
               <input
                 type="tel"
@@ -131,7 +134,7 @@
           </div>
           <div class="form-group">
             <div class="form-group">
-              <div>
+              <div class="input-tittle">
                 <label for="password">Contraseña *</label>
                 <div class="password-container">
                   <input
@@ -149,7 +152,7 @@
                 </div>
               </div>
 
-              <div>
+              <div class="input-tittle">
                 <label for="confirmPassword">Confirmar Contraseña *</label>
                 <div class="password-container">
                   <input
