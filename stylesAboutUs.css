@@ -196,9 +196,9 @@ body {
 }
 
 .ourPeople-member img {
-  width: 75%;
+  width: 11rem;
   border-radius: 50%;
-  height: 150px;
+  height: 11rem;
   object-fit: cover;
 }
 
@@ -376,8 +376,8 @@ body {
     padding: 15px;
   }
   .ourPeople-member img {
-    width: 70%;
-    height: 130px;
+    width: 8rem;
+    height: 8rem;
   }
   .btn {
     width: 45px;
@@ -400,13 +400,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
   }
   .ourPeople-member {
-    width: 90%;
+    width: 65%;
   }
   .ourPeople-member img {
-    width: 60%;
-    height: 120px;
+    width: 9rem;
+    height: 9rem;
   }
   .btn {
     width: 40px;
@@ -414,10 +415,6 @@ body {
   }
   .btn i {
     font-size: 18px;
-  }
-  .ourPeople-member img {
-    width: 45%;
-    height: 150px;
   }
 }
 
@@ -478,8 +475,11 @@ body {
   .quienes-somos-info #know-more {
     font-size: 0.7rem;
   }
+  .ourPeople-member {
+    width: 70%;
+  }
   .ourPeople-member img {
-    width: 60%;
-    height: 150px;
+    width: 9rem;
+    height: 9rem;
   }
 }
