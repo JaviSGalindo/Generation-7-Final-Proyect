@@ -11,7 +11,7 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 6000); // Cambia la diapositiva cada 7 segundos
+  setTimeout(showSlides, 8000); // Cambia la diapositiva cada 7 segundos
 }
 
 function moveSlide(n) {

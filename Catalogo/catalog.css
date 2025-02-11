@@ -78,7 +78,7 @@ p {
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 1024px) {
   .banner-img {
     height: 260px;
   }
@@ -377,7 +377,7 @@ article {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 0.5rem;
   opacity: 0.85;
-  animation: slide-in 0.5s, fade-out 0.5s 2.5s forwards; 
+  animation: slide-in 0.5s, fade-out 0.5s 2.5s forwards;
 }
 
 .tooltip {
@@ -390,7 +390,7 @@ article {
 .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color:#00003b;
+  background-color: #00003b;
   color: #fff;
   text-align: center;
   border-radius: 5px;
