@@ -19,8 +19,8 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 0px;
-
+  align-items: center;
+  margin-top: 1rem;
 }
 
 /* Sección de información */
@@ -206,7 +206,7 @@ textarea:focus:invalid {
   .info-section {
     width: 80%;
     border-radius: 10px 10px 0 0;
-    height: 350px;
+    height: 390px;
   }
 
   .info-section p {
@@ -254,44 +254,4 @@ textarea:focus:invalid {
   .politica-datos label {
     font-size: 10px;
   }
-}
-
-@media (max-width: 425px){
-  
-  .row {
-    flex-direction: column;
-    justify-content: center;
-    gap: 0px;
-  }
-
-  .info-section {
-    width: 367px;
-    height: 9rem;
-    border-radius: 10px 10px 0px 0px;
-  }
-  .info-title {
-    font-size: 10rem;
-  }
-
-  .info-section p{
-    padding: 3px; 
-    font-size: 12px; 
-  }
-  .mainformulario{
-    border-radius: 0px 0px 10px 10px;
-  }
-  .info-title {
-    font-size: 1rem;
-
-  }
-  
-  .svg-container svg {
-    visibility: hidden;
-    height: 0px;
-  }
-
-  .mainformulario {
-    border-radius: 0px 0px 10px 10px;
-  }
-
 }
