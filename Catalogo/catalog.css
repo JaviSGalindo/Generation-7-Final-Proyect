@@ -136,7 +136,7 @@ p {
   border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
   border-radius: 5px; /* Esquinas redondeadas */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
+  transition: all 0.5s ease; /* Transición suave para la sombra y aumento */
 }
 
 .producto-destacado img:hover {
