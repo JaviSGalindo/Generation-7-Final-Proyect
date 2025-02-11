@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <main class="main banner">
+      <div class="slides">
+        <img src="../imagenes/banner1.jpg" alt="Slide 1" />
+        <p class="ad">Nueva colección</p>
+        <h1 class="name_colection">E M P Í R E A</h1>
+      </div>
+      <div class="slides">
+        <img src="../imagenes/banner2.png" alt="Slide 2" />
+        <h1 class="head">Elevia</h1>
+        <p class="slogan">Tu esencia, tu belleza.</p>
+      </div>
+      <div class="button">
+        <button class="prev" onclick="moveSlide(-1)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="moveSlide(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </main>
+
+    <!-- Destacados Section -->
+    <section id="destacados">
+      <header>
+        <h1 id="title-destacados">Empírea</h1>
+      </header>
+      <div class="destacados-container">
+        <article class="producto-destacado">
+          <a href="#">
+            <img src="../imagenes/vestuario5.jpg" alt="" />
+          </a>
+          <div class="main-destacados-text">
+            <h1>VESTUARIO</h1>
+          </div>
+        </article>
+
+        <article class="producto-destacado">
+          <a href="#">
+            <img src="../imagenes/accesorios.jpg" alt="" />
+          </a>
+          <div class="main-destacados-text">
+            <h1>ACCESORIOS</h1>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <script src="../funcionalities/home.js"></script>
+  </body>
+</html>
