@@ -96,21 +96,18 @@
                 placeholder="Ingresa tu contraseña"
                 required
               />
-              <span class="error-message" style="display: none" id="passwordError"></span>
               <!-- Ícono para mostrar/ocultar la contraseña -->
-              <i
-                class="fa fa-eye"
-                id="togglePassword"
-                style="cursor: pointer"
-              ></i>
+              <i class="fa fa-eye" id="togglePassword" style="cursor: pointer"></i>
             </div>
-            <!-- recuperar contraseña -->
+            <!-- Mueve el span de error fuera del .password-container -->
+            <span class="error-message" id="passwordError" style="display: none;"></span>
+          
+            <!-- Recuperar contraseña -->
             <div class="forgot-password">
-              <a href="recuperacion.html"
-                >¿Olvidaste tu contraseña?</a
-              >
+              <a href="recuperacion.html">¿Olvidaste tu contraseña?</a>
             </div>
           </div>
+          
           <span class="error-message" style="display: none" id="accessError">
             Datos de acceso no válidos
           </span>
