@@ -40,14 +40,16 @@ h1 {
   border-radius: 10px;
   padding: 50px;
   width: 100%;
-  max-width: 950px;
+  max-width: 800px;
 }
 
 .form-group {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .form-group label {
@@ -67,9 +69,18 @@ input {
 }
 
 .input-tittle {
-  width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5px;
+  }
+
+  .input-tittle:has(span.show) {
+    padding-bottom: 0px; /* Elimina el padding cuando hay error */
 }
 
+
+
+  
 .input-tittle label {
   display: block;
   margin-bottom: 6px;
@@ -83,7 +94,7 @@ input {
 
 .togglePassword {
   position: absolute;
-  top: 35%;
+  top: 20px;
   right: 15px;
   transform: translateY(-50%);
   font-size: 18px;
@@ -143,16 +154,29 @@ span {
 /* mensajes de errores */
 
 .error-message {
-  width: 400px;
+  width: 700px;
   color: #ff0000;
   font-size: 12px;
   margin: 15px;
   word-break: break-word;
   max-width: 100%;
   display: block;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-left: 10px;
+  display: none;
 }
+
+.show {
+    display: block;
+  }
+
+  input, textarea, select {
+    margin-bottom: 10px;
+    width: 100%; /* Mantener el ancho */
+    box-sizing: border-box; /* Evitar desbordamiento */
+  }
+  
+
 
 input:focus {
   background-color: #b1d1eea0;
@@ -166,8 +190,10 @@ input:focus {
   }
 
   .form-group {
-    flex-direction: column;
-    gap: 10px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   }
 
   .input-tittle {
@@ -193,7 +219,7 @@ input:focus {
   }
 
   .togglePassword {
-    top: 32%;
+    top: 35%;
     font-size: 18px;
   }
 
@@ -256,6 +282,7 @@ input:focus {
   }
 
   .togglePassword {
+    top: 18px;
     font-size: 14px;
     right: 10px;
   }
