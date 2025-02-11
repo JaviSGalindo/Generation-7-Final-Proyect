@@ -176,6 +176,13 @@ body {
   margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
 }
+
+.inicial-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ourPeople-section {
   margin-top: 60px;
 }
@@ -184,6 +191,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+.imagen1 img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+  margin-left: 40px;
 }
 
 .ourPeople-member {
@@ -321,6 +334,7 @@ body {
   }
   .imagen1 img {
     width: 60%;
+    margin-left: 0px;
   }
   .quienes-somos-info {
     max-width: 500px;
@@ -356,7 +370,9 @@ body {
     padding-top: 10%;
   }
   .imagen1 img {
-    width: 30%;
+    width: 20rem;
+    height: 10rem;
+    object-fit: cover;
   }
   #initialTittle {
     font-size: 1.8rem;
@@ -386,6 +402,18 @@ body {
   .btn i {
     font-size: 20px;
   }
+  .quienes-somos-title {
+    width: 60%;
+    font-size: 36px !important;
+    
+  }
+
+  .inicial-banner p {
+    text-align: center;
+    font-size: 22px !important;
+    margin:  15px 0 ;
+  }
+
 }
 
 /* Ajustes para pantallas pequeñas (hasta 480px) */
@@ -415,6 +443,21 @@ body {
   }
   .btn i {
     font-size: 18px;
+  }
+  .quienes-somos-title {
+    width: 60%;
+    font-size: 24px !important;
+    
+  }
+  .inicial-banner img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .inicial-banner p {
+    text-align: center;
+    font-size: 14px !important;
+    margin:  15px 0 ;
   }
 }
 

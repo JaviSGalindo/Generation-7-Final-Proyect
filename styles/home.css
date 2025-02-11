@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #e8e1d9;
+  background-color: #e8e1d9 !important;
 }
 .main.banner {
   position: relative;

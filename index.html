@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/stylesFooter.css">
     <link rel="stylesheet" href="styles/nav2.css" />
-    <link rel="stylesheet" href="styleHome.css">
+    
     <title>Inicio</title>
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
@@ -59,45 +61,56 @@
       </div>
     </nav>
     <!-- Fin NavBar -->
+    <main class="main banner">
+      <div class="slides">
+        <a href="#destacados"
+          ><img src="imagenes/banner1.jpg" alt="Slide 1"
+        /></a>
+        <p class="ad">Nueva colección</p>
+        <h1 class="name_colection">E M P Í R E A</h1>
+      </div>
+      <div class="slides">
+        <a href="#Empoderate"
+          ><img src="imagenes/banner2.png" alt="Slide 2"
+        /></a>
+        <h1 class="head">Elevia</h1>
+        <p class="slogan">Tu esencia, tu belleza.</p>
+      </div>
+      <div class="button">
+        <button class="prev" onclick="moveSlide(-1)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="moveSlide(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </main>
 
-    <!-- sección princiapal donde va el logo y la imagen princiapl -->
-    <section class="logo-carrusel">
-        <!-- /* contenido izquierdo */ -->
-        <div class="left-content">
-          <img src="img/Elevia-ícono-1.png" alt="Logo Elevia" class="logo">
-          <div class="text-content">
-            <h1>Elevia</h1>
-            <p class="slogan">Tu esencia, tu belleza</p>
-            <p class="categories">Ropa | Accesorios</p>
+    <!-- Destacados Section -->
+    <section id="destacados">
+      <header>
+        <h1 id="title-destacados">Empírea</h1>
+      </header>
+      <div class="destacados-container">
+        <article class="producto-destacado">
+          <a href="Catalogo/catalog.html">
+            <img src="imagenes/vestuario5.jpg" alt="" />
+          </a>
+          <div class="main-destacados-text">
+            <h1>VESTUARIO</h1>
           </div>
-        </div>
+        </article>
 
-        <!-- /* contenido izquierdo */ -->
-        <div class="right-content">
-            <div class="carousel">
-                <div class="carousel-track">
-                  <img src="images/imgAccesorios1.webp" alt="Imagen 1" class="carousel-image">
-                  <img src="images/imgAccesorios4.webp" alt="Imagen 2" class="carousel-image">
-                  <img src="images/imgAccesorios7.webp" alt="Imagen 3" class="carousel-image">
-                </div>
-            </div>
-        </div>
-
-      </section>
-
-    <!-- segunda sección donde va una imagen y una descripción -->
-     <section class="imagen-description">
-        
-     </section>
-
-     <!-- última sección de home, donde presenta imagenes de prendas y accesorios -->
-      <section class="prendas-accesorios">
-
-      </section>
-
-
-    
-
+        <article class="producto-destacado">
+          <a href="#Accesorios">
+            <img src="imagenes/accesorios.jpg" alt="" />
+          </a>
+          <div class="main-destacados-text">
+            <h1>ACCESORIOS</h1>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <!-- Seccion Footer -->
     <footer class="footer-section">
