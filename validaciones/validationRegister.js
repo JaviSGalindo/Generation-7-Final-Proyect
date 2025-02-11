@@ -11,7 +11,9 @@ const handleSubmit = (event) => {
     localStorage.setItem("email", btoa(email));
     localStorage.setItem("password", btoa(password));
     document.getElementById("registerForm").reset();
-    window.location.href = "login.html";
+    
+    window.location.href = "structure/login.html";
+    
   }
 };
 
