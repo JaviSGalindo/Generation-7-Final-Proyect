@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
-    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/nav2.css" />
     <link rel="stylesheet" href="carrito.css"/>
     <link rel="stylesheet" href="catalog.css"/>
   </head>
@@ -25,44 +25,42 @@
     <div id="toast-container">
 
     </div>
-    <!--  Navbar -->
+    <!-- NavBar -->
     <nav class="navBar">
       <div class="logo">
-        <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        <a href="#home">
+          <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        </a>
       </div>
 
       <div class="barSections">
         <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#products">Catálogo</a></li>
-          <li><a href="#blog">Empodérate</a></li>
-          <li><a href="#AboutUs">¿Quiénes somos?</a></li>
-          <li><a href="#contact">Contáctanos</a></li>
+          <li><a href="../home.html">Inicio</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="">Empodérate</a></li>
+          <li><a href="../aboutUs.html">¿Quiénes somos?</a></li>
+          <li><a href="../contact.html">Contáctanos</a></li>
         </ul>
       </div>
 
       <div class="actionIcons">
-        <a href="#search" class="search" title="Buscar">
-          <i class="fa fa-search"></i>
-        </a>
-        <a href="#wishlist" class="wishlist" title="Deseos">
+        <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
         </a>
-        <a id="abrir-carrito" class="cart" title="Carrito">
+        <a class="cart" id="abrir-carrito" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
-          <span id="contadorCarrito">0</span>
+          <span id="contadorCarrito"></span>
         </a>
-        <a href="#login" class="login" title="Iniciar sesión">
+        <a href="#login" class="login" id="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
         </a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar..." />
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
+
+      <div class="hamburger">
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+  <!-- Fin NavBar -->
 
     <!--------- Contenedor del carrito de compras---- -->
 <div id="cerrar-carrito" class="carrito-modal">
@@ -76,6 +74,7 @@
     </div>
     <div class="carrito-footer">
       <p id="total-precio">Total: $0.00</p>
+      <button id="comprar-carrito" class="comprar-carrito">Comprar Ahora</button>
       <button id="vaciar-carrito" class="vaciar-carrito">Vaciar Carrito</button>
     </div>
   </div>
@@ -132,98 +131,75 @@
 
     <!--Footer -->
     <footer class="footer-section">
+
       <!-- Section de informacion de footer -->
-      <section class="footer-info-section">
-        <div class="footer-info-title">
-          <p id="redes">Nuestras Redes Sociales</p>
-        </div>
-        <div class="footer-info-container">
-          <p>
-            <a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
-              ><i class="fab fa-instagram" target="_blank"></i
-            ></a>
-          </p>
-          <p>
-            <a href="" target="_blank"><i class="fab fa-facebook"></i> </a>
-          </p>
-          <p>
-            <a href="" target="_blank"><i class="fab fa-whatsapp"></i> </a>
-          </p>
-          <p>
-            <a href="mailto:elevia.contact@gmail.com" target="_blank"
-              ><i class="fas fa-envelope"></i
-            ></a>
-          </p>
-        </div>
-      </section>
+      <!-- <section class="footer-info-section">
+          <div class="footer-info-title">
+              <p id="redes">Nuestras Redes Sociales</p>
+          </div>
+          <div class="footer-info-container">
+              <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
+              <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
+              </a></p>
+              <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
+              </a></p>
+              <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
+          </div>
+      </section> -->
 
       <!-- Seccion de logo - informacion respecto a la marca -->
       <section class="footer-final-section">
-        <!-- Logo y Nombre de la Marca -->
-        <div class="footer-logo-container">
-          <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia" />
-        </div>
-        <!-- Opciones de Ayuda -->
-        <div class="footer-elements-container">
-          <div id="ayuda-footer" class="footer-elements">
-            <p>Ayuda</p>
-            <ul class="footer-elements-list">
-              <li>
-                <a href="mailto:devoluciones.elevia@gmail.com" target="_blank"
-                  >Devoluciones</a
-                >
-              </li>
-              <li>
-                <a href="mailto:atencion.elevia@gmail.com" target="_blank"
-                  >Atención al cliente</a
-                >
-              </li>
-              <li>
-                <a href="/files/peticiones.pdf" download="peticiones.pdf"
-                  >Peticiones</a
-                >
-              </li>
-              <li>
-                <a href="/files/peticiones.pdf" download="peticiones.pdf"
-                  >Quejas y Reclamos</a
-                >
-              </li>
-            </ul>
+          <!-- Logo y Nombre de la Marca -->
+          <div class="footer-logo-container">
+              <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia">
           </div>
-        </div>
-        <!-- Acceso a las secciones de la pagina de Elevia -->
-        <div class="footer-elements-container">
-          <div id="nosotros-footer" class="footer-elements">
-            <p>Nosotros</p>
-            <ul class="footer-elements-list">
-              <li><a href="#contact-section">Productos</a></li>
-              <li><a href="#contact-section">Quiénes Somos</a></li>
-              <li><a href="#contact-section">Contáctanos</a></li>
-              <li><a href="#redes">Redes Sociales</a></li>
-            </ul>
+          <!-- Opciones de Ayuda -->
+          <div class="footer-elements-container">
+              <div id="ayuda-footer" class="footer-elements">
+                  <p>Ayuda</p>
+                  <ul class="footer-elements-list">
+                      <li><a href="mailto:devoluciones.elevia@gmail.com" target="_blank">Devoluciones</a></li>
+                      <li><a href="mailto:atencion.elevia@gmail.com" target="_blank">Atención al cliente</a></li>
+                      <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Peticiones</a></li>
+                      <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Quejas y Reclamos</a></li>
+                  </ul>
+              </div>
           </div>
-        </div>
+          <!-- Acceso a las secciones de la pagina de Elevia -->
+          <div class="footer-elements-container">
+              <div id="nosotros-footer" class="footer-elements">
+                  <p>Nosotros</p>
+                  <ul class="footer-elements-list">
+                      <li> <a href="#contact-section">Productos</a> </li>
+                      <li> <a href="#contact-section">Quiénes Somos</a> </li>
+                      <li> <a href="#contact-section">Contáctanos</a> </li>
+                      <li><a href="#redes">Redes Sociales</a></li>
+                  </ul>
+              </div>
+          </div> 
 
-        <!-- Suscripcion a noticias e informacion de Elevia -->
-        <div class="footer-newsletter-container">
-          <form action="subscribe.php" method="post">
-            <p>Suscribete a información y promociones especiales de Elevia</p>
-            <input
-              type="email"
-              id="email-newsletter"
-              name="email"
-              placeholder="Tu correo electrónico"
-              required
-            />
-            <button type="submit">Suscribirse</button>
-          </form>
-        </div>
-
-        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+          <div class="footer-elements-container">
+            <div id="elevia-footer" class="footer-elements">
+                <p></p>
+                <ul class="footer-elements-list">
+                    <li>"Empoderamos tu estilo, realzamos tu esencia y reflejamos tu belleza en cada detalle."</li>
+                </ul>
+            </div>
+        </div> 
+          
+      <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
       </section>
       <section class="footer-bottom-section">
-        <div>
-          <p>&copy; 2025 Elevia - Todos los derechos reservados.</p>
+          <div>
+            <p id="rights-reserved">&copy; 2025 Elevia  -  Todos los derechos reservados.</p>
+          </div>
+          <div class="footer-info-container">
+            <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
+            <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
+            </a></p>
+            <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
+            </a></p>
+            <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
         </div>
       </section>
     </footer>

@@ -1,65 +1,65 @@
 [
   {
     "nombre": "CONFIANZA",
-    "descripcion": "Vestido con escote profundo con amarre al frente y recogido en las mangas.",
+
     "precio": 165000,
     "img": "imgProducts/confianza.jpg"
   },
   {
     "nombre": "COQUETA",
-    "descripcion": "Enterizo disponible en negro, incluye cinturón",
+
     "precio": 172000,
     "img": "imgProducts/coqueta.webp"
   },
   {
     "nombre": "TENAZ",
-    "descripcion": "Set x 2. Top con manga en capa y falda.",
+
     "precio": 162000,
     "img": "imgProducts/tenaz.webp"
   },
   {
     "nombre": "VALIENTE",
-    "descripcion": "Set x 3. En lino.",
+
     "precio": 199000,
     "img": "imgProducts/valiente.webp"
   },
   {
     "nombre": "CREATIVA",
-    "descripcion": "Set x 2",
+
     "precio": 155000,
     "img": "imgProducts/creativa.webp"
   },
   {
     "nombre": "CORAJE",
-    "descripcion": "Vestido corto con amarre lateral.",
+
     "precio": 180000,
     "img": "imgProducts/coraje.jpg"
   },
 
   {
     "nombre": "SOÑADORA",
-    "descripcion": "Set x 2. Pantalón, top, incluye cinturón.",
+
     "precio": 171000,
     "img": "imgProducts/sonadora.jpg"
   },
 
   {
     "nombre": "COMPASIVA",
-    "descripcion": "Set x 2. Top y pantaloneta",
+
     "precio": 147000,
     "img": "imgProducts/compasiva.jpg"
   },
 
   {
     "nombre": "COMPROMETIDA",
-    "descripcion": "Set x 3. Camisa, falda y shorts.",
+
     "precio": 175000,
     "img": "imgProducts/comprometida.jpg"
   },
 
   {
     "nombre": "FORTALEZA",
-    "descripcion": "Set x 2.",
+
     "precio": 215000,
     "img": "imgProducts/fortaleza.jpg"
   }

@@ -8,8 +8,8 @@ const handleSubmit = (event) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
+    localStorage.setItem("email", btoa(email));
+    localStorage.setItem("password", btoa(password));
     document.getElementById("registerForm").reset();
     window.location.href = "login.html";
   }

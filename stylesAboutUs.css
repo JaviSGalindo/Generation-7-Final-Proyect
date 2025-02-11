@@ -7,40 +7,61 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #e8e1d9;
-  position: relative; /* Asegura que el pseudo-elemento ::before esté relativo al body */
+
+}
+.inicial-banner{
+  color: #e8e1d9;
+  position: static;
+  background-color: #e8e1d9;
 }
 
-body::before {
-  content: ""; /* Necesario para crear el pseudo-elemento */
-  position: absolute;
-  top: 0;
-  left: 0;
+.inicial-banner img {
+  display: grid;
   width: 100%;
-  height: 100%; /* Asegura que cubra toda el área visible */
-  background-image: url("../imagenes/sombras1.png");
-  background-size: cover; /* Asegura que la imagen cubra todo el área */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  opacity: 0.5; /* Controla la transparencia */
-  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  height: auto;
+}
+
+.inicial-banner h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Ajusta el color del texto */
+  font-size: 5em; /* Ajusta el tamaño del texto */
+  text-align: center; /* Centra el texto */
+  text-shadow: 5px 5px 10px black;
+  border: 3px solid #fff;
+  padding: 4rem 4rem;
+  box-shadow: 0 0 25px #222;
+}
+.inicial-banner p{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
 }
 
 /* Seccion de quienes somos */
 .quienes-somos-section {
-  margin-top: 80px;
-  padding: 20px;
-  background-color: #00003B;
+  background-color: #e8e1d9;
+  margin-top: 100px;
+  /* padding: 20px; */
+  /* background-color: #00003B; */
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 300PX;
+  height: 95%;
+  margin: 0px;
 }
 
 .quienes-somos-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  color: white;
+  justify-content: center;
+  color: #00003B;
   justify-items: center;
+  height: 30rem;
 }
 
 .quienes-somos-info {
@@ -50,7 +71,7 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centra el texto */
-  justify-content: center;
+  justify-content: left;
 }
 
 .quienes-somos-title {
@@ -62,43 +83,130 @@ body::before {
 }
 
 .quienes-somos-info p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
+#content{
+  display: none;
+  margin-top: 10px;
+}
+.quienes-somos-info #know-more{
+  padding: 1% 5%;
+  border: none;
+  color: #00003B;
+  background-color: #7ca0c0;
+  box-shadow: 2px 2px 5px #00003B;
+  margin-bottom: 5%;
+  
+}
+#know-more:hover{
+  background-color: #fff;
+}
+
 .imagen1 {
-  flex: 1 1 auto;
-  max-width: 400px;
+  /* flex: 1 1 auto; */
+  max-width: 500px;
   margin-left: 20px;
   padding-right: 80px;
   padding-left: 30px;
-  display: flex;
-  justify-content: center; /* Centra la imagen en pantallas grandes */
 }
 
 .imagen1 img {
-  border-radius: 15px;
-  width: 100%;
+  border-radius: 10px;
+  width: 80%;
   height: auto;
+  box-shadow: 0 0 15px #ddd;
+}
+
+.imagen1 img:hover{
+  transform: scale(1.1);
+
 }
 
 /* Estilos para pantallas pequeñas */
+@media (max-width: 2560px){
+
+  .inicial-banner h1 {
+    top: 30%;
+    padding: 4rem 6rem;
+    font-size: 3.3em;
+  }
+  .inicial-banner p{
+    top: 46%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1440px){
+
+  .inicial-banner h1 {
+    top: 30%;
+    padding: 2rem 3rem;
+    font-size: 3em;
+  }
+  .inicial-banner p{
+    top: 46%;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1024px){
+
+  .inicial-banner h1 {
+    top: 25%;
+    padding: 2rem 3rem;
+    font-size: 2.5em;
+  }
+  .inicial-banner p{
+    top: 38%;
+    font-size: 1.3rem;
+  }
+  .quienes-somos-info p {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
+
+  .inicial-banner h1 {
+    top: 20%;
+    left: 50%;
+    padding: 1rem 2rem;
+    font-size: 2em;
+  }
+
+  .inicial-banner p{
+    top: 30%;
+    font-size: 1rem;
+  }
+  .quienes-somos-section{
+    height: 810px;
+  }
+
   .quienes-somos-container {
-      flex-direction: column; /* Hace que los elementos se apilen */
+      display: grid;
       justify-content: center;
       padding-right: 30px;
       padding-left: 10px;
+      height: 25rem;
   }
 
   .quienes-somos-info {
       padding-left: 0; /* Elimina el padding a la izquierda */
       text-align: center; /* Asegura que el texto esté centrado */
+      max-width: 500px;
+ 
+  }
+
+  .quienes-somos-info p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
   }
 
   .imagen1 {
       margin-left: 0;
-      margin-top: 20px;
       margin-left: 30px;
       padding-right: 30px;
       padding-bottom: 30px;
@@ -109,7 +217,66 @@ body::before {
   }
 
   .imagen1 img {
-      width: 100%;
+      width: 40%;
+  }
+}
+
+@media (max-width: 425px){
+
+  .inicial-banner img {
+    display: grid;
+    width: 100%;
+    height: 250px;
+  }
+
+  .inicial-banner h1 {
+    top: 20%;
+    left: 50%;
+    padding: 1rem 2rem;
+    font-size: 1em;
+  }
+  .inicial-banner p{
+    top: 26%;
+    font-size: 0.6rem;
+  }
+  .quienes-somos-info p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
+  }
+  .imagen1 img {
+    width: 55%;
+}
+}
+
+@media (max-width: 320px){
+
+  .inicial-banner h1 {
+    top: 18%;
+    padding: 1rem 1rem;
+    font-size: 0.9em;
+  }
+
+  .inicial-banner p{
+    top: 24%;
+    font-size: 0.4rem;
+  }
+  .quienes-somos-info #know-more{
+    font-size: 0.7rem;
+  }
+
+  .quienes-somos-info p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
+  }
+  .imagen1 img {
+    width: 55%;
+  }
+  .quienes-somos-info p {
+    font-size: 0,4rem;
+    line-height: 1.3rem;
+
   }
 }
 
@@ -122,16 +289,16 @@ body::before {
   align-items: center;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
   background-color: #00003b;
   color: #ffffff;
+  padding: 5%;
 }
 #mision header,
 #vision header{
   padding-bottom: 30px;
 }
 #mision-vision-valores section {
-  padding: 20px;
+  padding: 40px;
 }
 
 #mision-vision-valores #mision {
@@ -183,6 +350,7 @@ body::before {
 
   }
 }
+
 
 /* Seccion de nuestro equipo */
 

@@ -105,7 +105,7 @@
 }
 
 /* Contador del carrito */
-.cart .contadorCarrito {
+.cart #contadorCarrito {
   position: absolute;
   top: -8px;
   right: -10px;
