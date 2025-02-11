@@ -1,0 +1,210 @@
+.main.banner {
+  position: relative;
+  width: 90%; /* O el tamaño que prefieras */
+  padding-top: 1vw;
+  max-width: 100%;
+  margin: auto; /* Esto lo centra horizontalmente */
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+}
+
+.slides {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Agregar la capa de transparencia con un pseudo-elemento */
+.slides::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(225, 225, 225, 0.1),
+    rgba(0, 0, 0, 1)
+  ); /* Ajusta la opacidad aquí */
+  z-index: 1; /* Asegura que esté sobre la imagen */
+}
+
+/* La imagen sigue intacta */
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.head {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Playfair Display", sans-serif;
+}
+.slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+
+.ad {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+
+.name_colection {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.head,
+.slogan,
+.ad,
+.name_colection {
+  position: absolute;
+  z-index: 2; /* Asegura que estén encima de la capa de transparencia */
+  color: white;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  width: 100%;
+  top: 44.5%;
+  display: flex;
+  justify-content: space-between;
+}
+.button .next,
+.prev {
+  font-size: 3vw;
+}
+.prev,
+.next {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2; /* Asegura que estén encima de la capa de transparencia */
+  color: white;
+  text-align: center;
+}
+
+#title-destacados {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Playfair Display", serif;
+  color: #00003b;
+}
+
+.destacados-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 70px;
+  max-width: 100;
+}
+
+.producto-destacado {
+  position: relative;
+  width: 600px; /* Ajusta según necesidad */
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.producto-destacado img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.producto-destacado:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-destacados-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.producto-destacado:hover .main-destacados-text {
+  opacity: 1;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .destacados-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto-destacado {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  #title-destacados {
+    font-size: 1.5rem;
+  }
+
+  .producto-destacado {
+    width: 100%;
+  }
+
+  .main-destacados-text {
+    font-size: 1rem;
+  }
+}
