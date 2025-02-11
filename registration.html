@@ -8,8 +8,8 @@
       rel="stylesheet"
       href="registration.css"
     />
-    <link rel="stylesheet" href="./styles/stylesFooter.css" />
-    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="styles/stylesFooter.css" />
+    <link rel="stylesheet" href="styles/nav2.css" />
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -27,15 +27,17 @@
     />
   </head>
   <body>
-    <!--  Navbar -->
+    <!-- NavBar -->
     <nav class="navBar">
       <div class="logo">
-        <img src="../img/Elevia-ícono-1.png" alt="logo" />
+        <a href="index.html">
+          <img src="img/Elevia-ícono-1.png" alt="logo" />
+        </a>
       </div>
 
       <div class="barSections">
         <ul>
-          <li><a href="home.html">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="Catalogo/catalog.html">Catálogo</a></li>
           <li><a href="">Empodérate</a></li>
           <li><a href="aboutUs.html">¿Quiénes somos?</a></li>
@@ -44,27 +46,23 @@
       </div>
 
       <div class="actionIcons">
-        <a href="#search" class="search" title="Buscar">
-          <i class="fa fa-search"></i>
-        </a>
-        <a href="#wishlist" class="wishlist" title="Deseos">
+        <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
           <i class="fa fa-heart"></i>
         </a>
-        <a id="abrir-carrito" class="cart" title="Carrito">
+        <a href="#cart" class="cart" id="cart" title="Carrito">
           <i class="fa fa-shopping-cart"></i>
-          <span id="contadorCarrito">0</span>
+          <span class="contadorCarrito"></span>
         </a>
-        <a href="#login" class="login" title="Iniciar sesión">
+        <a href="structure/login.html" class="login" id="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
         </a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar..." />
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
+
+      <div class="hamburger">
         <i class="fa fa-bars"></i>
       </div>
     </nav>
+    <!-- Fin NavBar -->
 
     <!----Formulario de registro ------>
     <div class="background">
@@ -229,11 +227,11 @@
               <div id="nosotros-footer" class="footer-elements">
                   <p>Nosotros</p>
                   <ul class="footer-elements-list">
-                      <li> <a href="#contact-section">Productos</a> </li>
-                      <li> <a href="#contact-section">Quiénes Somos</a> </li>
-                      <li> <a href="#contact-section">Contáctanos</a> </li>
-                      <li><a href="#redes">Redes Sociales</a></li>
-                  </ul>
+                    <li> <a href="Catalogo/catalog.html">Productos</a></li>
+                    <li><a href="index.html">Empoderate</a></li>
+                    <li> <a href="aboutUs.html">Quiénes Somos</a> </li>
+                    <li> <a href="contact.html">Contáctanos</a> </li>                        
+                </ul> 
               </div>
           </div> 
 
