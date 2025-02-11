@@ -5,6 +5,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #e8e1d9;
+
 }
 main {
   display: flex;
@@ -23,7 +25,6 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  padding: 30px;
 }
 
 .section-title h1 {
@@ -95,7 +96,7 @@ input[type="password"]:focus {
 }
 
 .error-message {
-  color: #e74c3c;
+  color: red;
   font-size: 12px;
   display: block;
   margin-top: 5px;
@@ -128,7 +129,7 @@ input[type="password"]:focus {
   text-decoration: none;
   display: block;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .forgot-password a:hover {
@@ -139,103 +140,69 @@ input[type="password"]:focus {
   color: #00003d;
   text-decoration: none;
   display: flex;
-  margin-top: 10px;
-  text-align: right;
+  margin-top: 7px;
+  text-align: center;
   justify-content: center;
 }
 
-/* Para pantallas de 320px */
-@media (max-width: 320px) {
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Usa toda la altura de la pantalla */
-    overflow: hidden; /* Evita el desbordamiento */
-  }
-
-  .login-container {
-    padding: 5px;
-    max-width: 100%;
-  }
-
-  .section-title h1 {
-    font-size: 20px;
-  }
-
-  .section-title h2 {
-    font-size: 15px;
-  }
-
-  input[type="text"],
-  input[type="password"] {
-    padding: 10px;
-    font-size: 14px; /* Ajusta el tamaño del texto ingresado */
-  }
-
-  /* Reducir tamaño del placeholder */
-  input::placeholder {
-    font-size: 12px; /* Disminuye el tamaño del placeholder */
-    color: gray; /* Cambia el color si es necesario */
-    opacity: 0.7; /* Ajusta la opacidad */
-  }
-
-  .login-button {
-    padding: 12px;
-    font-size: 14px;
-  }
-}
-
-/* Para pantallas de 425px */
+/* Para pantallas de 425px o menos */
 @media (max-width: 425px) {
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 130vh; /* Usa toda la altura de la pantalla */
-    overflow: hidden; /* Evita el desbordamiento */
-    margin-top: 3rem;
-  }
-  */ .login-container {
+  .login-container {
     padding: 20px;
     max-width: 90%;
   }
 
   .section-title h1 {
-    font-size: 20px;
+    font-size: 0.9rem;
   }
 
   .section-title h2 {
-    font-size: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 7px;
+  }
+
+  .form-group {
+    margin-bottom: 7px;
+  }
+
+  .forgot-password {
+    margin-bottom: 18px;
   }
 
   input[type="text"],
   input[type="password"] {
     padding: 10px;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
+
+  /* Reducir tamaño del placeholder */
   input::placeholder {
-    font-size: 12px; /* Disminuye el tamaño del placeholder */
-    color: gray; /* Cambia el color si es necesario */
-    opacity: 0.7; /* Ajusta la opacidad */
+    font-size: 0.9rem;
+    color: gray;
+    opacity: 0.7;
   }
 
   .login-button {
     padding: 12px;
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: -2rem;
   }
-
-  .forgot-password,
   .register {
-    font-size: 13px;
+    margin-top: 3px;
   }
 }
+@media (max-height: 568px) {
+  .login-container {
+    margin-top: 80px;
+    transform: scale(0.8); /* Reduce ligeramente el tamaño */
+  }
+}
+
 
 /* Para pantallas de 768px */
 @media (max-width: 768px) {
   .login-container {
-    margin-top: 7rem;
-    padding: 25px;
+    padding: 27px;
     width: 60%;
   }
 
@@ -291,5 +258,13 @@ input[type="password"]:focus {
   .forgot-password,
   .register {
     font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .login-container {
+    padding: 32px;
+  }
+  .login-button {
+    font-size: 1rem;
   }
 }

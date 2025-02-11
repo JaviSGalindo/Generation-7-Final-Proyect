@@ -6,24 +6,23 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #e8e1d9;
-
+  background-color: #e8e1d9 !important;
 }
 .inicial-banner{
+  margin-top: 7%;
   color: #e8e1d9;
   position: static;
   background-color: #e8e1d9;
 }
 
 .inicial-banner img {
-  display: grid;
   width: 100%;
-  height: auto;
+  height: 500px;
 }
 
 .inicial-banner h1 {
   position: absolute;
-  top: 40%;
+  top: 35% !important; 
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Ajusta el color del texto */
@@ -36,23 +35,18 @@ body {
 }
 .inicial-banner p{
   position: absolute;
-  top: 75%;
+  top: 55% !important;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 /* Seccion de quienes somos */
 .quienes-somos-section {
   background-color: #e8e1d9;
   margin-top: 100px;
-  /* padding: 20px; */
-  /* background-color: #00003B; */
   font-family: "Poppins", sans-serif;
-  font-weight: 300PX;
-  height: 95%;
-  margin: 0px;
 }
 
 .quienes-somos-container {
@@ -60,18 +54,15 @@ body {
   align-items: center;
   justify-content: center;
   color: #00003B;
-  justify-items: center;
-  height: 30rem;
+  padding: 5%;
 }
 
 .quienes-somos-info {
-  flex: 1 1 100%;
+  /* flex: 1 1 100%; */
   max-width: 700px;
-  padding-left: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el texto */
-  justify-content: left;
+  align-items: center; 
 }
 
 .quienes-somos-title {
@@ -94,192 +85,34 @@ body {
 .quienes-somos-info #know-more{
   padding: 1% 5%;
   border: none;
-  color: #00003B;
-  background-color: #7ca0c0;
-  box-shadow: 2px 2px 5px #00003B;
+  color: white;
+  background-color: #00003B;;
+  margin-top: 30px;
   margin-bottom: 5%;
+  border-radius: 10px;
   
 }
 #know-more:hover{
-  background-color: #fff;
+  background-color: #7CA0C0;
+}
+.imagen1{
+  display: flex;
+  justify-content: center;
 }
 
-.imagen1 {
-  /* flex: 1 1 auto; */
-  max-width: 500px;
-  margin-left: 20px;
-  padding-right: 80px;
-  padding-left: 30px;
-}
 
 .imagen1 img {
   border-radius: 10px;
-  width: 80%;
+  width: 40%;
   height: auto;
   box-shadow: 0 0 15px #ddd;
+  height: auto;
 }
 
 .imagen1 img:hover{
-  transform: scale(1.1);
+  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
 
 }
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 2560px){
-
-  .inicial-banner h1 {
-    top: 30%;
-    padding: 4rem 6rem;
-    font-size: 3.3em;
-  }
-  .inicial-banner p{
-    top: 46%;
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 1440px){
-
-  .inicial-banner h1 {
-    top: 30%;
-    padding: 2rem 3rem;
-    font-size: 3em;
-  }
-  .inicial-banner p{
-    top: 46%;
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 1024px){
-
-  .inicial-banner h1 {
-    top: 25%;
-    padding: 2rem 3rem;
-    font-size: 2.5em;
-  }
-  .inicial-banner p{
-    top: 38%;
-    font-size: 1.3rem;
-  }
-  .quienes-somos-info p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .inicial-banner h1 {
-    top: 20%;
-    left: 50%;
-    padding: 1rem 2rem;
-    font-size: 2em;
-  }
-
-  .inicial-banner p{
-    top: 30%;
-    font-size: 1rem;
-  }
-  .quienes-somos-section{
-    height: 810px;
-  }
-
-  .quienes-somos-container {
-      display: grid;
-      justify-content: center;
-      padding-right: 30px;
-      padding-left: 10px;
-      height: 25rem;
-  }
-
-  .quienes-somos-info {
-      padding-left: 0; /* Elimina el padding a la izquierda */
-      text-align: center; /* Asegura que el texto esté centrado */
-      max-width: 500px;
- 
-  }
-
-  .quienes-somos-info p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-top: 10%;
-  }
-
-  .imagen1 {
-      margin-left: 0;
-      margin-left: 30px;
-      padding-right: 30px;
-      padding-bottom: 30px;
-      display: flex;
-      width: 100%;
-      height: auto;
-      justify-content: center;
-  }
-
-  .imagen1 img {
-      width: 40%;
-  }
-}
-
-@media (max-width: 425px){
-
-  .inicial-banner img {
-    display: grid;
-    width: 100%;
-    height: 250px;
-  }
-
-  .inicial-banner h1 {
-    top: 20%;
-    left: 50%;
-    padding: 1rem 2rem;
-    font-size: 1em;
-  }
-  .inicial-banner p{
-    top: 26%;
-    font-size: 0.6rem;
-  }
-  .quienes-somos-info p {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    padding-top: 10%;
-  }
-  .imagen1 img {
-    width: 55%;
-}
-}
-
-@media (max-width: 320px){
-
-  .inicial-banner h1 {
-    top: 18%;
-    padding: 1rem 1rem;
-    font-size: 0.9em;
-  }
-
-  .inicial-banner p{
-    top: 24%;
-    font-size: 0.4rem;
-  }
-  .quienes-somos-info #know-more{
-    font-size: 0.7rem;
-  }
-
-  .quienes-somos-info p {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    padding-top: 10%;
-  }
-  .imagen1 img {
-    width: 55%;
-  }
-  .quienes-somos-info p {
-    font-size: 0,4rem;
-    line-height: 1.3rem;
-
-  }
-}
-
 
 /* Seccion mision y vision */
 #mision-vision-valores {
@@ -334,24 +167,6 @@ body {
   text-align: center;
 }
 
-
-@media screen and (max-width: 425px) {
-    #mision-vision-valores {
-        
-        flex-direction: column;
-        padding: 20px;
-        align-items: center;
-}
-
-#mision-vision-valores #vision {
-
-    border-top: 2px solid #ffffff; /* Línea blanca entre "Misión" y "Vision" */
-    border-left: none;
-
-  }
-}
-
-
 /* Seccion de nuestro equipo */
 
 #initialTittle {
@@ -381,9 +196,9 @@ body {
 }
 
 .ourPeople-member img {
-  width: 75%;
+  width: 11rem;
   border-radius: 50%;
-  height: 150px;
+  height: 11rem;
   object-fit: cover;
 }
 
@@ -464,64 +279,207 @@ body {
   background-color: #7ca0c0; /* Oscurece el color al pasar el cursor */
   transform: scale(1.1); /* Efecto de zoom */
 }
+/* Estilos generales para pantallas pequeñas hasta 2560px */
+@media (max-width: 2560px) {
+  .inicial-banner h1 {
+    top: 30%;
+    padding: 4rem 6rem;
+    font-size: 3.3em;
+  }
+  .inicial-banner p {
+    top: 46%;
+    font-size: 2rem;
+  }
+}
 
-@media (max-width: 768px) {
+/* Ajustes para pantallas hasta 1440px */
+@media (max-width: 1440px) {
+  .inicial-banner h1 {
+    padding: 2rem 3rem;
+    font-size: 3em;
+  }
+  .inicial-banner p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Ajustes para pantallas medianas (1024px o menos) */
+@media (max-width: 1024px) {
+  .inicial-banner {
+    margin-top: 11%;
+  }
+  .inicial-banner h1 {
+    padding: 1rem 3rem;
+    font-size: 2em;
+  }
+  .inicial-banner p {
+    top: 42% !important;
+    font-size: 1.3rem;
+  }
+  .quienes-somos-info p {
+    font-size: 1rem;
+  }
+  .imagen1 img {
+    width: 60%;
+  }
+  .quienes-somos-info {
+    max-width: 500px;
+    margin-left: 6%;
+  }
+}
+
+/* Ajustes para pantallas menores a 884px */
+@media (max-width: 884px) {
+  .inicial-banner {
+    margin-top: 14%;
+  }
+  .inicial-banner h1 {
+    top: 25% !important;
+    padding: 1rem 2rem;
+    font-size: 2em;
+  }
+  .inicial-banner p {
+    top: 35% !important;
+    font-size: 1rem;
+  }
+  .quienes-somos-container {
+    flex-direction: column;
+  }
+  .quienes-somos-info {
+    margin-left: 0;
+    text-align: center;
+    max-width: 500px;
+  }
+  .quienes-somos-info p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
+  }
+  .imagen1 img {
+    width: 30%;
+  }
   #initialTittle {
-    font-size: 1.8rem; /* Reduce el tamaño del título */
+    font-size: 1.8rem;
   }
-
+  #mision-vision-valores h2 {
+    font-size: 2.5rem;
+  }
+  .inicial-banner img {
+    width: 100%;
+    height: 350px;
+  }
   .ourPeople-container {
-    gap: 15px; /* Reduce el espacio entre las tarjetas */
+    gap: 15px;
   }
-
   .ourPeople-member {
-    width: 200px; /* Reduce el tamaño de las tarjetas */
+    width: 200px;
     padding: 15px;
   }
-
   .ourPeople-member img {
-    width: 70%;
-    height: 130px; /* Ajusta el tamaño de las imágenes */
+    width: 8rem;
+    height: 8rem;
   }
-
   .btn {
     width: 45px;
-    height: 45px; /* Reduce el tamaño de los botones */
+    height: 45px;
   }
-
   .btn i {
-    font-size: 20px; /* Reduce el tamaño de los íconos */
+    font-size: 20px;
   }
 }
 
-/* Para pantallas pequeñas (móviles) */
+/* Ajustes para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {
-#initialTittle {
-    font-size: 1.5rem; /* Ajusta el tamaño del título */
+  #initialTittle {
+    font-size: 1.5rem;
   }
-
+  #mision-vision-valores h2 {
+    font-size: 2.2rem;
+  }
   .ourPeople-container {
-    flex-direction: column; /* Las tarjetas se apilan verticalmente */
-    align-items: center; /* Centra las tarjetas */
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-  }
 
+  }
   .ourPeople-member {
-    width: 90%; /* Las tarjetas ocupan el 90% del ancho de la pantalla */
+    width: 65%;
   }
-
   .ourPeople-member img {
-    width: 60%;
-    height: 120px; /* Reduce un poco más el tamaño de las imágenes */
+    width: 9rem;
+    height: 9rem;
   }
-
   .btn {
     width: 40px;
-    height: 40px; /* Botones más pequeños */
+    height: 40px;
   }
-
   .btn i {
-    font-size: 18px; /* Íconos más pequeños */
+    font-size: 18px;
   }
 }
 
+/* Ajustes para pantallas muy pequeñas (hasta 428px) */
+@media (max-width: 428px) {
+  #mision-vision-valores {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+  #mision-vision-valores h2 {
+    font-size: 2rem;
+  }
+  #mision-vision-valores #vision {
+    border-top: 2px solid #ffffff;
+    border-left: none;
+  }
+  .inicial-banner {
+    margin-top: 25%;
+  }
+  .inicial-banner h1 {
+    top: 21% !important;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
+  .inicial-banner p {
+    top: 27% !important;
+    font-size: 0.6rem;
+  }
+  .quienes-somos-info #know-more {
+    font-size: 0.7rem;
+    margin-top: 10px;
+  }
+  .quienes-somos-info p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding-top: 10%;
+  }
+}
+
+/* Ajustes para pantallas extra pequeñas (hasta 320px) */
+@media (max-width: 320px) {
+  .inicial-banner {
+    margin-top: 33%;
+  }
+  .inicial-banner img {
+    height: 150px;
+  }
+  .inicial-banner h1 {
+    top: 20% !important;
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
+  }
+  .inicial-banner p {
+    top: 25% !important;
+    font-size: 0.4rem;
+  }
+  .quienes-somos-info #know-more {
+    font-size: 0.7rem;
+  }
+  .ourPeople-member {
+    width: 70%;
+  }
+  .ourPeople-member img {
+    width: 9rem;
+    height: 9rem;
+  }
+}
