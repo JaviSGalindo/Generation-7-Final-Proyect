@@ -92,7 +92,7 @@ export function validatePolicyCheck() {
 export function validatePhoneNumber() {
   const phoneNumber = document.getElementById("telefono");
   const phoneNumberError = document.getElementById("numberError");
-  const phoneRegex = /^[0-9]{10}$/;
+  const phoneRegex = /^\d{10}$/;
 
   if (!phoneRegex.test(phoneNumber.value.trim())) {
     phoneNumberError.textContent = "Por favor, ingresa un número de teléfono válido.";
