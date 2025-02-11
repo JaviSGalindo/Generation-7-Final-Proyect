@@ -22,19 +22,19 @@
     <!-- NavBar -->
     <nav class="navBar">
       <div class="logo">
-        <a href="#home">
+        <a href="../index.html">
           <img src="../img/Elevia-ícono-1.png" alt="logo" />
         </a>
       </div>
 
       <div class="barSections">
         <ul>
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#products">Catálogo</a></li>
-          <li><a href="#blog">Empodérate</a></li>
-          <li><a href="#AboutUs">¿Quiénes somos?</a></li>
-          <li><a href="#contact">Contáctanos</a></li>
-        </ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../Catalogo/catalog.html">Catálogo</a></li>
+          <li><a href="">Empodérate</a></li>
+          <li><a href="../aboutUs.html">¿Quiénes somos?</a></li>
+          <li><a href="../contact.html">Contáctanos</a></li>
+      </ul>
       </div>
 
       <div class="actionIcons">
@@ -45,7 +45,7 @@
           <i class="fa fa-shopping-cart"></i>
           <span class="contadorCarrito"></span>
         </a>
-        <a href="#login" class="login" id="login" title="Iniciar sesión">
+        <a href="#" class="login" id="login" title="Iniciar sesión">
           <i class="fa fa-user"></i>
         </a>
       </div>
@@ -96,21 +96,18 @@
                 placeholder="Ingresa tu contraseña"
                 required
               />
-              <span class="error-message" style="display: none" id="passwordError"></span>
               <!-- Ícono para mostrar/ocultar la contraseña -->
-              <i
-                class="fa fa-eye"
-                id="togglePassword"
-                style="cursor: pointer"
-              ></i>
+              <i class="fa fa-eye" id="togglePassword" style="cursor: pointer"></i>
             </div>
-            <!-- recuperar contraseña -->
+            <!-- Mueve el span de error fuera del .password-container -->
+            <span class="error-message" id="passwordError" style="display: none;"></span>
+          
+            <!-- Recuperar contraseña -->
             <div class="forgot-password">
-              <a href="../structure/recuperacion.html"
-                >¿Olvidaste tu contraseña?</a
-              >
+              <a href="recuperacion.html">¿Olvidaste tu contraseña?</a>
             </div>
           </div>
+          
           <span class="error-message" style="display: none" id="accessError">
             Datos de acceso no válidos
           </span>
@@ -118,7 +115,7 @@
           <button type="submit" class="login-button">Iniciar sesión</button>
 
           <div>
-            <a href="#" class="register">¿Aún no tienes cuenta? Registrate</a>
+            <a href="../registration.html" class="register">¿Aún no tienes cuenta? Registrate</a>
           </div>
         </form>
       </article>
@@ -165,11 +162,11 @@
               <div id="nosotros-footer" class="footer-elements">
                   <p>Nosotros</p>
                   <ul class="footer-elements-list">
-                      <li> <a href="#contact-section">Productos</a> </li>
-                      <li> <a href="#contact-section">Quiénes Somos</a> </li>
-                      <li> <a href="#contact-section">Contáctanos</a> </li>
-                      <li><a href="#redes">Redes Sociales</a></li>
-                  </ul>
+                    <li><a href="../Catalogo/catalog.html">Productos</a></li>
+                    <li><a href="../index.html">Empoderate</a></li>
+                    <li><a href="../aboutUs.html">Quiénes Somos</a></li>
+                    <li><a href="../contact.html">Contáctanos</a></li>
+                </ul>
               </div>
           </div> 
 

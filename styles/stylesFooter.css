@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-top: 60px;
+    margin-top: 50px;
     align-items: center;
     justify-content: center;
     background-color: #00003B;
@@ -44,7 +44,7 @@
     text-align: center;
   }
   .footer-info-title-contact{
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     padding-bottom: 18px;
     padding-right: 25px;
     padding-left: 25px;
@@ -184,7 +184,7 @@
   }
   
   .footer-elements p {
-    font-size: 36px;
+    font-size: 1.7rem;
     font-family: "Playfair Display", sans-serif;
     font-weight: 700;
     margin: 0;
@@ -220,7 +220,7 @@
     align-items: center;
     justify-content: space-around;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
   
   .back-to-top-button {
@@ -253,6 +253,7 @@
     .footer-info-container-contact a {
       font-size: 2.5rem;
     }
+
   }
   
   @media (max-width: 550px) {
@@ -268,6 +269,7 @@
     }
     #rights-reserved {
       font-size: 1rem;
+      padding-bottom: 10px;
     }
     .footer-elements-container{
       padding-top: 10px;
