@@ -25,13 +25,13 @@ export function renderModal(producto) {
               <div class="mt-3">
                 <label for="modalTalla">Talla:</label>
                 <select id="modalTalla" class="form-select">
-                  ${producto.tallas.map(talla => `<option>${talla}</option>`).join("")}
+                  ${opcionesTallas}
                 </select>
               </div>
               <div class="mt-3">
                 <label for="modalColor">Color:</label>
                 <select id="modalColor" class="form-select">
-                  ${producto.colores.map(color => `<option>${color}</option>`).join("")}
+                  ${opcionesColores}
                 </select>
               </div>
             </div>
@@ -44,6 +44,6 @@ export function renderModal(producto) {
     `;
 
     // Inicializar el modal con Bootstrap para que funcione correctamente
-    const modal = new bootstrap.Modal(document.getElementById("productoModal"));
+    const modal = new bootstrap.Modal(document.getElementById("product-modal"));
     modal.show();
 }
