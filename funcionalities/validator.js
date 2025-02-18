@@ -70,27 +70,3 @@ const handleSubmit = (event) => {
 };
 
 document.getElementById("contactForm").addEventListener("submit", handleSubmit);
-
-//Agregar "<span id="name/email/message/policyError" class="error-message"></span><br>" para mostrar los errores junto al campo de entrada en lugar de alertas (bajo el input)
-
-//Agregar <span id="successMessage" style="color: green; display: none;">Formulario enviado correctamente</span> para mostrar que el formulario se envio exitosamente en lugar de una alerta (bajo el button submit)
-
-//css:
-/*
-.error-message {
-  color: red;
-  font-size: 12px;
-  display: block;
-  margin-top: 5px;
-}
-
-#successMessage {
-    color: green;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-
-*/
-
-//Accesibilidad: Es importante que los mensajes de error sean fácilmente legibles para usuarios con discapacidad visual.  agregar un aria-live="assertive" en los contenedores de error para que las tecnologías de asistencia anuncien los mensajes correctamente.
