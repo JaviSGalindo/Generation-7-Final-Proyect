@@ -1,3 +1,5 @@
+import * as alerts from "../funcionalities/alerts.js";
+
 export function validateName() {
   const name = document.getElementById("name");
   const nameError = document.getElementById("nameError");
@@ -148,6 +150,16 @@ export function validateEmptyPassword() {
     return false;
   }
 }
+export function incorrectPassword() {
+  const passwordError = document.getElementById("passwordError");
+  passwordError.style.display = "block";
+  passwordError.textContent = "Contraseña Incorrecta";
+}
+export function correctPassword() {
+  const passwordError = document.getElementById("passwordError");
+  passwordError.style.display = "none";
+  passwordError.textContent = "";
+}
 
 // Agregar event listeners para validación en tiempo real
 
@@ -176,7 +188,7 @@ export function successMessage() {
   // document.querySelectorAll(".formulario").forEach((form) => form.reset());
 }
 
-export function sendContactForm(event) {
+export async function sendContactForm(event) {
   let hasErrors = false;
   clearErrorMessages();
 
@@ -186,13 +198,15 @@ export function sendContactForm(event) {
   if (validatePolicyCheck()) hasErrors = true;
 
   if (!hasErrors) {
-    successMessage(event);
+    await alerts.ejecutarConAlerta();
+    return true;
   } else {
     event.preventDefault();
+    return false;
   }
 }
 
-export function sendRegisterForm(event) {
+export async function sendRegisterForm(event) {
   let hasErrors = false;
   clearErrorMessages();
 
@@ -203,7 +217,7 @@ export function sendRegisterForm(event) {
   if (validatePassword()) hasErrors = true;
 
   if (!hasErrors) {
-    successMessage();
+    await alerts.ejecutarConAlerta();
     return true;
   } else {
     event.preventDefault();

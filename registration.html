@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="registration.css" />
     <link rel="stylesheet" href="styles/stylesFooter.css" />
     <link rel="stylesheet" href="styles/nav2.css" />
+    <link rel="stylesheet" href="styles/alerts.css">
 
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -194,23 +195,16 @@
       </div>
     </div>
 
+    <!-- Alerta Modal -->
+    <div class="overlay" id="alertOverlay">
+      <div class="custom-alert">
+          <h2>¡Gracias! Has completado el registro</h2>
+          <p id="text-alert">Ahora, puedes iniciar sesión.</p>
+          <button class="close-btn" id="hide-btn"> <p>Inicio de Sesión</p> </button>
+      </div>
+  </div>
     <!--Footer -->
     <footer class="footer-section">
-      <!-- Section de informacion de footer -->
-      <!-- <section class="footer-info-section">
-          <div class="footer-info-title">
-              <p id="redes">Nuestras Redes Sociales</p>
-          </div>
-          <div class="footer-info-container">
-              <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
-              <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
-              </a></p>
-              <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
-              </a></p>
-              <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
-          </div>
-      </section> -->
-
       <!-- Seccion de logo - informacion respecto a la marca -->
       <section class="footer-final-section">
         <!-- Logo y Nombre de la Marca -->
@@ -302,6 +296,7 @@
     </footer>
 
     <script src="funcionalities/nav.js"></script>
+    <script type="module" src=".//funcionalities/alerts.js"></script>
     <script type="module" src="validacionFormulario.js"></script>
     <script type="module" src="validaciones/validationRegister.js"></script>
     <script src="funcionalities/register.js"></script>
