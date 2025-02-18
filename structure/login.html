@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../styles/nav2.css" />
     <link rel="stylesheet" href="../styles/stylesFooter.css" />
     <link rel="stylesheet" href="../styles/styleLogin.css" />
-
+    <link rel="stylesheet" href="../styles/alerts.css">
     <title>Login</title>
     <link
       rel="stylesheet"
@@ -120,25 +120,16 @@
         </form>
       </article>
     </main>
-
+<!-- Alerta Modal -->
+<div class="overlay" id="alertOverlay">
+  <div class="custom-alert">
+      <h2>¡Inicio de sesión exitoso!</h2>
+      <p id="text-alert">Haz click en Continuar</p>
+      <button class="close-btn" id="hide-btn"> <p>Continuar</p> </button>
+  </div>
+</div>
     <!--Footer -->
     <footer class="footer-section">
-
-      <!-- Section de informacion de footer -->
-      <!-- <section class="footer-info-section">
-          <div class="footer-info-title">
-              <p id="redes">Nuestras Redes Sociales</p>
-          </div>
-          <div class="footer-info-container">
-              <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
-              <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
-              </a></p>
-              <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
-              </a></p>
-              <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
-          </div>
-      </section> -->
-
       <!-- Seccion de logo - informacion respecto a la marca -->
       <section class="footer-final-section">
           <!-- Logo y Nombre de la Marca -->
@@ -196,8 +187,9 @@
       </section>
     </footer>
 
-    <script src="../funcionalities/login.js"></script>
-    <script type="module" src="./validationLogin.js"></script>
     <script src="../funcionalities/nav.js"></script>
+    <script src="../funcionalities/login.js"></script>
+    <script type="module" src="../funcionalities/alerts.js"></script>
+    <script type="module" src="./validationLogin.js"></script>
   </body>
 </html>

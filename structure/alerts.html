@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta Personalizada</title>
+    <link rel="stylesheet" href="/styles/alerts.css">
+</head>
+<body>
+
+    <button onclick="showCustomAlert()">Mostrar Alerta</button>
+
+    <div class="overlay" id="alertOverlay">
+        <div class="custom-alert">
+            <h2>¡Atención!</h2>
+            <p>Esto es una alerta personalizada.</p>
+            <button class="close-btn" onclick="hideCustomAlert()"> <p>Cerrar</p> </button>
+        </div>
+    </div>
+
+    <script src="/funcionalities/alerts.js"></script>
+
+</body>
+</html>
