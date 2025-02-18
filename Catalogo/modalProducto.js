@@ -44,6 +44,6 @@ export function renderModal(producto) {
     `;
 
     // Inicializar el modal con Bootstrap para que funcione correctamente
-    const modal = new bootstrap.Modal(document.getElementById("product-modal"));
+    const modal = new bootstrap.Modal(document.getElementById("productoModal"));
     modal.show();
 }

@@ -359,7 +359,7 @@ article {
 
 /*toast*/
 
-#toast-container {
+#custom-toast-container {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -369,7 +369,7 @@ article {
   z-index: 1000;
 }
 
-.toast {
+.toaster {
   background-color: #7ca0c0;
   color: #00003b;
   padding: 0.5rem;
@@ -380,14 +380,14 @@ article {
   animation: slide-in 0.5s, fade-out 0.5s 2.5s forwards;
 }
 
-.tooltip {
+.tooltiper {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
 /* Tooltip text */
-.tooltiptext {
+.tooltiper .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: #00003b;
@@ -406,7 +406,7 @@ article {
 }
 
 /* Tooltip show on hover */
-.tooltip:hover .tooltiptext {
+.tooltiper:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
@@ -437,14 +437,14 @@ article {
       transform: translateX(0);
     }
   }
-  .toast-container {
+  #custom-toast-container {
     margin-right: 0;
     margin-left: 0;
     right: 0.1rem;
     max-width: 80%;
     width: 100px;
   }
-  .toast {
+  .toaster {
     font-size: 0rem;
   }
 }

@@ -3,7 +3,7 @@ const contenedorCarrito = document.querySelector(".carrito-items");
 const btnVaciar = document.getElementById("vaciar-carrito");
 const totalPrecio = document.getElementById("total-precio");
 const contadorCarrito = document.getElementById("contadorCarrito");
-const toast = document.getElementById("toast-container");
+const toaster = document.getElementById("custom-toast-container");
 
 // Cargar carrito desde localStorage si existe
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -127,9 +127,9 @@ const vaciarCarrito = () => {
 // Mostrar un mensaje en pantalla
 const addToast = (message) => {
   const nuevoToast = document.createElement("div");
-  nuevoToast.classList.add("toast");
+  nuevoToast.classList.add("toaster");
   nuevoToast.innerHTML = `<h4>${message}</h4>`;
-  toast.appendChild(nuevoToast);
+  toaster.appendChild(nuevoToast);
 
   setTimeout(() => {
     nuevoToast.remove();
