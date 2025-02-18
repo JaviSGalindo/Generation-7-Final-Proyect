@@ -1,8 +1,9 @@
 import * as validator from "../validacionFormulario.js";
+import * as alerts from "../funcionalities/alerts.js";
 
 const form = document.getElementById("loginForm");
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault();
   if (validator.sendLoginForm(event)) {
       
@@ -13,9 +14,10 @@ const handleSubmit = (event) => {
     const userPassword = atob(localStorage.getItem("password"));
 
     if (email !== userEmail || password !== userPassword) {
-      alert("Email o contraseña incorrectos");
+      validator.incorrectPassword();
     } else {
-      alert("Inicio de sesión exitoso");
+      validator.correctPassword();
+      await alerts.ejecutarConAlerta();
       window.location.href = "../index.html";
     }
   }

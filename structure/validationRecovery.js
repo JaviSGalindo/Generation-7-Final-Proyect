@@ -1,13 +1,16 @@
 import * as validator from "../validacionFormulario.js";
+import * as alerts from "../funcionalities/alerts.js";
 
 const form = document.getElementById("recoveryForm");
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault();
   
   if(validator.sendRecoveryForm(event)) {
-    alert("Mensaje de recuperacion enviado!")
+    
+    await alerts.ejecutarConAlerta();
     document.getElementById("recoveryForm").reset();
+    window.location.href = "../structure/login.html"; 
   }
 };
 

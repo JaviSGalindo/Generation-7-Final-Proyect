@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/stylesContactUs.css">
     <link rel="stylesheet" href="styles/stylesFooter.css">
     <link rel="stylesheet" href="styles/nav2.css" />
+    <link rel="stylesheet" href="styles/alerts.css">
     <title>Contacto</title>
 
     <!-- Font Awesome -->
@@ -120,6 +121,14 @@
       </form>
     </article>
   </main>
+  <!-- Alerta Modal -->
+<div class="overlay" id="alertOverlay">
+  <div class="custom-alert">
+      <h2>¡Formulario Enviado!</h2>
+      <p id="text-alert">Gracias por contactarte con nosotros.</p>
+      <button class="close-btn" id="hide-btn"> <p>Aceptar</p> </button>
+  </div>
+</div>
     <!-- Seccion Footer -->
     <footer class="footer-section">
 
@@ -187,6 +196,7 @@
       </section>
   </footer>
   <script src="funcionalities/nav.js"></script>
-  <script src="funcionalities/validator.js"></script>
+  <script type="module" src="funcionalities/alerts.js"></script>
+  <script type="module" src="funcionalities/validator.js"></script>
   </body>
 </html>
