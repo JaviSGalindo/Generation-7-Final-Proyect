@@ -70,7 +70,7 @@ const actualizarContadorCarrito = () => {
 };
 
 // Agregar un producto al carrito
-const addToCart = (producto) => {
+export const addToCart = (producto) => {
   const productoExistente = carrito.find(
     (item) => item.nombre === producto.nombre
   );

@@ -1,4 +1,4 @@
-import { renderModal } from "./modalProducto.js";
+import {renderModal} from "./modalProducto.js";
 
 const contenedor = document.querySelector(".productos-container");
 
@@ -21,7 +21,7 @@ fetch("catalogo.json")
     });
 
 // Formateador para pesos colombianos
-const formatoPesos = new Intl.NumberFormat("es-CO", {
+export const formatoPesos = new Intl.NumberFormat("es-CO", {
     style: "currency",
     currency: "COP",
     maximumFractionDigits: 0,
@@ -43,7 +43,7 @@ export const addProducts = (producto) => {
           </button>
           <button class="tooltiper carrito-btn" aria-label="Agregar al carrito">
             <i class="fas fa-shopping-cart"></i>
-            <span class="tooltiptext">Haz clic para agregar al carrito</span>
+            <span class="tooltiptext">Agregar al carrito</span>
           </button>
         </div>
       </div>
