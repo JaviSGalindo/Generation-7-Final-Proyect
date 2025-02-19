@@ -127,23 +127,24 @@ button {
   font-size: 1rem;
   color: #fff;
   background-color: #00003d;
+  padding: 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .styleboton {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente si es necesario */
-  width: 100%; /* Ocupará el 100% del contenedor padre */
-  margin-top: 1rem; /* Espacio superior */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem; 
 }
 
 
 button:hover {
   background-color: #7ca0c0;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 button:active {

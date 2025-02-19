@@ -44,10 +44,12 @@
     color: white;
     border: none;
     padding: 0 2rem;
-    border-radius: 12px;
+    border-radius: 20px;
     cursor: pointer;
     margin-top: 15px;
     height: 2.5rem;
+    transition: transform 0.3s ease;
+
 }
 .close-btn p {
     font-family: "Poppins", sans-serif !important;
@@ -57,7 +59,7 @@
 
 .close-btn:hover {
 background-color: #7ca0c0;
-transform: scale(1.05);
+transform: scale(1.02);
 }
 
 .close-btn:active {
