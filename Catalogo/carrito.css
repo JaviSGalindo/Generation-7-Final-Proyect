@@ -1,4 +1,25 @@
-/* Fondo oscuro superpuesto */
+
+/* carrito vacío */
+#carrito-empty {
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Alinea elementos en columna (si hay más de uno) */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  height: 100%; /* Asegura que ocupe todo el espacio del contenedor */
+
+  text-align: center; /* Asegura que el texto esté centrado si hay varias líneas */
+}
+
+#carrito-empty h1 {
+  color: rgba(0, 0, 59, 0.71);
+  font-size: 1.2rem;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+
+
 /* Fondo oscuro superpuesto */
 #cerrar-carrito {
   position: fixed;
@@ -50,6 +71,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #00003b;
 }
+
 
 .carrito-items {
   background-color: white;

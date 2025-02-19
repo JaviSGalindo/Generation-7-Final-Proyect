@@ -562,13 +562,6 @@ select {
     transition: background-color 0.3s ease; /* Transición suave del fondo */
 }
 
-
-/* Cambiar el fondo del elemento seleccionado */
-#modalTalla:focus, #modalColor:focus {
-    border-color: #7CA0C0; /* Color del fondo seleccionado */
-    outline: none; /* Elimina el contorno predeterminado */
-}
-
 /* MEDIA QUERY para pantallas mayores a 884px */
 @media (min-width: 1024px) {
     .modal-body {

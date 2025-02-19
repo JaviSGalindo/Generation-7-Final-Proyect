@@ -24,6 +24,14 @@ const guardarCarrito = () => {
 const renderCarrito = () => {
   contenedorCarrito.innerHTML = "";
 
+  if (carrito.length === 0) {
+    contenedorCarrito.innerHTML = `
+      <div id="carrito-empty">
+        <h1>Tu carrito está vacío, pero no tu estilo. <br><br> ¡Explora nuestro catálogo y encuentra tus imprescindibles!</h1>        
+      </div>
+    `;
+  }
+
   carrito.forEach((producto) => {
     contenedorCarrito.innerHTML += `
       <div class="carrito-item">
