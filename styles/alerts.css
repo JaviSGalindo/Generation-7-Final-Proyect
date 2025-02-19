@@ -26,6 +26,8 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transform: scale(0.8);
     transition: transform 0.3s ease;
+    color: #00003d;
+
 }
 .custom-alert h2 {
     font-family: "Playfair Display", sans-serif;
@@ -44,7 +46,7 @@
     color: white;
     border: none;
     padding: 0 2rem;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     margin-top: 15px;
     height: 2.5rem;
