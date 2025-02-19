@@ -2,65 +2,77 @@
   {
     "nombre": "CONFIANZA",
 
-    "precio": 165000,
+    "precio": 188000,
     "img": "imgProducts/confianza.jpg"
   },
   {
     "nombre": "COQUETA",
 
-    "precio": 172000,
+    "precio": 200000,
     "img": "imgProducts/coqueta.webp"
   },
   {
     "nombre": "TENAZ",
 
-    "precio": 162000,
+    "precio": 205000,
     "img": "imgProducts/tenaz.webp"
   },
   {
     "nombre": "VALIENTE",
 
-    "precio": 199000,
+    "precio": 205000,
     "img": "imgProducts/valiente.webp"
   },
   {
     "nombre": "CREATIVA",
 
-    "precio": 155000,
+    "precio": 180000,
     "img": "imgProducts/creativa.webp"
   },
   {
     "nombre": "CORAJE",
 
-    "precio": 180000,
+    "precio": 200000,
     "img": "imgProducts/coraje.jpg"
   },
 
   {
     "nombre": "SOÑADORA",
 
-    "precio": 171000,
+    "precio": 210000,
     "img": "imgProducts/sonadora.jpg"
   },
 
   {
     "nombre": "COMPASIVA",
 
-    "precio": 147000,
+    "precio": 170000,
     "img": "imgProducts/compasiva.jpg"
   },
 
   {
     "nombre": "COMPROMETIDA",
 
-    "precio": 175000,
+    "precio": 200000,
     "img": "imgProducts/comprometida.jpg"
   },
 
   {
     "nombre": "FORTALEZA",
 
-    "precio": 215000,
+    "precio": 200000,
     "img": "imgProducts/fortaleza.jpg"
+  },
+  {
+    "nombre": "SEGURA",
+
+    "precio": 188000,
+    "img": "imgProducts/segura.jpg"
+  },
+  {
+    "nombre": "SABIA",
+
+    "precio": 250000,
+    "img": "imgProducts/sabia.png"
   }
 ]
