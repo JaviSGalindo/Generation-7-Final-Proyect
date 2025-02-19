@@ -63,7 +63,7 @@ input {
   height: 40px;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 5px;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   font-size: 14px;
@@ -78,9 +78,6 @@ input {
   .input-tittle:has(span.show) {
     padding-bottom: 0px; /* Elimina el padding cuando hay error */
 }
-
-
-
   
 .input-tittle label {
   display: block;
@@ -121,7 +118,7 @@ span {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -133,7 +130,14 @@ span {
 }
 .form-footer button:hover {
   background-color: #7ca0c0;
+  transform: scale(1.02);
 }
+
+.form-footer button:active {
+  background-color: #7ca0c080;
+  transform: scale(0.95);
+}
+
 .login-footer {
   margin-top: 20px;
   text-align: center;
@@ -147,6 +151,7 @@ span {
 }
 .login-footer a {
   color: #00003d;
+  text-decoration: none;
 }
 .login-footer a:hover {
   text-decoration: underline;

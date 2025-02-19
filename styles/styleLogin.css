@@ -60,7 +60,7 @@ input[type="password"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 16px;
   color: #00003d;
   box-sizing: border-box;
@@ -83,7 +83,7 @@ input[type="password"]:focus {
   font-family: "Poppins", sans-serif;
   color: #00003d;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 #togglePassword {
@@ -112,14 +112,20 @@ input[type="password"]:focus {
   color: white;
   font-size: 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   margin-bottom: 0.5rem;
 }
 
 .login-button:hover {
   background-color: #7ca0c0;
+  transform: scale(1.02);
+}
+
+.login-button:active {
+  background-color: #7ca0c080;
+  transform: scale(0.95);
 }
 
 .forgot-password a {
@@ -143,6 +149,9 @@ input[type="password"]:focus {
   margin-top: 7px;
   text-align: center;
   justify-content: center;
+}
+.register:hover {
+  text-decoration: underline;
 }
 
 /* Para pantallas de 425px o menos */
