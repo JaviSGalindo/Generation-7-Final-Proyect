@@ -78,5 +78,21 @@
     "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
     "tallas": ["S", "M", "L", "XL", "XXL"],
     "colores": ["Gris"]
+  },
+  {
+    "nombre": "SEGURA",
+    "precio": 188000,
+    "img": "imgProducts/segura3.jpg",
+    "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Gris"]
+  },
+  {
+    "nombre": "SABIA",
+    "precio": 250000,
+    "img": "imgProducts/sabia.png",
+    "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Gris"]
   }
 ]

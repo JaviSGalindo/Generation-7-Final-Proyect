@@ -62,25 +62,67 @@ p {
 
 /* Estilos banner */
 
-.banner-img {
-    margin-top: 100px;
-    margin-bottom: 10px;
-    background-image: url("../images/anillo.png");
-    height: 540px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+.banner {
+    display: flex; /* Habilita flexbox */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    position: relative; /* Para colocar el pseudo-elemento */
+    height: 540px; /* Altura del banner */
+    margin-top: 120px; /* Espacio debajo de la navbar */
+    background-image: url("imgProducts/coraje2.jpg"); /* Imagen de fondo principal */
+    background-size: cover; /* Cubre el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    overflow: hidden; /* Evita desbordes del pseudo-elemento */
 }
-
-@media (max-width: 1024px) {
-    .banner-img {
-        height: 400px;
+@media (max-width: 880px) {
+    .banner{
+        margin-top: 100px
     }
 }
 
-@media (max-width: 1024px) {
-    .banner-img {
-        height: 260px;
+/* Añadimos opacidad a la imagen sin afectar el texto */
+.banner::before {
+    content: ""; /* Capa pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Color opaco negro con transparencia */
+    z-index: 1; /* Asegúrate que quede detrás del texto */
+}
+
+/* Texto del banner */
+.banner h1,
+.banner .ad {
+    position: relative; /* Asegura que el texto esté encima del pseudo-elemento */
+    z-index: 2; /* Evita que el texto sea opacado */
+    color: white; /* Color del texto para asegurar visibilidad */
+    text-align: center; /* Para alinear el texto */
+}
+
+.ad {
+    font-size: 2.5rem; /* Haz el texto un poco más pequeño si es necesario */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    text-align: center; /* Asegura buena alineación en múltiples líneas */
+    margin-bottom: 1rem; /* Espaciado opcional si hay más de un texto */
+}
+
+.name_colection {
+    font-size: 4rem; /* Tamaño más grande que el subtítulo */
+    color: white;
+    font-weight: bold;
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 440px) {
+    .name_colection {
+        font-size: 2rem;
+        text-align: center;
     }
 }
 
@@ -133,7 +175,7 @@ p {
     aspect-ratio: 16/9;
     object-fit: cover;
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+    border: 1px solid rgba(0, 0, 0, 0); /* Borde más visible */
     border-radius: 5px; /* Esquinas redondeadas */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
     transition: all 0.5s ease; /* Transición suave para la sombra y aumento */
@@ -170,25 +212,28 @@ p {
 
 .main-destacados-text {
     position: absolute; /* Posiciona el texto en relación al contenedor */
-    bottom: 0; /* Alinea el texto en la parte inferior */
-    /* Alinea el texto al borde izquierdo */
-    width: 90%; /* Coincide con el ancho de la magen */
-    border-radius: 10px;
-    margin: 10px;
+    bottom: 10px;
 
+    width: 90%; /* Coincide con el ancho de la magen */
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
     text-align: center; /* Centra el texto horizontalmente */
     overflow: hidden;
-    color: #000000;
-    padding: 0.5rem 1rem; /* Espaciado interno */
-    background-color: rgba(232, 225, 217, 0.5);
+
+    font-family: "Playfair Display", serif;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.6);
     /* Asegura que el padding no rompa el diseño */
     opacity: 0; /* Oculta el texto por defecto */
     transition: opacity 0.3s ease;
-    margin-bottom: 20px;
+
 }
 
 .main-destacados-text h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
 }
 
 @media (max-width: 425px) {
