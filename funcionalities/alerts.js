@@ -19,7 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 export async function ejecutarConAlerta() {
-    console.log("Antes de la alerta...");
     await showCustomAlert();  // Espera hasta que el usuario haga clic en "Continuar"
-    console.log("Después de la alerta, código sigue...");
 }
