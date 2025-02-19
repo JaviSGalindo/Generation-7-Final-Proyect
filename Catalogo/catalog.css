@@ -1,12 +1,12 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #e8e1d9;
+    font-family: "Poppins", sans-serif;
+    background-color: #e8e1d9;
 }
 
 h1,
@@ -15,436 +15,595 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", sans-serif;
-  font-weight: 600;
-  display: flex;
-  justify-self: center;
-  color: #00003b;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-self: center;
+    color: #00003b;
 }
 
 h1 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.9rem;
-  }
+    h1 {
+        font-size: 1.9rem;
+    }
 }
 
 h3 {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 p {
-  text-align: center;
+    text-align: center;
 }
 
 /* Estilo para la navbar  */
 #navbar {
-  background-color: rgba(232, 225, 217, 0.9);
-  height: 100px; /* Establece una altura para que sea visible */
-  border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */
-  top: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 1000;
-  backdrop-filter: blur(4px);
+    background-color: rgba(232, 225, 217, 0.9);
+    height: 100px; /* Establece una altura para que sea visible */
+    border: 2px dashed #ccc; /* Un borde discontínuo para mostrar el área */
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 #abrir-carrito {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* Estilos banner */
 
 .banner-img {
-  margin-top: 100px;
-  margin-bottom: 10px;
-  background-image: url("../images/anillo.png");
-  height: 540px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    background-image: url("../images/anillo.png");
+    height: 540px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 @media (max-width: 1024px) {
-  .banner-img {
-    height: 400px;
-  }
+    .banner-img {
+        height: 400px;
+    }
 }
 
 @media (max-width: 1024px) {
-  .banner-img {
-    height: 260px;
-  }
+    .banner-img {
+        height: 260px;
+    }
 }
 
 /* Estilos Destacados */
 
 #title-destacados {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 #title-catalogo {
-  padding-bottom: 2.5rem;
-  padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
 }
 
 @media (max-width: 425px) {
-  #title-destacados {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
+    #title-destacados {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 
-  #title-catalogo {
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-  }
+    #title-catalogo {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+    }
 }
 
 .destacados-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-bottom: 30px;
-  max-width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 30px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .producto-destacado {
-  display: flex;
-  position: relative; /* Necesario para posicionar elementos absolutos dentro */
-  justify-content: center;
+    display: flex;
+    position: relative; /* Necesario para posicionar elementos absolutos dentro */
+    justify-content: center;
 }
 
 .producto-destacado img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  justify-content: center;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
-  border-radius: 5px; /* Esquinas redondeadas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: all 0.5s ease; /* Transición suave para la sombra y aumento */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.5s ease; /* Transición suave para la sombra y aumento */
 }
 
 .producto-destacado img:hover {
-  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+    transform: scale(1.01); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
 .producto-destacado img:active {
-  transform: scale(1); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+    transform: scale(1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
 @media (max-width: 2560px) {
-  .producto-destacado img {
-    width: 80vw; /* Reduce el tamaño de las imágenes */
-  }
+    .producto-destacado img {
+        width: 80vw; /* Reduce el tamaño de las imágenes */
+    }
 }
+
 @media (max-width: 768px) {
-  .producto-destacado img {
-    width: 100%; /* Reduce el tamaño de las imágenes */
-  }
-  .destacados-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
-  }
+    .producto-destacado img {
+        width: 100%; /* Reduce el tamaño de las imágenes */
+    }
+
+    .destacados-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px;
+    }
 }
 
 .main-destacados-text {
-  position: absolute; /* Posiciona el texto en relación al contenedor */
-  bottom: 0; /* Alinea el texto en la parte inferior */
-  /* Alinea el texto al borde izquierdo */
-  width: 90%; /* Coincide con el ancho de la magen */
-  border-radius: 10px;
-  margin: 10px;
+    position: absolute; /* Posiciona el texto en relación al contenedor */
+    bottom: 0; /* Alinea el texto en la parte inferior */
+    /* Alinea el texto al borde izquierdo */
+    width: 90%; /* Coincide con el ancho de la magen */
+    border-radius: 10px;
+    margin: 10px;
 
-  text-align: center; /* Centra el texto horizontalmente */
-  overflow: hidden;
-  color: #000000;
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  background-color: rgba(232, 225, 217, 0.5);
-  /* Asegura que el padding no rompa el diseño */
-  opacity: 0; /* Oculta el texto por defecto */
-  transition: opacity 0.3s ease;
-  margin-bottom: 20px;
+    text-align: center; /* Centra el texto horizontalmente */
+    overflow: hidden;
+    color: #000000;
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    background-color: rgba(232, 225, 217, 0.5);
+    /* Asegura que el padding no rompa el diseño */
+    opacity: 0; /* Oculta el texto por defecto */
+    transition: opacity 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .main-destacados-text h1 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 425px) {
-  .main-destacados-text h1 {
-    font-size: 1rem;
-  }
+    .main-destacados-text h1 {
+        font-size: 1rem;
+    }
 }
 
 .producto-destacado:hover .main-destacados-text {
-  opacity: 1; /* Muestra el texto al hacer hover */
+    opacity: 1; /* Muestra el texto al hacer hover */
 }
 
 /* Estilos Catalogo */
 
 .primer-row {
-  padding-top: 10px;
-  display: flex;
-  align-items: center; /* Alinear verticalmente al centro */
-  justify-content: space-around;
-  margin: 0 10px 0 10px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center; /* Alinear verticalmente al centro */
+    justify-content: space-around;
+    margin: 0 10px 0 10px;
 }
 
 article {
-  padding: 10px;
+    padding: 10px;
 }
 
 .producto-catalogo img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  justify-content: center;
-  aspect-ratio: 9/16;
-  max-width: 400px;
-  max-height: 500px;
-  object-fit: cover;
-  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
-  border-radius: 5px; /* Esquinas redondeadas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
-  cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    aspect-ratio: 9/16;
+    max-width: 400px;
+    max-height: 500px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transición suave para la sombra y aumento */
+    cursor: pointer;
 }
 
 .producto-catalogo img:hover {
-  transform: scale(1.015); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+    transform: scale(1.015); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
 .producto-catalogo img:active {
-  transform: scale(1); /* retorna  el tamaño */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1); /* retorna  el tamaño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .productos-container {
-  justify-items: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  align-items: center;
-  padding: 1rem;
-  justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
 }
 
 @media (min-width: 2100px) {
-  .productos-container {
-    justify-items: center;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-  }
+    .productos-container {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 
 @media (min-width: 1700px) and (max-width: 2100px) {
-  .productos-container {
-    justify-items: center;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-  }
+    .productos-container {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 1220px) {
-  .productos-container {
-    justify-items: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-  }
+    .productos-container {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 930px) {
-  .productos-container {
-    justify-items: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-  }
+    .productos-container {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 620px) {
-  .productos-container {
-    justify-items: center;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-  }
+    .productos-container {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 
 .descripcion-producto {
-  padding: 0 10px 0 10px;
-  margin: 5px 20px 5px 20px;
-  height: 50px; /* Ajusta según lo necesario */
-  font-size: 12px;
-  align-content: center;
+    padding: 0 10px 0 10px;
+    margin: 5px 20px 5px 20px;
+    height: 50px; /* Ajusta según lo necesario */
+    font-size: 12px;
+    align-content: center;
 }
 
 @media (min-width: 2400px) {
-  .descripcion-producto {
-    margin: 0 30px 0 30px;
-  }
+    .descripcion-producto {
+        margin: 0 30px 0 30px;
+    }
 }
 
 /* Estilos para los botones de wishlist y carrito */
 .action-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .action-btns button {
-  background-color: transparent; /* Fondo transparente */
-  border-color: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
+    background-color: transparent; /* Fondo transparente */
+    border-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
 }
 
 /* Iconos de los botones */
 .action-btns button i {
-  font-size: 1.2rem;
-  margin: 5px; /* Espaciado entre el ícono y el texto */
-  color: #00003b;
-  transition: transform 0.3s ease, color 0.3s ease; /* Transición también en los íconos */
+    font-size: 1.2rem;
+    margin: 5px; /* Espaciado entre el ícono y el texto */
+    color: #00003b;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición también en los íconos */
 }
 
 /* Efecto de hover */
 .action-btns button:hover i {
-  color: #7ca0c0;
-  transform: scale(1.2);
+    color: #7ca0c0;
+    transform: scale(1.2);
 }
 
 /* Efecto cuando el botón es clickeado (activo) */
 .action-btns button:active i {
-  color: #7ca0c080;
-  transform: scale(1);
+    color: #7ca0c080;
+    transform: scale(1);
 }
 
 /*toast*/
 
-#toast-container {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 1000;
+#custom-toast-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1000;
 }
 
-.toast {
-  background-color: #7ca0c0;
-  color: #00003b;
-  padding: 0.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 0.5rem;
-  opacity: 0.85;
-  animation: slide-in 0.5s, fade-out 0.5s 2.5s forwards;
+.toaster {
+    background-color: #7ca0c0;
+    color: #00003b;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.5rem;
+    opacity: 0.85;
+    animation: slide-in 0.5s, fade-out 0.5s 2.5s forwards;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+.tooltiper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
 /* Tooltip text */
-.tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #00003b;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 4px 8px;
-  position: absolute;
-  font-size: 12px;
-  z-index: 1;
-  bottom: 125%; /* Position the tooltip above */
-  left: 50%;
-  margin-left: -50px;
-  opacity: 0;
-  transition: opacity 0.2s; /* Make the tooltip appear faster */
+.tooltiper .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #00003b;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 4px 8px;
+    position: absolute;
+    font-size: 12px;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above */
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.2s; /* Make the tooltip appear faster */
 }
 
 /* Tooltip show on hover */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+.tooltiper:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 @keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@media (max-width: 322px) {
-  @keyframes slide-in {
     from {
-      transform: translateX(80%);
+        opacity: 1;
     }
     to {
-      transform: translateX(0);
+        opacity: 0;
     }
-  }
-  .toast-container {
-    margin-right: 0;
-    margin-left: 0;
-    right: 0.1rem;
-    max-width: 80%;
-    width: 100px;
-  }
-  .toast {
-    font-size: 0rem;
-  }
 }
+
+@media (max-width: 322px) {
+    @keyframes slide-in {
+        from {
+            transform: translateX(80%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    #custom-toast-container {
+        margin-right: 0;
+        margin-left: 0;
+        right: 0.1rem;
+        max-width: 80%;
+        width: 100px;
+    }
+
+    .toaster {
+        font-size: 0rem;
+    }
+}
+
+/* Estilos del modal */
+
+.modal-content {
+    background-color: #e8e1d9; /* Fondo igual que el catálogo */
+    border: none; /* Elimina bordes del modal */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 10px; /* Reducido para mantener todo más compacto */
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column; /* Apilado por defecto */
+    gap: 20px; /* Espaciado entre columnas */
+    padding: 15px; /* Reducido el padding interno */
+}
+
+.modal-header .modal-title {
+    font-family: "Playfair Display", sans-serif; /* Consistencia en fuentes */
+    font-size: 1.8rem; /* Tamaño del título */
+    color: #00003b; /* Color igual al diseño */
+    text-align: center; /* Centrado */
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 0 auto;
+}
+
+#modalPrecio {
+    font-family: "Playfair Display", sans-serif; /* Fuente de estilo */
+    font-size: 1.5rem; /* Tamaño del precio */
+    color: #00003b; /* Color */
+    text-align: center; /* Centra el precio */
+    display: block; /* Comportamiento de bloque */
+    margin: 10px auto; /* Margen reducido */
+}
+
+#modalDesc {
+    font-family: "Poppins", sans-serif; /* Fuente estándar */
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #333; /* Color de texto */
+    margin-bottom: 15px; /* Menor espacio inferior */
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 15px; /* Espaciado entre botones */
+    margin-top: 10px; /* Margen superior reducido */
+    padding: 0; /* Elimina padding extra */
+}
+
+.modal-footer .btn-primary {
+    background-color: #00003b; /* Azul oscuro */
+    border: none;
+    color: white;
+    padding: 10px 15px; /* Tamaño ajustado */
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif; /* Fuente coherente */
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #7CA0C0; /* Cambio de color al pasar el ratón */
+    transform: scale(1.02); /* Efecto hover */
+}
+
+.modal-footer .btn-primary:active {
+    background-color: #5A809C; /* Color activo */
+    transform: scale(1.0); /* Efecto cuando se presiona */
+}
+
+.modal-img-container img {
+    width: 100%; /* Imagen responsiva */
+    height: auto; /* Mantiene proporción */
+    object-fit: cover; /* Ajusta imagen */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.modal-info-container {
+    text-align: center; /* Centra contenido verticalmente */
+    flex: 1; /* Permite que tome espacio según diseño */
+    margin: 0 auto; /* Centra completamente en escritorio */
+}
+
+/* Cambiar el borde del select al hacer focus */
+#modalTalla:focus, #modalColor:focus {
+    border-color: #7CA0C0;
+    outline: none; /* Eliminar el contorno predeterminado */
+}
+
+/* Eliminar estilos predeterminados del navegador que afectan las opciones */
+select {
+    -webkit-appearance: none; /* Eliminar apariencia predeterminada en Safari/Chrome */
+    -moz-appearance: none; /* Eliminar apariencia en Firefox */
+    appearance: none;
+}
+
+
+#modalTalla, #modalColor {
+    width: 100%; /* Ocupan el ancho completo (por defecto) */
+    padding: 8px; /* Reducir un poco el espacio interno */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: white; /* Fondo predeterminado */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+}
+
+
+/* Cambiar el fondo del elemento seleccionado */
+#modalTalla:focus, #modalColor:focus {
+    border-color: #7CA0C0; /* Color del fondo seleccionado */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* MEDIA QUERY para pantallas mayores a 884px */
+@media (min-width: 1024px) {
+    .modal-body {
+        flex-direction: column; /* Apila contenido */
+        gap: 15px; /* Espaciado reducido */
+        padding: 20px; /* Mantén algo de espacio en móviles */
+    }
+
+
+    .modal-img-container img {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 400px; /* Ancho máximo */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .modal-footer {
+        flex-direction: column; /* Botones apilados */
+        align-items: stretch; /* Ancho completo */
+        gap: 10px; /* Espaciado entre botones */
+    }
+
+
+    .modal-footer .btn {
+        font-size: 1rem; /* Reduce el tamaño de la fuente */
+        padding: 8px 12px; /* Reduce el tamaño interno del botón */
+        width: auto; /* Ajusta al contenido */
+        max-width: 250px; /* Limita el ancho máximo del botón */
+    }
+
+}
+
+
+
+
+
+
+

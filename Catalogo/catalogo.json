@@ -1,66 +1,82 @@
 [
   {
     "nombre": "CONFIANZA",
-
     "precio": 165000,
-    "img": "imgProducts/confianza.jpg"
+    "img": "imgProducts/confianza.jpg",
+    "descripcion": "Expresa seguridad y determinación en cada paso que das.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Negro", "Blanco", "Azul"]
   },
   {
     "nombre": "COQUETA",
-
     "precio": 172000,
-    "img": "imgProducts/coqueta.webp"
+    "img": "imgProducts/coqueta.webp",
+    "descripcion": "Un reflejo de tu encanto natural y actitud vibrante.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Rojo", "Beige", "Verde"]
   },
   {
     "nombre": "TENAZ",
-
     "precio": 162000,
-    "img": "imgProducts/tenaz.webp"
+    "img": "imgProducts/tenaz.webp",
+    "descripcion": "Resistencia y determinación en cada desafío que enfrentas.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Denim Oscuro", "Gris", "Negro"]
   },
   {
     "nombre": "VALIENTE",
-
     "precio": 199000,
-    "img": "imgProducts/valiente.webp"
+    "img": "imgProducts/valiente.webp",
+    "descripcion": "Para quienes enfrentan la vida con coraje y sin miedo.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Azul Marino", "Negro", "Burdeos"]
   },
   {
     "nombre": "CREATIVA",
-
     "precio": 155000,
-    "img": "imgProducts/creativa.webp"
+    "img": "imgProducts/creativa.webp",
+    "descripcion": "La inspiración fluye en cada detalle de tu esencia.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Rosa", "Celeste", "Amarillo"]
   },
   {
     "nombre": "CORAJE",
-
     "precio": 180000,
-    "img": "imgProducts/coraje.jpg"
+    "img": "imgProducts/coraje.jpg",
+    "descripcion": "Un símbolo de determinación y valentía inquebrantable.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Gris", "Negro", "Blanco"]
   },
-
   {
     "nombre": "SOÑADORA",
-
     "precio": 171000,
-    "img": "imgProducts/sonadora.jpg"
+    "img": "imgProducts/sonadora.jpg",
+    "descripcion": "Refleja tu esencia soñadora y tu deseo de alcanzar lo imposible.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Azul", "Verde", "Rosa"]
   },
-
   {
     "nombre": "COMPASIVA",
-
     "precio": 147000,
-    "img": "imgProducts/compasiva.jpg"
+    "img": "imgProducts/compasiva.jpg",
+    "descripcion": "Un recordatorio de la empatía y el amor que brindas al mundo.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Beige"]
   },
-
   {
     "nombre": "COMPROMETIDA",
-
     "precio": 175000,
-    "img": "imgProducts/comprometida.jpg"
+    "img": "imgProducts/comprometida.jpg",
+    "descripcion": "Refleja la pasión y entrega con la que persigues tus objetivos.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Negro", "Vino", "Beige"]
   },
-
   {
     "nombre": "FORTALEZA",
-
     "precio": 215000,
-    "img": "imgProducts/fortaleza.jpg"
+    "img": "imgProducts/fortaleza.jpg",
+    "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
+    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "colores": ["Gris"]
   }
 ]

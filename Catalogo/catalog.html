@@ -1,271 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Catálogo</title>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Catálogo</title>
 
-        <!-- Fuentes -->
-        <link
+    <!-- Fuentes -->
+    <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
-        />
+    />
 
-        <!-- Iconos font-awesome -->
-        <link
+    <!-- Bootstrap -->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+
+    <!-- Iconos font-awesome -->
+    <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
             rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../styles/stylesFooter.css" />
-        <link rel="stylesheet" href="../styles/nav2.css" />
-        <link rel="stylesheet" href="carrito.css" />
-        <link rel="stylesheet" href="catalog.css" />
-    </head>
-    <body>
-        <div id="toast-container"></div>
-        <!-- NavBar -->
-        <nav class="navBar">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../img/Elevia-ícono-1.png" alt="logo" />
-                </a>
-            </div>
+    />
+    <link rel="stylesheet" href="../styles/stylesFooter.css"/>
+    <link rel="stylesheet" href="../styles/nav2.css"/>
+    <link rel="stylesheet" href="carrito.css"/>
+    <link rel="stylesheet" href="catalog.css"/>
+</head>
+<body>
+<div id="custom-toast-container"></div>
+<!-- NavBar -->
+<nav class="navBar">
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../img/Elevia-ícono-1.png" alt="logo"/>
+        </a>
+    </div>
 
-            <div class="barSections">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="catalog.html">Catálogo</a></li>
-                    <li><a href="">Empodérate</a></li>
-                    <li><a href="../aboutUs.html">¿Quiénes somos?</a></li>
+    <div class="barSections">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="catalog.html">Catálogo</a></li>
+            <li><a href="">Empodérate</a></li>
+            <li><a href="../aboutUs.html">¿Quiénes somos?</a></li>
+            <li><a href="../contact.html">Contáctanos</a></li>
+        </ul>
+    </div>
+
+    <div class="actionIcons">
+        <a
+                href="#wishlist"
+                class="wishlist"
+                id="wishlist"
+                title="Deseos"
+        >
+            <i class="fa fa-heart"></i>
+        </a>
+        <a class="cart" id="abrir-carrito" title="Carrito">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="contadorCarrito"></span>
+        </a>
+        <a
+                href="../structure/login.html"
+                class="login"
+                id="login"
+                title="Iniciar sesión"
+        >
+            <i class="fa fa-user"></i>
+        </a>
+    </div>
+
+    <div class="hamburger">
+        <i class="fa fa-bars"></i>
+    </div>
+</nav>
+<!-- Fin NavBar -->
+
+<!--------- Contenedor del carrito de compras---- -->
+<div id="cerrar-carrito" class="carrito-modal">
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-header">
+            <h2>Tu Carrito</h2>
+            <button class="cerrar-carrito">X</button>
+        </div>
+        <div id="carrito-items" class="carrito-items">
+            <!-- Seran agregados desde js -->
+        </div>
+        <div class="carrito-footer">
+            <p id="total-precio">Total: $0.00</p>
+            <button id="comprar-carrito" class="comprar-carrito">
+                Comprar Ahora
+            </button>
+            <button id="vaciar-carrito" class="vaciar-carrito">
+                Vaciar Carrito
+            </button>
+        </div>
+    </div>
+</div>
+
+<!--------- FIN Contenedor del carrito de compras---- -->
+
+<main>
+    <!-- Hero Section -->
+    <section id="banner-container">
+        <div class="banner">
+            <a href="#">
+                <article class="banner-img"></article>
+            </a>
+        </div>
+    </section>
+
+    <!-- Destacados Section -->
+    <section id="destacados">
+        <header>
+            <h1 id="title-destacados">Productos Destacados</h1>
+        </header>
+        <div class="destacados-container">
+            <article class="producto-destacado">
+                <a href="#">
+                    <img src="../images/imgAccesorios7.webp" alt=""/>
+                </a>
+                <div class="main-destacados-text">
+                    <h1>CONFIANZA</h1>
+                </div>
+            </article>
+
+            <article class="producto-destacado">
+                <a href="#">
+                    <img src="../images/imgAccesorios3.webp" alt=""/>
+                </a>
+                <div class="main-destacados-text">
+                    <h1>COQUETA</h1>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Catalogo Section -->
+    <section id="Catalogo">
+        <header>
+            <h1 id="title-catalogo">Catálogo</h1>
+        </header>
+        <div class="productos-container">
+            <!--Productos agregados dinamicamente-->
+        </div>
+    </section>
+</main>
+
+<!-- Modal dinámico -->
+<div id="product-modal"></div>
+
+<!--Footer -->
+<footer class="footer-section">
+    <!-- Section de informacion de footer -->
+    <!-- <section class="footer-info-section">
+  <div class="footer-info-title">
+      <p id="redes">Nuestras Redes Sociales</p>
+  </div>
+  <div class="footer-info-container">
+      <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
+      <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
+      </a></p>
+      <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
+      </a></p>
+      <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
+  </div>
+</section> -->
+
+    <!-- Seccion de logo - informacion respecto a la marca -->
+    <section class="footer-final-section">
+        <!-- Logo y Nombre de la Marca -->
+        <div class="footer-logo-container">
+            <img
+                    src="../images/Elevia-Logo-1-Footer.png"
+                    alt="Logo de Elevia"
+            />
+        </div>
+        <!-- Opciones de Ayuda -->
+        <div class="footer-elements-container">
+            <div id="ayuda-footer" class="footer-elements">
+                <p>Ayuda</p>
+                <ul class="footer-elements-list">
+                    <li>
+                        <a
+                                href="mailto:devoluciones.elevia@gmail.com"
+                                target="_blank"
+                        >Devoluciones</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="mailto:atencion.elevia@gmail.com"
+                                target="_blank"
+                        >Atención al cliente</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="/files/peticiones.pdf"
+                                download="peticiones.pdf"
+                        >Peticiones</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                                href="/files/peticiones.pdf"
+                                download="peticiones.pdf"
+                        >Quejas y Reclamos</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Acceso a las secciones de la pagina de Elevia -->
+        <div class="footer-elements-container">
+            <div id="nosotros-footer" class="footer-elements">
+                <p>Nosotros</p>
+                <ul class="footer-elements-list">
+                    <li><a href="Catalogo/catalog.html">Productos</a></li>
+                    <li><a href="../index.html">Empoderate</a></li>
+                    <li><a href="../aboutUs.html">Quiénes Somos</a></li>
                     <li><a href="../contact.html">Contáctanos</a></li>
                 </ul>
             </div>
+        </div>
 
-            <div class="actionIcons">
-                <a
-                    href="#wishlist"
-                    class="wishlist"
-                    id="wishlist"
-                    title="Deseos"
-                >
-                    <i class="fa fa-heart"></i>
-                </a>
-                <a class="cart" id="abrir-carrito" title="Carrito">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span id="contadorCarrito"></span>
-                </a>
-                <a
-                    href="../structure/login.html"
-                    class="login"
-                    id="login"
-                    title="Iniciar sesión"
-                >
-                    <i class="fa fa-user"></i>
-                </a>
-            </div>
-
-            <div class="hamburger">
-                <i class="fa fa-bars"></i>
-            </div>
-        </nav>
-        <!-- Fin NavBar -->
-
-        <!--------- Contenedor del carrito de compras---- -->
-        <div id="cerrar-carrito" class="carrito-modal">
-            <div id="carrito-modal" class="carrito-modal">
-                <div class="carrito-header">
-                    <h2>Tu Carrito</h2>
-                    <button class="cerrar-carrito">X</button>
-                </div>
-                <div id="carrito-items" class="carrito-items">
-                    <!-- Seran agregados desde js -->
-                </div>
-                <div class="carrito-footer">
-                    <p id="total-precio">Total: $0.00</p>
-                    <button id="comprar-carrito" class="comprar-carrito">
-                        Comprar Ahora
-                    </button>
-                    <button id="vaciar-carrito" class="vaciar-carrito">
-                        Vaciar Carrito
-                    </button>
-                </div>
+        <div class="footer-elements-container">
+            <div id="elevia-footer" class="footer-elements">
+                <p></p>
+                <ul class="footer-elements-list">
+                    <li>
+                        "Empoderamos tu estilo, realzamos tu esencia y
+                        reflejamos tu belleza en cada detalle."
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <!--------- FIN Contenedor del carrito de compras---- -->
+        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+    </section>
+    <section class="footer-bottom-section">
+        <div>
+            <p id="rights-reserved">
+                &copy; 2025 Elevia - Todos los derechos reservados.
+            </p>
+        </div>
+        <div class="footer-info-container">
+            <p>
+                <a
+                        href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
+                ><i class="fab fa-instagram" target="_blank"></i
+                ></a>
+            </p>
+            <p>
+                <a href="" target="_blank"
+                ><i class="fab fa-facebook"></i>
+                </a>
+            </p>
+            <p>
+                <a href="" target="_blank"
+                ><i class="fab fa-whatsapp"></i>
+                </a>
+            </p>
+            <p>
+                <a
+                        href="mailto:elevia.contact@gmail.com"
+                        target="_blank"
+                ><i class="fas fa-envelope"></i
+                ></a>
+            </p>
+        </div>
+    </section>
+</footer>
 
-        <main>
-            <!-- Hero Section -->
-            <section id="banner-container">
-                <div class="banner">
-                    <a href="#">
-                        <article class="banner-img"></article>
-                    </a>
-                </div>
-            </section>
+<!-- Scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Destacados Section -->
-            <section id="destacados">
-                <header>
-                    <h1 id="title-destacados">Productos Destacados</h1>
-                </header>
-                <div class="destacados-container">
-                    <article class="producto-destacado">
-                        <a href="#">
-                            <img src="../images/imgAccesorios1.webp" alt="" />
-                        </a>
-                        <div class="main-destacados-text">
-                            <h1>CONFIANZA</h1>
-                        </div>
-                    </article>
+<!-- Scripts modulares personalizados -->
+<script type="module" src="fetchCatalog.js"></script>
+<script type="module" src="modalProducto.js"></script>
 
-                    <article class="producto-destacado">
-                        <a href="#">
-                            <img src="../images/imgAccesorios2.webp" alt="" />
-                        </a>
-                        <div class="main-destacados-text">
-                            <h1>COQUETA</h1>
-                        </div>
-                    </article>
-                </div>
-            </section>
+<!-- Scripts personalizados no modulares -->
+<script src="carrito.js"></script>
+<script src="fetchCarrito.js"></script>
+<script src="../funcionalities/nav.js"></script>
 
-            <!-- Catalogo Section -->
-            <section id="Catalogo">
-                <header>
-                    <h1 id="title-catalogo">Catálogo</h1>
-                </header>
-                <div class="productos-container">
-                    <!--Productos agregados dinamicamente-->
-                </div>
-            </section>
-        </main>
-
-        <!--Footer -->
-        <footer class="footer-section">
-            <!-- Section de informacion de footer -->
-            <!-- <section class="footer-info-section">
-          <div class="footer-info-title">
-              <p id="redes">Nuestras Redes Sociales</p>
-          </div>
-          <div class="footer-info-container">
-              <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
-              <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
-              </a></p>
-              <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
-              </a></p>
-              <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
-          </div>
-      </section> -->
-
-            <!-- Seccion de logo - informacion respecto a la marca -->
-            <section class="footer-final-section">
-                <!-- Logo y Nombre de la Marca -->
-                <div class="footer-logo-container">
-                    <img
-                        src="../images/Elevia-Logo-1-Footer.png"
-                        alt="Logo de Elevia"
-                    />
-                </div>
-                <!-- Opciones de Ayuda -->
-                <div class="footer-elements-container">
-                    <div id="ayuda-footer" class="footer-elements">
-                        <p>Ayuda</p>
-                        <ul class="footer-elements-list">
-                            <li>
-                                <a
-                                    href="mailto:devoluciones.elevia@gmail.com"
-                                    target="_blank"
-                                    >Devoluciones</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="mailto:atencion.elevia@gmail.com"
-                                    target="_blank"
-                                    >Atención al cliente</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="/files/peticiones.pdf"
-                                    download="peticiones.pdf"
-                                    >Peticiones</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="/files/peticiones.pdf"
-                                    download="peticiones.pdf"
-                                    >Quejas y Reclamos</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Acceso a las secciones de la pagina de Elevia -->
-                <div class="footer-elements-container">
-                    <div id="nosotros-footer" class="footer-elements">
-                        <p>Nosotros</p>
-                        <ul class="footer-elements-list">
-                            <li><a href="Catalogo/catalog.html">Productos</a></li>
-                            <li><a href="../index.html">Empoderate</a></li>
-                            <li><a href="../aboutUs.html">Quiénes Somos</a></li>
-                            <li><a href="../contact.html">Contáctanos</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-elements-container">
-                    <div id="elevia-footer" class="footer-elements">
-                        <p></p>
-                        <ul class="footer-elements-list">
-                            <li>
-                                "Empoderamos tu estilo, realzamos tu esencia y
-                                reflejamos tu belleza en cada detalle."
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
-            </section>
-            <section class="footer-bottom-section">
-                <div>
-                    <p id="rights-reserved">
-                        &copy; 2025 Elevia - Todos los derechos reservados.
-                    </p>
-                </div>
-                <div class="footer-info-container">
-                    <p>
-                        <a
-                            href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"
-                            ><i class="fab fa-instagram" target="_blank"></i
-                        ></a>
-                    </p>
-                    <p>
-                        <a href="" target="_blank"
-                            ><i class="fab fa-facebook"></i>
-                        </a>
-                    </p>
-                    <p>
-                        <a href="" target="_blank"
-                            ><i class="fab fa-whatsapp"></i>
-                        </a>
-                    </p>
-                    <p>
-                        <a
-                            href="mailto:elevia.contact@gmail.com"
-                            target="_blank"
-                            ><i class="fas fa-envelope"></i
-                        ></a>
-                    </p>
-                </div>
-            </section>
-        </footer>
-        <script src="carrito.js"></script>
-        <script type="module" src="fetchCatalog.js"></script>
-        <script src="fetchCarrito.js"></script>
-        <script src="../funcionalities/nav.js"></script>
-    </body>
+</body>
 </html>
