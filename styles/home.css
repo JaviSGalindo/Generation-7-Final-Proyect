@@ -142,7 +142,7 @@ body {
   align-items: center;
   padding-bottom: 70px;
   padding-top: 0.1rem;
-  max-width: 100;
+  max-width: 100px;
 }
 
 .producto-destacado {
@@ -162,7 +162,7 @@ body {
   aspect-ratio: 16/9;
   object-fit: cover;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, transparent); /* Borde más visible */
+  border: 1px solid rgba(0, 0, 0, 0); /* Borde más visible */
   border-radius: 5px; /* Esquinas redondeadas */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
   transition: transform 0.5s ease, box-shadow 0.5s ease;

@@ -1,0 +1,122 @@
+[
+  {
+    "nombre": "CONFIANZA",
+    "descripcion": "Vestido corto con escote profundo en V, nudo decorativo al frente que se ajusta justo por debajo del busto, mangas son largas y presentan un detalle de fruncido en la parte exterior. Ideal para un look fresco y elegante, perfecto para un evento casual o semiformal",
+    "precio": 188000,
+    "img": ["imgProducts/confianza.jpg", "imgProducts/confianza2"],
+    "talla": ["XS", "S", "M", "L"],
+    "color": ["Azul celeste", "Verde menta"]
+  },
+  {
+    "nombre": "COQUETA",
+    "descripcion": "Enterizo con cuello redondo, sin mangas, con costuras verticales que estilizan el torso, dándole un ajuste favorecedor; su parte inferior es  larga y ancha y de caida fluida, incluye cinturon en la misma tela y color con detalles metalicos. Su diseño minimalistas lo convierten en una opción sofisticada, ideal para ocasiones elegantes o eventos formales.",
+    "precio": 200000,
+    "img": [
+      "imgProducts/coqueta.webp",
+      "imgProducts/coqueta2.jpg",
+      "imgProducts/coqueta3.jpg"
+    ],
+    "talla": ["S", "M", "L"],
+    "color": ["Negro"]
+  },
+  {
+    "nombre": "TENAZ",
+    "descripcion": "Set de dos piezas, Un crop top con escote en v profundo, lazo ajustable en el busto y en la parte de atras del cuello, que permite un ajuste personalizado, mangas largas y amplias tipo capa y una falda corta y ajustada. Este conjunto ofrece un aire moderno y estilizado dando balance entre lo sensual y lo elegante.",
+    "precio": 205000,
+    "img": [
+      "imgProducts/tenaz.webp",
+      "imgProducts/tenaz2.jpg",
+      "imgProducts/tenaz3.jpg"
+    ],
+    "talla": ["S", "M"],
+    "color": ["Negro", "Blanco"]
+  },
+  {
+    "nombre": "VALIENTE",
+    "descripcion": "Set de dos piezas en lino, compuesto por un blazer largo y de corte fluido, manga larga y un short de tiro alto, ancho, con cintura elástica y lazo decorativo. Los bolsillos laterales ofrecen un estilo práctico y versátil. Ideal para un look fresco y chic",
+    "precio": 205000,
+    "img": [
+      "imgProducts/valiente.webp",
+      "imgProducts/valiente2.jpg",
+      "imgProducts/valiente3.jpg"
+    ],
+    "talla": ["S", "M", "L"],
+    "color": ["Beige"]
+  },
+  {
+    "nombre": "CREATIVA",
+    "descripcion": "Set de dos piezas, compuesto por un crop top ajustado con escote recto y tirantes delgados, detalle de abertura triangular en la parte frontal y espalda con recogido en elastico para mejor ajuste, y un pantalon de corte alto y pierna ancha, con bolsillos laterales que aportan funcionalidad. Perfecto para una apariencia sofisticada y cómoda",
+    "precio": 180000,
+    "img": [
+      "imgProducts/creativa.webp",
+      "imgProducts/creativa2.jpg",
+      "imgProducts/creativa3.jpg"
+    ],
+    "talla": ["S", "M"],
+    "color": ["Verde Oliva"]
+  },
+  {
+    "nombre": "CORAJE",
+    "descripcion": "Vestido corto con escote en V y tirantes delgados, capa frontal sobrepuesta cruzada para formar una falda asimétrica con un nudo lateral que crea un efecto drapeado. Esta prenda es una elección llamativa que combina sensualidad y elegancia, perfecta para destacar en cualquier ocasión especial.",
+    "precio": 200000,
+    "img": [
+      "imgProducts/coraje.jpg",
+      "imgProducts/coraje2.jpg",
+      "imgProducts/coraje3.jpg"
+    ],
+    "talla": ["XS", "S", "M"],
+    "color": ["Rojo", "Blanco"]
+  },
+
+  {
+    "nombre": "SOÑADORA",
+    "descripcion": "Set de dos piezas, compuesto pur un top de manga corta y corte frontal recto, con un lazo ajustable en la parte baja, Abertura ovalada en la espalda y cierre de botón en la parte superior del cuello, y un pantalon De tiro alto y corte amplio y pliegues frontales sutiles. Ideal para eventos diurnos o reuniones casuales que requieran un toque de estilo sin perder la comodidad.",
+    "precio": 210000,
+    "img": [
+      "imgProducts/sonadora.jpg",
+      "imgProducts/sonadora2.jpg",
+      "imgProducts/sonadora3.jpg"
+    ],
+    "talla": ["S", "M"],
+    "color": ["Blanco"]
+  },
+
+  {
+    "nombre": "COMPASIVA",
+    "descripcion": "Set de dos piezas, compuesto por un top de tirantes anchos, con escote en forma de corazón suave, diseño estructurado con costuras visibles que ayudan a definir la figura, short con pretina alta, pierna ancha, con un diseño clásico y pinzas en la parte delantera. Este set es perfecto para un look casual fresco y cómodo.",
+    "precio": 170000,
+    "img": [
+      "imgProducts/compasiva.jpg",
+      "imgProducts/compasiva2.jpg",
+      "imgProducts/compasiva3.jpg"
+    ],
+    "talla": ["S", "M"],
+    "color": ["Azul claro"]
+  },
+
+  {
+    "nombre": "COMPROMETIDA",
+    "descripcion": "Set de tres piezas, compuesto por una camisa corta de manga corta, suelta y ligera, un top de tirantes delgados, ajustado, sin mangas y de escote recto y una mini falda ajustada, de talle alto, con un ligero drapeado en la parte delantera. Este conjunto tiene un aire fresco y relajado, ideal para un look casual pero moderno.",
+    "precio": 200000,
+    "img": [
+      "imgProducts/comprometida.jpg",
+      "imgProducts/comprometida2.jpg",
+      "imgProducts/comprometida3.jpg"
+    ],
+    "talla": ["S", "M"],
+    "color": ["Blanco"]
+  },
+
+  {
+    "nombre": "FORTALEZA",
+    "descripcion": "Set de dos piezas, compuesto por un crop top asimétrico de un solo hombro, escote en v profundo con detalle de botón en el centro, escote bajo en la espalda y lazo ajustable en la parte posterior para mayor ajuste y un short de talle alto, ajustado con pliegues suaves. Este conjunto tiene un toque chic y femenino, ideal para eventos casuales con un estilo único. ",
+    "precio": 200000,
+    "img": [
+      "imgProducts/fortaleza.jpg",
+      "imgProducts/fortaleza2.jpg",
+      "imgProducts/fortaleza3.jpg"
+    ],
+    "talla": ["S", "M"],
+    "color": ["Palo de rosa"]
+  }
+]
