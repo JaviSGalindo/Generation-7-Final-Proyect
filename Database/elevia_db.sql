@@ -57,11 +57,11 @@ INSERT INTO `carrito` (`id_carrito`, `cantidad`, `usuario_id`, `variante_product
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detalle_ordenes`
+-- Table structure for table `detalle_orden`
 --
 
-DROP TABLE IF EXISTS `detalle_ordenes`;
-CREATE TABLE IF NOT EXISTS `detalle_ordenes` (
+DROP TABLE IF EXISTS `detalle_orden`;
+CREATE TABLE IF NOT EXISTS `detalle_orden` (
   `id_detalle` int NOT NULL AUTO_INCREMENT,
   `cantidad` int NOT NULL,
   `orden_id` int NOT NULL,
@@ -72,10 +72,10 @@ CREATE TABLE IF NOT EXISTS `detalle_ordenes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Dumping data for table `detalle_ordenes`
+-- Dumping data for table `detalle_orden`
 --
 
-INSERT INTO `detalle_ordenes` (`id_detalle`, `cantidad`, `orden_id`, `variante_producto_id`) VALUES
+INSERT INTO `detalle_orden` (`id_detalle`, `cantidad`, `orden_id`, `variante_producto_id`) VALUES
 (1, 2, 1, 1),
 (2, 1, 1, 2),
 (3, 3, 2, 3),
@@ -90,11 +90,11 @@ INSERT INTO `detalle_ordenes` (`id_detalle`, `cantidad`, `orden_id`, `variante_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ordenes`
+-- Table structure for table `orden`
 --
 
-DROP TABLE IF EXISTS `ordenes`;
-CREATE TABLE IF NOT EXISTS `ordenes` (
+DROP TABLE IF EXISTS `orden`;
+CREATE TABLE IF NOT EXISTS `orden` (
   `id_orden` int NOT NULL AUTO_INCREMENT,
   `total` decimal(10,2) NOT NULL,
   `estado` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -105,10 +105,10 @@ CREATE TABLE IF NOT EXISTS `ordenes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Dumping data for table `ordenes`
+-- Dumping data for table `orden`
 --
 
-INSERT INTO `ordenes` (`id_orden`, `total`, `estado`, `fecha_orden`, `usuario_id`) VALUES
+INSERT INTO `orden` (`id_orden`, `total`, `estado`, `fecha_orden`, `usuario_id`) VALUES
 (1, 59.99, 'Pendiente', '2025-02-01', 1),
 (2, 89.99, 'Completado', '2025-02-02', 2),
 (3, 19.99, 'Cancelado', '2025-02-03', 3),
@@ -123,11 +123,11 @@ INSERT INTO `ordenes` (`id_orden`, `total`, `estado`, `fecha_orden`, `usuario_id
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos`
+-- Table structure for table `producto`
 --
 
-DROP TABLE IF EXISTS `productos`;
-CREATE TABLE IF NOT EXISTS `productos` (
+DROP TABLE IF EXISTS `producto`;
+CREATE TABLE IF NOT EXISTS `producto` (
   `id_producto` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
   `descripcion` varchar(150) COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -139,10 +139,10 @@ CREATE TABLE IF NOT EXISTS `productos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Dumping data for table `productos`
+-- Dumping data for table `producto`
 --
 
-INSERT INTO `productos` (`id_producto`, `nombre`, `descripcion`, `categoria`, `imagen_producto`, `stock`, `precio`) VALUES
+INSERT INTO `producto` (`id_producto`, `nombre`, `descripcion`, `categoria`, `imagen_producto`, `stock`, `precio`) VALUES
 (1, 'CONFIANZA', 'Ropa cómoda y elegante.', 'Ropa', 'imgProducts/confianza.jpg', 100, 165000.00),
 (2, 'COQUETA', 'Diseño femenino y atractivo.', 'Ropa', 'imgProducts/coqueta.webp', 100, 172000.00),
 (3, 'TENAZ', 'Resistente y versátil para cualquier ocasión.', 'Ropa', 'imgProducts/tenaz.webp', 100, 162000.00),
@@ -157,11 +157,11 @@ INSERT INTO `productos` (`id_producto`, `nombre`, `descripcion`, `categoria`, `i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Table structure for table `usuario`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
   `id_usuario` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
   `apellido` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -174,10 +174,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `telefono`, `email`, `direccion`, `contraseña`) VALUES
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `telefono`, `email`, `direccion`, `contraseña`) VALUES
 (1, 'Juan', 'Pérez', '555-1234', 'juanperez@gmail.com', 'Calle Falsa 123', 'clave1'),
 (2, 'María', 'Gómez', '555-5678', 'mariagomez@gmail.com', 'Av. Siempre Viva 742', 'clave2'),
 (3, 'Carlos', 'López', '555-8765', 'carloslopez@gmail.com', 'Calle Central 45', 'clave3'),
@@ -192,25 +192,25 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `telefono`, `email`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `variante_productos`
+-- Table structure for table `variante_producto`
 --
 
-DROP TABLE IF EXISTS `variante_productos`;
-CREATE TABLE IF NOT EXISTS `variante_productos` (
-  `id_variante_productos` int NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `variante_producto`;
+CREATE TABLE IF NOT EXISTS `variante_producto` (
+  `id_variante_producto` int NOT NULL AUTO_INCREMENT,
   `producto_id` int NOT NULL,
   `talla` char(5) COLLATE utf8mb4_spanish_ci NOT NULL,
   `color` varchar(50) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `stock_variante` int NOT NULL,
-  PRIMARY KEY (`id_variante_productos`),
+  PRIMARY KEY (`id_variante_producto`),
   KEY `fk_variante_producto` (`producto_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=151 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Dumping data for table `variante_productos`
+-- Dumping data for table `variante_producto`
 --
 
-INSERT INTO `variante_productos` (`id_variante_productos`, `producto_id`, `talla`, `color`, `stock_variante`) VALUES
+INSERT INTO `variante_producto` (`id_variante_producto`, `producto_id`, `talla`, `color`, `stock_variante`) VALUES
 (1, 1, 'S', 'Negro', 10),
 (2, 1, 'M', 'Negro', 10),
 (3, 1, 'L', 'Negro', 10),
@@ -370,27 +370,27 @@ INSERT INTO `variante_productos` (`id_variante_productos`, `producto_id`, `talla
 -- Constraints for table `carrito`
 --
 ALTER TABLE `carrito`
-  ADD CONSTRAINT `fk_carrito_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE,
-  ADD CONSTRAINT `fk_carrito_variante` FOREIGN KEY (`variante_producto_id`) REFERENCES `variante_productos` (`id_variante_productos`) ON DELETE CASCADE;
+  ADD CONSTRAINT `fk_carrito_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_carrito_variante` FOREIGN KEY (`variante_producto_id`) REFERENCES `variante_producto` (`id_variante_producto`) ON DELETE CASCADE;
 
 --
--- Constraints for table `detalle_ordenes`
+-- Constraints for table `detalle_orden`
 --
-ALTER TABLE `detalle_ordenes`
-  ADD CONSTRAINT `fk_detalle_orden` FOREIGN KEY (`orden_id`) REFERENCES `ordenes` (`id_orden`) ON DELETE CASCADE,
-  ADD CONSTRAINT `fk_detalle_variante` FOREIGN KEY (`variante_producto_id`) REFERENCES `variante_productos` (`id_variante_productos`) ON DELETE CASCADE;
+ALTER TABLE `detalle_orden`
+  ADD CONSTRAINT `fk_detalle_orden` FOREIGN KEY (`orden_id`) REFERENCES `orden` (`id_orden`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_detalle_variante` FOREIGN KEY (`variante_producto_id`) REFERENCES `variante_producto` (`id_variante_producto`) ON DELETE CASCADE;
 
 --
--- Constraints for table `ordenes`
+-- Constraints for table `orden`
 --
-ALTER TABLE `ordenes`
-  ADD CONSTRAINT `fk_orden_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE;
+ALTER TABLE `orden`
+  ADD CONSTRAINT `fk_orden_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE;
 
 --
--- Constraints for table `variante_productos`
+-- Constraints for table `variante_producto`
 --
-ALTER TABLE `variante_productos`
-  ADD CONSTRAINT `fk_variante_producto` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id_producto`) ON DELETE CASCADE;
+ALTER TABLE `variante_producto`
+  ADD CONSTRAINT `fk_variante_producto` FOREIGN KEY (`producto_id`) REFERENCES `producto` (`id_producto`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
