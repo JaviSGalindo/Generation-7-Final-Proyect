@@ -142,7 +142,7 @@ body {
   align-items: center;
   padding-bottom: 70px;
   padding-top: 0.1rem;
-  max-width: 100px;
+  max-width: 100%;
 }
 
 .producto-destacado {
