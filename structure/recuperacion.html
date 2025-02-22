@@ -1,179 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=, initial-scale=1.0"/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/nav2.css" />
-    <link rel="stylesheet" href="../styles/stylesFooter.css" />
-    <link rel="stylesheet" href="../styles/styleRecovery.css" />
+    <link rel="stylesheet" href="../styles/nav2.css"/>
+    <link rel="stylesheet" href="../styles/stylesFooter.css"/>
+    <link rel="stylesheet" href="../styles/styleRecovery.css"/>
     <link rel="stylesheet" href="../styles/alerts.css">
 
 
     <title>Recuperacion</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <title>Document</title>
-  </head>
-  <body>
-    <!-- NavBar -->
-    <nav class="navBar">
-      <div class="logo">
+</head>
+<body>
+<!-- NavBar -->
+<nav class="navBar">
+    <div class="logo">
         <a href="../index.html">
-          <img src="../img/Elevia-ícono-1.png" alt="logo" />
+            <img src="../img/Elevia-ícono-1.png" alt="logo"/>
         </a>
-      </div>
+    </div>
 
-      <div class="barSections">
+    <div class="barSections">
         <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="../Catalogo/catalog.html">Catálogo</a></li>
-          <li><a href="">Empodérate</a></li>
-          <li><a href="../aboutUs.html">¿Quiénes somos?</a></li>
-          <li><a href="../contact.html">Contáctanos</a></li>
-      </ul>
-      </div>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Catalogo/catalog.html">Catálogo</a></li>
+            <li><a href="">Empodérate</a></li>
+            <li><a href="../aboutUs.html">¿Quiénes somos?</a></li>
+            <li><a href="../contact.html">Contáctanos</a></li>
+        </ul>
+    </div>
 
-      <div class="actionIcons">
+    <div class="actionIcons">
         <a href="#wishlist" class="wishlist" id="wishlist" title="Deseos">
-          <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
         </a>
         <a href="../Catalogo/catalog.html" class="cart" id="cart" title="Carrito">
-          <i class="fa fa-shopping-cart"></i>
-          <span class="contadorCarrito"></span>
+            <i class="fa fa-shopping-cart"></i>
+            <span class="contadorCarrito"></span>
         </a>
         <a href="login.html" class="login" id="login" title="Iniciar sesión">
-          <i class="fa fa-user"></i>
+            <i class="fa fa-user"></i>
         </a>
-      </div>
+    </div>
 
-      <div class="hamburger">
+    <div class="hamburger">
         <i class="fa fa-bars"></i>
-      </div>
-    </nav>
-    <!-- Fin NavBar -->
+    </div>
+</nav>
+<!-- Fin NavBar -->
 
-    <!-- formulario restauracion contraseña-->
-    <main class="row">
-      <section class="restore-container">
+<!-- formulario restauracion contraseña-->
+<main class="row">
+    <section class="restore-container">
         <header class="section-title">
-          <h1>Recuperar Contraseña</h1>
-          <h2>
-            Introduce tu correo electrónico para restablecer tu contraseña
-          </h2>
+            <h1>Recuperar Contraseña</h1>
+            <h2>
+                Introduce tu correo electrónico para restablecer tu contraseña
+            </h2>
         </header>
 
         <form
-        id="recoveryForm"
-        novalidate
-        class="formulario"
-        action="https://formspree.io/f/xjkgwnnv"
-        method="POST"
+                id="recoveryForm"
+                novalidate
+                class="formulario"
+                action="https://formspree.io/f/xjkgwnnv"
+                method="POST"
         >
-          <div class="form-group">
-            <label class="tittle-email" for="email">Correo electrónico:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Ingresa tu correo electrónico"
-              required
-            />
-            <span
-              id="emailError"
-              class="error-message"
-              aria-hidden="true"
-            ></span>
-          </div>
-          <span class="error-message" style="display: none" id="accessError">
+            <div class="form-group">
+                <label class="tittle-email" for="email">Correo electrónico:</label>
+                <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ingresa tu correo electrónico"
+                        required
+                />
+                <span
+                        id="emailError"
+                        class="error-message"
+                        aria-hidden="true"
+                ></span>
+            </div>
+            <span class="error-message" style="display: none" id="accessError">
             Datos de acceso no válidos
           </span>
-          <button type="submit" class="login-button">
-            Enviar enlace de recuperación
-          </button>
+            <button type="submit" class="login-button">
+                Enviar enlace de recuperación
+            </button>
         </form>
 
         <a href="../structure/login.html" class="return-to-login"
-          >Volver al inicio de sesión</a
+        >Volver al inicio de sesión</a
         >
-      </section>
-    </main>
-  <!-- Alerta Modal -->
-  <div class="overlay" id="alertOverlay">
+    </section>
+</main>
+<!-- Alerta Modal -->
+<div class="overlay" id="alertOverlay">
     <div class="custom-alert">
         <h2>¡Revisa tu correo!</h2>
-        <p id="text-alert">Hemos enviado un enlace de recuperación a tu dirección de correo registrada. Sigue las instrucciones para restablecer tu contraseña.</p>
-        <button class="close-btn" id="hide-btn"> <p>Entendido</p> </button>
+        <p id="text-alert">Hemos enviado un enlace de recuperación a tu dirección de correo registrada. Sigue las
+            instrucciones para restablecer tu contraseña.</p>
+        <button class="close-btn" id="hide-btn"><span>Entendido</span></button>
     </div>
-  </div>
-    <!--Footer -->
-    <footer class="footer-section">
+</div>
+<!--Footer -->
+<footer class="footer-section">
 
-      <!-- Seccion de logo - informacion respecto a la marca -->
-      <section class="footer-final-section">
-          <!-- Logo y Nombre de la Marca -->
-          <div class="footer-logo-container">
-              <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia">
-          </div>
-          <!-- Opciones de Ayuda -->
-          <div class="footer-elements-container">
-              <div id="ayuda-footer" class="footer-elements">
-                  <p>Ayuda</p>
-                  <ul class="footer-elements-list">
-                      <li><a href="mailto:devoluciones.elevia@gmail.com" target="_blank">Devoluciones</a></li>
-                      <li><a href="mailto:atencion.elevia@gmail.com" target="_blank">Atención al cliente</a></li>
-                      <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Peticiones</a></li>
-                      <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Quejas y Reclamos</a></li>
-                  </ul>
-              </div>
-          </div>
-          <!-- Acceso a las secciones de la pagina de Elevia -->
-          <div class="footer-elements-container">
-              <div id="nosotros-footer" class="footer-elements">
-                  <p>Nosotros</p>
-                  <ul class="footer-elements-list">
+    <!-- Seccion de logo - informacion respecto a la marca -->
+    <section class="footer-final-section">
+        <!-- Logo y Nombre de la Marca -->
+        <div class="footer-logo-container">
+            <img src="../images/Elevia-Logo-1-Footer.png" alt="Logo de Elevia">
+        </div>
+        <!-- Opciones de Ayuda -->
+        <div class="footer-elements-container">
+            <div id="ayuda-footer" class="footer-elements">
+                <p>Ayuda</p>
+                <ul class="footer-elements-list">
+                    <li><a href="mailto:devoluciones.elevia@gmail.com" target="_blank">Devoluciones</a></li>
+                    <li><a href="mailto:atencion.elevia@gmail.com" target="_blank">Atención al cliente</a></li>
+                    <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Peticiones</a></li>
+                    <li><a href="/files/peticiones.pdf" download="peticiones.pdf">Quejas y Reclamos</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Acceso a las secciones de la pagina de Elevia -->
+        <div class="footer-elements-container">
+            <div id="nosotros-footer" class="footer-elements">
+                <p>Nosotros</p>
+                <ul class="footer-elements-list">
                     <li><a href="../Catalogo/catalog.html">Productos</a></li>
                     <li><a href="../index.html">Empoderate</a></li>
                     <li><a href="../aboutUs.html">Quiénes Somos</a></li>
                     <li><a href="../contact.html">Contáctanos</a></li>
                 </ul>
-              </div>
-          </div> 
+            </div>
+        </div>
 
-          <div class="footer-elements-container">
+        <div class="footer-elements-container">
             <div id="elevia-footer" class="footer-elements">
                 <p></p>
                 <ul class="footer-elements-list">
                     <li>"Empoderamos tu estilo, realzamos tu esencia y reflejamos tu belleza en cada detalle."</li>
                 </ul>
             </div>
-        </div> 
-          
-      <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
-      </section>
-      <section class="footer-bottom-section">
-          <div>
-              <p id="rights-reserved">&copy; 2025 Elevia  -  Todos los derechos reservados.</p>
-          </div>
-          <div class="footer-info-container">
-            <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
+        </div>
+
+        <!-- Footer seccion Todos los derechos reservados - Fin de pagina -->
+    </section>
+    <section class="footer-bottom-section">
+        <div>
+            <p id="rights-reserved">&copy; 2025 Elevia - Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-info-container">
+            <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram"
+                                                                                    target="_blank"></i></a></p>
             <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
             </a></p>
             <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
             </a></p>
             <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
         </div>
-      </section>
-    </footer>
-    <script src="../funcionalities/nav.js"></script>
-    <script src="../funcionalities/recovery.js"></script>
-    <script type="module" src="../funcionalities/alerts.js"></script>
+    </section>
+</footer>
+<script src="../funcionalities/nav.js"></script>
+<!--    <script src="../funcionalities/recovery.js"></script>-->
+<script type="module" src="../funcionalities/alerts.js"></script>
 
-    <script type="module" src="validationRecovery.js"></script>
-  </body>
+<script type="module" src="validationRecovery.js"></script>
+</body>
 </html>
