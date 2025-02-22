@@ -53,7 +53,7 @@
     transition: transform 0.3s ease;
 
 }
-.close-btn p {
+.close-btn span {
     font-family: "Poppins", sans-serif !important;
     font-size: 1rem !important;
     align-self: center;
