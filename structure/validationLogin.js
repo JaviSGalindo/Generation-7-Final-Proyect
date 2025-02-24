@@ -11,7 +11,7 @@ const handleSubmit = async (event) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    //Trer la base de de datos que se creó en ValidationRegister Linea 14
+    //Traer la base de de datos que se creó en ValidationRegister Linea 14
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
     //Ahora se usa un find para encontrar en la base de datos el email y la contraseña
@@ -23,21 +23,13 @@ const handleSubmit = async (event) => {
 
       validator.correctPassword();
       await alerts.ejecutarConAlerta();
-      // window.location.href = "../index.html"; // Redirige al inicio
 
-      // Mostrar nombre y foto de perfil
+      // Mostrar cambio de icono
       const loginIcon = document.querySelector(".login");
       loginIcon.innerHTML = `
-        <img src="${users.profilePicture}" alt="Perfil" class="profile-pic" />
-        <span>${users.name}</span>
-        <button id="logoutButton">Cerrar sesión</button>
-      `;
-
-      // Agregar evento de cerrar sesión
-      document.getElementById("logoutButton").addEventListener("click", function () {
-        localStorage.removeItem("users");
-        window.location.href = "../index.html";
-      });
+        <i alt="Perfil" class="fa-solid fa-house-user onclick="toggleDropdown()" /></i>`;
+      
+      //window.location.href = "../index.html"; // Redirige al inicio
       
     }
   }
