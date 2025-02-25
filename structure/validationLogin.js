@@ -53,7 +53,6 @@ const handleSubmit = async (event) => {
 
   } catch (error) {
     console.error("Error al iniciar sesión:", error);
-    emailErrorSpan.textContent = "No se pudo conectar con el servidor. Inténtalo más tarde.";
   }
 };
 
