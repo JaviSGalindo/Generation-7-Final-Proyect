@@ -1,5 +1,6 @@
 import * as validator from "../validacionFormulario.js";
 import { emailNotFound, incorrectPassword } from "../validacionFormulario.js";
+import * as alerts from "../funcionalities/alerts.js";
 
 const form = document.getElementById("loginForm");
 const API_URL = 'http://localhost:8080/usuarios';
@@ -42,13 +43,13 @@ const handleSubmit = async (event) => {
       } else if (errorData && errorData.message) {
         console.error("Error:", errorData.message);
       }
-
       return; // Salir de la función si hay error
     }
 
     // Si todo está bien, obtener el token y redirigir
     const data = await response.json();
     localStorage.setItem("token", data.token);
+    await alerts.ejecutarConAlerta();
     window.location.href = "../index.html";
 
   } catch (error) {
