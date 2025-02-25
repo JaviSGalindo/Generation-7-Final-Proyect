@@ -19,7 +19,7 @@
     "nombre": "TENAZ",
     "precio": 205000,
     "img": "imgProducts/tenaz.webp",
-    "descripcion": "Set de dos piezas, Un crop top con escote en v profundo, lazo ajustable en el busto y en la parte de atras del cuello, que permite un ajuste personalizado, mangas largas y amplias tipo capa y una falda corta y ajustada.",
+    "descripcion": "Set de dos piezas, Un crop top con escote en v profundo, lazo ajustable en el busto y en la parte de atrás del cuello, que permite un ajuste personalizado, mangas largas y amplias tipo capa y una falda corta y ajustada.",
     "tallas": ["S", "M"],
     "colores": ["Negro", "Blanco"]
   },
@@ -91,7 +91,7 @@
     "nombre": "SABIA",
     "precio": 250000,
     "img": "imgProducts/sabia.png",
-    "descripcion": "Set de tres piezas, compuesto por una camisa de botones, manga larga; un pantalon de pierna ancha, con frunvudo en la pretina y lazo decorativo, ambas piezas en tejido semi-transparente, y un bodi ajustado de tirantes delgados",
+    "descripcion": "Set de tres piezas, compuesto por una camisa de botones, manga larga; un pantalon de pierna ancha, con fruncido en la pretina y lazo decorativo, ambas piezas en tejido semi-transparente, y un bodi ajustado de tirantes delgados",
     "tallas": ["M", "L", "XL"],
     "colores": ["Blanco y rosa"]
   },

@@ -1,3 +1,5 @@
+import * as alerts from "/funcionalities/alerts.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navBar = document.querySelector(".navBar");
@@ -9,6 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
       barSections.style.display = navBar.classList.contains("open")
         ? "flex"
         : "none";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded",  function () {
+  const token = localStorage.getItem("token");
+  const loginBtn = document.getElementById("login");
+
+  if (!loginBtn) return; // Si el botón no existe, salir de la función
+
+  if (!token) {
+    // Si NO hay sesión, redirigir al login al hacer clic
+    loginBtn.addEventListener("click", () => {
+      window.location.href = "login.html";
+    });
+  } else {
+    // Si HAY sesión, cambiar la apariencia del botón y mostrar alerta solo en clic
+    loginBtn.style.opacity = "0.5"; // Reduce visibilidad para indicar sesión activa
+
+    loginBtn.addEventListener("click", async () => {
+      await alerts.ejecutarConAlerta(); // Ejecutar la alerta al hacer clic
     });
   }
 });
