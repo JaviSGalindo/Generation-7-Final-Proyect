@@ -215,7 +215,7 @@ export async function sendContactForm(event) {
     if (validatePolicyCheck()) hasErrors = true;
 
     if (!hasErrors) {
-        await alerts.ejecutarConAlerta();
+        await alerts.ejecutarConAlerta("alertOverlay");
         return true;
     } else {
         event.preventDefault();

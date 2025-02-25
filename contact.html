@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/stylesFooter.css">
     <link rel="stylesheet" href="styles/nav2.css" />
     <link rel="stylesheet" href="styles/alerts.css">
+    
     <title>Contacto</title>
 
     <!-- Font Awesome -->
@@ -129,6 +130,18 @@
       <button class="close-btn" id="hide-btn"> <span>Aceptar</span> </button>
   </div>
 </div>
+
+<!-- Alerta Usuario Iniciado -->
+<div class="overlay" id="alertSession">
+  <div class="custom-alert">
+      <h2>¡Ya tienes una sesión activa!</h2>
+      <p id="text-alert">Puedes seguir navegando o cerrar sesión si lo prefieres.</p>
+      <button class="close-btn" id="exit-btn"><span>Continuar</span></button>
+      <button class="close-btn" id="cerrar-sesion-btn"><span>Cerrar Sesión</span></button>
+  </div>
+</div>
+
+
     <!-- Seccion Footer -->
     <footer class="footer-section">
 
@@ -195,7 +208,7 @@
           </div>
       </section>
   </footer>
-  <script src="funcionalities/nav.js"></script>
+  <script type="module" src="funcionalities/nav.js"></script>
   <script type="module" src="funcionalities/alerts.js"></script>
   <script type="module" src="funcionalities/validator.js"></script>
   </body>

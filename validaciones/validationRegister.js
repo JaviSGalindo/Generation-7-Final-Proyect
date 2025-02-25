@@ -41,10 +41,8 @@ const handleSubmit = async (event) => {
         if (response.ok) {
             emailRegistered(false); // Oculta el mensaje de error si el registro es exitoso
             console.log("Registro exitoso:", data);
-            await alerts.ejecutarConAlerta();
-
-            // Limpiar formulario y redirigir después de un registro exitoso
             form.reset();
+            await alerts.ejecutarConAlerta("alertOverlay");
             window.location.href = "structure/login.html";
         } else if (response.status === 400) {
             emailRegistered(true); // Muestra error si el email ya está registrado
