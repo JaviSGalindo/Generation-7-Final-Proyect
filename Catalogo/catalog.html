@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../styles/nav2.css"/>
     <link rel="stylesheet" href="carrito.css"/>
     <link rel="stylesheet" href="catalog.css"/>
+    <link rel="stylesheet" href="../styles/alerts.css">
 </head>
 <body>
 <div id="custom-toast-container"></div>
@@ -75,6 +76,17 @@
     </div>
 </nav>
 <!-- Fin NavBar -->
+
+
+<!-- Alerta Usuario Iniciado -->
+<div class="overlay" id="alertSession">
+    <div class="custom-alert">
+        <h2>¡Ya tienes una sesión activa!</h2>
+        <p id="text-alert">Puedes seguir navegando o cerrar sesión si lo prefieres.</p>
+        <button class="close-btn" id="exit-btn"><span>Continuar</span></button>
+        <button class="close-btn" id="cerrar-sesion-btn"><span>Cerrar Sesión</span></button>
+    </div>
+</div>
 
 <!--------- Contenedor del carrito de compras---- -->
 <div id="cerrar-carrito" class="carrito-modal">
@@ -154,21 +166,7 @@
 
 <!--Footer -->
 <footer class="footer-section">
-    <!-- Section de informacion de footer -->
-    <!-- <section class="footer-info-section">
-  <div class="footer-info-title">
-      <p id="redes">Nuestras Redes Sociales</p>
-  </div>
-  <div class="footer-info-container">
-      <p><a href="https://www.instagram.com/_elevia?igsh=bmdiamFnYnlzNGFt"><i class="fab fa-instagram" target="_blank"></i></a></p>
-      <p><a href="" target="_blank"><i class="fab fa-facebook"></i>
-      </a></p>
-      <p><a href="" target="_blank"><i class="fab fa-whatsapp"></i>
-      </a></p>
-      <p><a href="mailto:elevia.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></p>
-  </div>
-</section> -->
-
+   
     <!-- Seccion de logo - informacion respecto a la marca -->
     <section class="footer-final-section">
         <!-- Logo y Nombre de la Marca -->
@@ -279,13 +277,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Scripts modulares personalizados -->
+<script type="module" src="../funcionalities/nav.js"></script>
 <script type="module" src="fetchCatalog.js"></script>
 <script type="module" src="modalProducto.js"></script>
 
 <!-- Scripts personalizados no modulares -->
 <script src="carrito.js"></script>
 <script type="module" src="fetchCarrito.js"></script>
-<script src="../funcionalities/nav.js"></script>
+
+<!-- Scrpits Alerts -->
 
 </body>
 </html>

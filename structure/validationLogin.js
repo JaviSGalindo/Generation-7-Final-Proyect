@@ -49,7 +49,7 @@ const handleSubmit = async (event) => {
     // Si todo está bien, obtener el token y redirigir
     const data = await response.json();
     localStorage.setItem("token", data.token);
-    await alerts.ejecutarConAlerta();
+    await alerts.ejecutarConAlerta("alertOverlay");
     window.location.href = "../index.html";
 
   } catch (error) {

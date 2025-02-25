@@ -52,7 +52,7 @@
     margin-top: 15px;
     height: 2.5rem;
     transition: transform 0.3s ease;
-
+    width: 11.1rem;
 }
 .close-btn span {
     font-family: "Poppins", sans-serif !important;
@@ -69,6 +69,21 @@ transform: scale(1.02);
 background-color: #7ca0c080;
 transform: scale(0.95);
 }
+#exit-btn {
+    background-color: #00003d;
+}
+
+#exit-btn:hover {
+    background-color: #00003d;
+}
+#cerrar-sesion-btn {
+    background-color: #7ca0c0d0;
+}
+
+#cerrar-sesion-btn:hover {
+    background-color: #7ca0c0d0;
+}
+
 
 /* Mostrar la alerta */
 .overlay.show {

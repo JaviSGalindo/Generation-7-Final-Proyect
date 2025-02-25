@@ -8,6 +8,7 @@ const handleSubmit = async (event) => {
   if (await validator.sendContactForm(event)) {
    
     document.getElementById("contactForm").reset();
+    
   }
 };
 

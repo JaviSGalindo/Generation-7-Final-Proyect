@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : "none";
     });
   }
-});
 
-document.addEventListener("DOMContentLoaded",  function () {
   const token = localStorage.getItem("token");
   const loginBtn = document.getElementById("login");
 
@@ -31,7 +29,7 @@ document.addEventListener("DOMContentLoaded",  function () {
     loginBtn.style.opacity = "0.5"; // Reduce visibilidad para indicar sesión activa
 
     loginBtn.addEventListener("click", async () => {
-      await alerts.ejecutarConAlerta(); // Ejecutar la alerta al hacer clic
+      await alerts.ejecutarConAlerta("alertSession"); // Ejecutar la alerta al hacer clic
     });
   }
 });
