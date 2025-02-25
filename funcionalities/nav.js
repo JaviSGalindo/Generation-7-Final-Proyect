@@ -18,14 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!loginBtn) return; // Si el botón no existe, salir de la función
 
   if (!token) {
-    // Si NO hay sesión, redirigir al login al hacer clic
     loginBtn.addEventListener("click", () => {
-      let currentPage = window.location.pathname.split("/").pop(); // Obtiene solo el nombre del archivo actual
+      let currentPage = window.location.pathname;
 
-      if (currentPage === "catalog.html") {
-        window.location.href = "../structure/login.html"; // Retrocede una carpeta
+      if (currentPage==('/Catalogo/catalog.html')) {
+        window.location.href = "/structure/login.html";
       } else {
-        window.location.href = "structure/login.html"; // Accede directamente
+        window.location.href = "structure/login.html";
       }
     });
   } else {
@@ -34,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loginBtn.addEventListener("click", async () => {
       await alerts.ejecutarConAlerta("alertSession"); // Ejecutar la alerta al hacer clic
+
     });
   }
 });
