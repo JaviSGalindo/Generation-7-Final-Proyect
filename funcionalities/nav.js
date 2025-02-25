@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hamburger && navBar) {
     hamburger.addEventListener("click", () => {
       navBar.classList.toggle("open");
-      barSections.style.display = navBar.classList.contains("open")
-        ? "flex"
-        : "none";
+      barSections.style.display = navBar.classList.contains("open") ? "flex" : "none";
     });
   }
 
@@ -22,7 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!token) {
     // Si NO hay sesión, redirigir al login al hacer clic
     loginBtn.addEventListener("click", () => {
-      window.location.href = "login.html";
+      let currentPage = window.location.pathname.split("/").pop(); // Obtiene solo el nombre del archivo actual
+
+      if (currentPage === "catalog.html") {
+        window.location.href = "../structure/login.html"; // Retrocede una carpeta
+      } else {
+        window.location.href = "structure/login.html"; // Accede directamente
+      }
     });
   } else {
     // Si HAY sesión, cambiar la apariencia del botón y mostrar alerta solo en clic
