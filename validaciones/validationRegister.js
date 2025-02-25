@@ -1,37 +1,51 @@
 import * as validator from "../validacionFormulario.js";
 
 const form = document.getElementById("registerForm");
+const API_URL = 'http://localhost:8080/usuarios';
 
 const handleSubmit = async (event) => {
-  event.preventDefault(); //Eviita el comportamiento predeterminado del formulario
-  
-  //es una función de validación que se supone devuelve true o false, dependiendo de si los datos del formulario son válidos.
-  if (await validator.sendRegisterForm(event)) {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const name = document.getElementById("name").value
+  event.preventDefault();
 
-    //Uso un array USERS que guarda pares clave-valor en el almacenamiento local del navegador.
-    const users = JSON.parse(localStorage.getItem('users')) || []; //Si no está en el storaje lo guarda como vacio
+  // Validación antes de enviar la solicitud
+  const isValid = await validator.sendRegisterForm(event);
+  if (!isValid) return;
 
-    // Se usa un find para verificar si usuarioya existe en el array
-    const isUserRegisted = users.find(user => user.email === email)
-    if(isUserRegisted){
-        return alert("El usuario ya está registrado")
+  // Capturar valores del formulario
+  const nombre = document.getElementById("name").value;
+  const apellido = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const telefono = document.getElementById("telefono").value;
+  const contrasena = document.getElementById("password").value;
+
+  // Guardar en localStorage (de forma segura, aunque idealmente debería manejarse con tokens)
+  localStorage.setItem("email", btoa(email));
+  localStorage.setItem("password", btoa(contrasena));
+
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ nombre, apellido, telefono, email, contrasena }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error en la solicitud: ${response.status}`);
     }
 
-    //Guardamoe el objeto en el array, se guada un objeto completo
-    users.push({ email: email, password: password, name: name})
+    const data = await response.json();
+    console.log("Registro exitoso:", data);
 
-    //Y ahora se guarda en el storage
-    localStorage.setItem('users',JSON.stringify(users))
+    // Limpiar formulario y redirigir después de un registro exitoso
+    form.reset();
+    window.location.href = "structure/login.html";
 
-    // restablece el formulario a su estado inicial, eliminando los datos ingresados en los campos.
-    document.getElementById("registerForm").reset();
-
-    //redirige al usuario a la página login.html después de completar el registro exitosamente.
-    window.location.href = "structure/login.html"; 
+  } catch (error) {
+    console.error("Error al registrarse:", error);
   }
 };
 
+// Agregar el listener correctamente
 form.addEventListener("submit", handleSubmit);

@@ -1,38 +1,61 @@
 import * as validator from "../validacionFormulario.js";
-import * as alerts from "../funcionalities/alerts.js";
+import { emailNotFound, incorrectPassword } from "../validacionFormulario.js";
 
 const form = document.getElementById("loginForm");
+const API_URL = 'http://localhost:8080/usuarios';
+const emailErrorSpan = document.getElementById("emailError");
+const passwordErrorSpan = document.getElementById("passwordError");
 
 const handleSubmit = async (event) => {
   event.preventDefault();
 
-  if (validator.sendLoginForm(event)) {
-      
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+  // Limpiar mensajes anteriores
+  emailErrorSpan.textContent = "";
+  passwordErrorSpan.textContent = "";
 
-    //Traer la base de de datos que se creó en ValidationRegister Linea 14
-    const users = JSON.parse(localStorage.getItem('users')) || [];
+  // Validación del formulario
+  const isValid = await validator.sendLoginForm(event);
+  if (!isValid) return;
 
-    //Ahora se usa un find para encontrar en la base de datos el email y la contraseña
-    const validuser = users.find(user => user.email === email && user.password === password)
+  // Obtener valores del formulario
+  const email = document.getElementById("email").value;
+  const contrasena = document.getElementById("password").value;
 
-    if (!validuser) {
-      validator.incorrectPassword();
-    } else {
+  try {
+    const response = await fetch(`${API_URL}/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ email, contrasena }),
+    });
 
-      validator.correctPassword();
-      await alerts.ejecutarConAlerta();
+    // Si la respuesta no es OK, manejar errores personalizados
+    if (!response.ok) {
+      const errorData = await response.json(); // Leer la respuesta una vez
 
-      // Mostrar cambio de icono
-      const loginIcon = document.querySelector(".login");
-      loginIcon.innerHTML = `
-        <i alt="Perfil" class="fa-solid fa-house-user onclick="toggleDropdown()" /></i>`;
-      
-      //window.location.href = "../index.html"; // Redirige al inicio
-      
+      if (response.status === 500) {
+        emailNotFound();
+      } else if (response.status === 401) {
+        incorrectPassword();
+      } else if (errorData && errorData.message) {
+        console.error("Error:", errorData.message);
+      }
+
+      return; // Salir de la función si hay error
     }
+
+    // Si todo está bien, obtener el token y redirigir
+    const data = await response.json();
+    localStorage.setItem("token", data.token);
+    window.location.href = "../index.html";
+
+  } catch (error) {
+    console.error("Error al iniciar sesión:", error);
+    emailErrorSpan.textContent = "No se pudo conectar con el servidor. Inténtalo más tarde.";
   }
 };
 
+// Agregar el eventListener al formulario
 form.addEventListener("submit", handleSubmit);

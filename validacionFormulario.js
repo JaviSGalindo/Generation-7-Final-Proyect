@@ -155,10 +155,11 @@ export function incorrectPassword() {
   passwordError.style.display = "block";
   passwordError.textContent = "Contraseña Incorrecta";
 }
-export function correctPassword() {
-  const passwordError = document.getElementById("passwordError");
-  passwordError.style.display = "none";
-  passwordError.textContent = "";
+
+export function emailNotFound() {
+  const emailError = document.getElementById("emailError");
+  emailError.style.display = "block";
+  emailError.textContent = "El email no está registrado";
 }
 
 // Agregar event listeners para validación en tiempo real
