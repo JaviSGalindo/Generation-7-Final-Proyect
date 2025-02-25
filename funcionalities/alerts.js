@@ -29,7 +29,13 @@ export function resolveAlert(alertToExecute) {
 export function cerrarSesion(alertToExecute) {
     localStorage.removeItem("token");
     resolveAlert(alertToExecute); 
+    let currentPage = window.location.pathname;
+
+    if (currentPage==('/Catalogo/catalog.html')) {
+    window.location.href = "/structure/login.html";
+    } else {
     window.location.href = "structure/login.html";
+    }
 }
 
 // Agregar eventos a los botones de cierre cuando el DOM esté cargado
