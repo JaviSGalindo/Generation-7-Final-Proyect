@@ -91,7 +91,7 @@
     "nombre": "SABIA",
     "precio": 250000,
     "img": "imgProducts/sabia.png",
-    "descripcion": "Set de tres piezas, compuesto por una camisa de botones, manga larga; un pantalon de pierna ancha, con frunvudo en la pretina y lazo decorativo, ambas piezas en tejido semi-transparente, y un bodi ajustado de tirantes delgados",
+    "descripcion": "Set de tres piezas, compuesto por una camisa de botones, manga larga; un pantalon de pierna ancha, con fruncido en la pretina y lazo decorativo, ambas piezas en tejido semi-transparente, y un bodi ajustado de tirantes delgados",
     "tallas": ["M", "L", "XL"],
     "colores": ["Blanco y rosa"]
   },
