@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loginBtn.addEventListener("click", () => {
       let currentPage = window.location.pathname;
 
-      if (currentPage==('/Catalogo/catalog.html')) {
-        window.location.href = "/structure/login.html";
+      if (currentPage.includes('/Catalogo/catalog.html')) {
+        window.location.href = "../structure/login.html";
       } else {
         window.location.href = "structure/login.html";
       }
