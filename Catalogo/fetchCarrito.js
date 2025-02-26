@@ -211,37 +211,38 @@ const comprarBtn = document.getElementById("comprar-carrito");
 comprarBtn.addEventListener("click", async () => {
   const token = localStorage.getItem("token");
  
-  if(!token){
-    console.log("No hay sesion iniciada")
-  }
-  else {
-    const mp = new MercadoPago("APP_USR-16153bf5-8f02-4b32-8242-1a00cbcf113d", {
-      locale: "es-CO",
+  const mp = new MercadoPago("APP_USR-16153bf5-8f02-4b32-8242-1a00cbcf113d", {
+    locale: "es-CO",
+  });
+  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+  console.log("Total a pagar:", total);
+  try {
+    const response = await fetch("preferences.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ total: total }),
     });
-    const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-    console.log("Total a pagar:", total);
-    try {
-      const response = await fetch("preferences.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ total: total }),
-      });
-  
-      const data = await response.json();
-      console.log("Respuesta de MercadoPago:", data);
-  
-      if (data.id) {
-        window.location.href = data.init_point;
-      } else {
-        console.error("Error: No se recibió un ID de pago válido.");
-        alert("Hubo un problema al procesar el pago.");
-      }
-    } catch (error) {
-      console.error("Error en la petición:", error);
-      alert("Hubo un problema al conectar con el servidor.");
+
+    const data = await response.json();
+    console.log("Respuesta de MercadoPago:", data);
+
+    if (data.id) {
+      window.location.href = data.init_point;
+    } else {
+      console.error("Error: No se recibió un ID de pago válido.");
+      alert("Hubo un problema al procesar el pago.");
     }
+  } catch (error) {
+    console.error("Error en la petición:", error);
+    alert("Hubo un problema al conectar con el servidor.");
   }
+  // if(!token){
+  //   console.log("No hay sesion iniciada")
+  // }
+  // else {
+    
+  // }
 
 });

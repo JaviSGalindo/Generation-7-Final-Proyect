@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!token) {
     loginBtn.addEventListener("click", () => {
+
+      console.log("estoy aqui");
       let currentPage = window.location.pathname;
 
       if (currentPage.includes('/Catalogo/catalog.html')) {
