@@ -42,6 +42,7 @@ export function cerrarSesion(alertToExecute) {
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("hide-btn")?.addEventListener("click", () => resolveAlert("alertOverlay"));
     document.getElementById("exit-btn")?.addEventListener("click", () => resolveAlert("alertSession"));
+    // document.getElementById("okay-btn")?.addEventListener("click", () => resolveAlert("alertBuy"));
     document.getElementById("cerrar-sesion-btn")?.addEventListener("click", () => cerrarSesion("alertSession"));
 });
 

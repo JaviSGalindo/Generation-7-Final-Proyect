@@ -1,3 +1,5 @@
+// import { ejecutarConAlerta } from "../funcionalities/alerts";
+
 const contenedorCatalogo = document.querySelector(".productos-container");
 const contenedorCarrito = document.querySelector(".carrito-items");
 const btnVaciar = document.getElementById("vaciar-carrito");
@@ -20,16 +22,29 @@ const guardarCarrito = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
+function carritoIsEmpty() {
+  if (carrito.length === 0){
+    comprarBtn.style.opacity = "0.5";
+    comprarBtn.disabled = true;
+    return true;
+  }
+  else {
+    comprarBtn.style.opacity = "1";
+    comprarBtn.disabled = false;
+    return false;
+  }
+}
+
 // Renderizar el carrito en pantalla
 const renderCarrito = () => {
   contenedorCarrito.innerHTML = "";
 
-  if (carrito.length === 0) {
+  if (carritoIsEmpty()){
     contenedorCarrito.innerHTML = `
-      <div id="carrito-empty">
-        <h1>Tu carrito está vacío, pero no tu estilo. <br><br> ¡Explora nuestro catálogo y encuentra tus imprescindibles!</h1>        
-      </div>
-    `;
+    <div id="carrito-empty">
+      <h1>Tu carrito está vacío, pero no tu estilo. <br><br> ¡Explora nuestro catálogo y encuentra tus imprescindibles!</h1>        
+    </div>
+  `;
   }
 
   carrito.forEach((producto) => {
@@ -129,7 +144,8 @@ const vaciarCarrito = () => {
   carrito = [];
   guardarCarrito();
   renderCarrito();
-  totalPrecio.textContent = "Total: $0.00";
+  carritoIsEmpty();
+  totalPrecio.textContent = "Total: $0";
 };
 
 // Mostrar un mensaje en pantalla
@@ -185,4 +201,47 @@ btnVaciar.addEventListener("click", (event) => {
 // Renderizar el carrito al cargar la página
 window.addEventListener("load", () => {
   renderCarrito();
+});
+
+//Integrar mercado pago
+// Integración del botón para Mercado Pago
+
+const comprarBtn = document.getElementById("comprar-carrito");
+
+comprarBtn.addEventListener("click", async () => {
+  const token = localStorage.getItem("token");
+ 
+  if(!token){
+    console.log("No hay sesion iniciada")
+  }
+  else {
+    const mp = new MercadoPago("APP_USR-16153bf5-8f02-4b32-8242-1a00cbcf113d", {
+      locale: "es-CO",
+    });
+    const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+    console.log("Total a pagar:", total);
+    try {
+      const response = await fetch("preferences.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ total: total }),
+      });
+  
+      const data = await response.json();
+      console.log("Respuesta de MercadoPago:", data);
+  
+      if (data.id) {
+        window.location.href = data.init_point;
+      } else {
+        console.error("Error: No se recibió un ID de pago válido.");
+        alert("Hubo un problema al procesar el pago.");
+      }
+    } catch (error) {
+      console.error("Error en la petición:", error);
+      alert("Hubo un problema al conectar con el servidor.");
+    }
+  }
+
 });
