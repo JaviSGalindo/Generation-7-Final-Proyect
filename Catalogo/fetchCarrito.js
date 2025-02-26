@@ -239,11 +239,5 @@ comprarBtn.addEventListener("click", async () => {
     console.error("Error en la petición:", error);
     alert("Hubo un problema al conectar con el servidor.");
   }
-  // if(!token){
-  //   console.log("No hay sesion iniciada")
-  // }
-  // else {
-    
-  // }
-
+  
 });
