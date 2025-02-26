@@ -217,13 +217,14 @@ comprarBtn.addEventListener("click", async () => {
   const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
   console.log("Total a pagar:", total);
   try {
-    const response = await fetch("preferences.php", {
+    const response = await fetch("http://localhost:3000/create_preference", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ total: total }),
     });
+    
 
     const data = await response.json();
     console.log("Respuesta de MercadoPago:", data);

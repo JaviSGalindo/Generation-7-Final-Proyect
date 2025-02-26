@@ -1,0 +1,28 @@
+{
+  "name": "generation-7-final-proyect",
+  "version": "1.0.0",
+  "description": "Creacion de repositorio!\r Carpeta General del Proyecto",
+  "type": "module",
+  "main": "validacionFormulario.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaviSGalindo/Generation-7-Final-Proyect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaviSGalindo/Generation-7-Final-Proyect/issues"
+  },
+  "homepage": "https://github.com/JaviSGalindo/Generation-7-Final-Proyect#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mercadopago": "^2.3.0"
+  }
+}
