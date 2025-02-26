@@ -8,7 +8,7 @@ const handleSubmit = async (event) => {
   
   if(validator.sendRecoveryForm(event)) {
     
-    await alerts.ejecutarConAlerta();
+    await alerts.ejecutarConAlerta("alertOverlay");
     document.getElementById("recoveryForm").reset();
     window.location.href = "../structure/login.html"; 
   }

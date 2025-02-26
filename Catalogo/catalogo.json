@@ -1,98 +1,162 @@
 [
   {
     "nombre": "CONFIANZA",
-    "precio": 165000,
+    "precio": 188000,
     "img": "imgProducts/confianza.jpg",
-    "descripcion": "Expresa seguridad y determinación en cada paso que das.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Negro", "Blanco", "Azul"]
+    "descripcion": "Vestido corto con escote profundo en V, nudo decorativo al frente que se ajusta justo por debajo del busto, mangas largas y presentan un detalle de fruncido en la parte exterior. Ideal para un look fresco y elegante.",
+    "tallas": ["XS", "S", "M", "L"],
+    "colores": ["Azul celeste", "Verde menta"]
   },
   {
     "nombre": "COQUETA",
-    "precio": 172000,
+    "precio": 200000,
     "img": "imgProducts/coqueta.webp",
-    "descripcion": "Enterizo con cuello redondo, sin mangas, costuras verticales que estilizan el torso y dan un ajuste favorecedor; parte inferior larga, ancha, caída fluida e incluye cinturón de la misma tela y color con detalles metálicos.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Rojo", "Beige", "Verde"]
+    "descripcion": "Enterizo con cuello redondo, sin mangas, costuras verticales que estilizan el torso y dan un ajuste favorecedor; parte inferior larga, ancha, caída fluida, incluye cinturón de la misma tela y color con detalles metálicos.",
+    "tallas": ["S", "M", "L"],
+    "colores": ["Negro"]
   },
   {
     "nombre": "TENAZ",
-    "precio": 162000,
+    "precio": 205000,
     "img": "imgProducts/tenaz.webp",
-    "descripcion": "Resistencia y determinación en cada desafío que enfrentas.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Denim Oscuro", "Gris", "Negro"]
+    "descripcion": "Set de dos piezas, Un crop top con escote en v profundo, lazo ajustable en el busto y en la parte de atrás del cuello, que permite un ajuste personalizado, mangas largas y amplias tipo capa y una falda corta y ajustada.",
+    "tallas": ["S", "M"],
+    "colores": ["Negro", "Blanco"]
   },
   {
     "nombre": "VALIENTE",
-    "precio": 199000,
+    "precio": 205000,
     "img": "imgProducts/valiente.webp",
-    "descripcion": "Para quienes enfrentan la vida con coraje y sin miedo.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Azul Marino", "Negro", "Burdeos"]
-  },
-  {
-    "nombre": "CREATIVA",
-    "precio": 155000,
-    "img": "imgProducts/creativa.webp",
-    "descripcion": "La inspiración fluye en cada detalle de tu esencia.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Rosa", "Celeste", "Amarillo"]
-  },
-  {
-    "nombre": "CORAJE",
-    "precio": 180000,
-    "img": "imgProducts/coraje.jpg",
-    "descripcion": "Un símbolo de determinación y valentía inquebrantable.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Gris", "Negro", "Blanco"]
-  },
-  {
-    "nombre": "SOÑADORA",
-    "precio": 171000,
-    "img": "imgProducts/sonadora.jpg",
-    "descripcion": "Refleja tu esencia soñadora y tu deseo de alcanzar lo imposible.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Azul", "Verde", "Rosa"]
-  },
-  {
-    "nombre": "COMPASIVA",
-    "precio": 147000,
-    "img": "imgProducts/compasiva.jpg",
-    "descripcion": "Un recordatorio de la empatía y el amor que brindas al mundo.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
+    "descripcion": "Set de dos piezas en lino, compuesto por un blazer largo y de corte fluido, manga larga y un short de tiro alto, ancho, con cintura elástica y lazo decorativo. Los bolsillos laterales ofrecen un estilo práctico y versátil.",
+    "tallas": ["S", "M", "L"],
     "colores": ["Beige"]
   },
   {
+    "nombre": "CREATIVA",
+    "precio": 180000,
+    "img": "imgProducts/creativa.webp",
+    "descripcion": "Set de dos piezas, compuesto por un crop top ajustado con escote recto y tirantes delgados, detalle de abertura triangular en la parte frontal y espalda con recogido en elastico para mejor ajuste, y un pantalon de corte alto y pierna ancha, con bolsillos laterales que aportan funcionalidad.",
+    "tallas": ["S", "M"],
+    "colores": ["Verde Oliva"]
+  },
+  {
+    "nombre": "CORAJE",
+    "precio": 200000,
+    "img": "imgProducts/coraje.jpg",
+    "descripcion": "Vestido corto con escote en V y tirantes delgados, capa frontal sobrepuesta cruzada para formar una falda asimétrica con un nudo lateral que crea un efecto drapeado.",
+    "tallas": ["XS", "S", "M"],
+    "colores": ["Rojo", "Blanco"]
+  },
+  {
+    "nombre": "SOÑADORA",
+    "precio": 210000,
+    "img": "imgProducts/sonadora.jpg",
+    "descripcion": "Set de dos piezas, compuesto pur un top de manga corta y corte frontal recto, con un lazo ajustable en la parte baja, Abertura ovalada en la espalda y cierre de botón en la parte superior del cuello, y un pantalon De tiro alto y corte amplio y pliegues frontales sutiles.",
+    "tallas": ["S", "M"],
+    "colores": ["Blanco"]
+  },
+  {
+    "nombre": "COMPASIVA",
+    "precio": 170000,
+    "img": "imgProducts/compasiva.jpg",
+    "descripcion": "Set de dos piezas, compuesto por un top de tirantes anchos, con escote en forma de corazón suave, diseño estructurado con costuras visibles que ayudan a definir la figura, short con pretina alta, pierna ancha, con un diseño clásico y pinzas en la parte delantera.",
+    "tallas": ["S", "M"],
+    "colores": ["Azul claro"]
+  },
+  {
     "nombre": "COMPROMETIDA",
-    "precio": 175000,
+    "precio": 200000,
     "img": "imgProducts/comprometida.jpg",
-    "descripcion": "Refleja la pasión y entrega con la que persigues tus objetivos.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Negro", "Vino", "Beige"]
+    "descripcion": "Set de tres piezas, compuesto por una camisa corta de manga corta, suelta y ligera, un top de tirantes delgados, ajustado, sin mangas y de escote recto y una mini falda ajustada, de talle alto, con un ligero drapeado en la parte delantera.",
+    "tallas": ["S", "M"],
+    "colores": ["Blanco"]
   },
   {
     "nombre": "FORTALEZA",
-    "precio": 215000,
+    "precio": 210000,
     "img": "imgProducts/fortaleza.jpg",
-    "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Gris"]
+    "descripcion": "Set de dos piezas, compuesto por un crop top asimétrico de un solo hombro, escote en v profundo con detalle de botón en el centro, escote bajo en la espalda y lazo ajustable en la parte posterior para mayor ajuste y un short de talle alto, ajustado con pliegues suaves.",
+    "tallas": ["S", "M"],
+    "colores": ["Palo de rosa"]
   },
   {
     "nombre": "SEGURA",
     "precio": 188000,
     "img": "imgProducts/segura3.jpg",
-    "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Gris"]
+    "descripcion": "Set de dos piezas, compuesto por un crop top con  tirantes delgados ajustable, detalle fruncido en el escote, y corte en v en la parte frontal inferior, Descubierto en la parte trasera con lazos de ammarre para ajustar al gusto",
+    "tallas": ["S", "M"],
+    "colores": ["Marfil"]
   },
   {
     "nombre": "SABIA",
     "precio": 250000,
     "img": "imgProducts/sabia.png",
-    "descripcion": "Un símbolo de resistencia y firmeza en cada desafío.",
-    "tallas": ["S", "M", "L", "XL", "XXL"],
-    "colores": ["Gris"]
+    "descripcion": "Set de tres piezas, compuesto por una camisa de botones, manga larga; un pantalon de pierna ancha, con fruncido en la pretina y lazo decorativo, ambas piezas en tejido semi-transparente, y un bodi ajustado de tirantes delgados",
+    "tallas": ["M", "L", "XL"],
+    "colores": ["Blanco y rosa"]
+  },
+  {
+    "nombre": "CONSTANCIA",
+    "precio": 200000,
+    "img": "imgProducts/constancia.png",
+    "descripcion": "Set de tres piezas que incluye un crop top strapless ajustado, una falda mini de corte recto y una sobrecamisa ligera con mangas largas y botones al frente",
+    "tallas": ["S", "M"],
+    "colores": ["Azul"]
+  },
+  {
+    "nombre": "AMADA",
+    "precio": 190000,
+    "img": "imgProducts/amada.jpg",
+    "descripcion": "Set de tres piezas que incluye un crop top strapless ajustado, una falda mini de corte recto y una sobrecamisa ligera con mangas largas y botones al frente",
+    "tallas": ["S", "M", "L"],
+    "colores": ["Negro", "Rojo"]
+  },
+  {
+    "nombre": "APASIONADA",
+    "precio": 217000,
+    "img": "imgProducts/Apasionada1.jpg",
+    "descripcion": "Set de tres, compuesto por una falda mini de corte ajustado y un lazo decorativo de amarre al cuello, un top de tirantes delgados y un blazer corto",
+    "tallas": ["S", "M"],
+    "colores": ["Blanco"]
+  },
+  {
+    "nombre": "AUDAZ",
+    "precio": 200000,
+    "img": "imgProducts/Audaz.jpg",
+    "descripcion": "Set de dos piezas incluye un top corto de tiras con amarre al cuello y con un corte elegante y un pantalón de tiro alto con pinzas y cinturón a juego",
+    "tallas": ["S", "M"],
+    "colores": ["Gris claro", "Borgoña", "Negro"]
+  },
+  {
+    "nombre": "PERSISTENTE",
+    "precio": 210000,
+    "img": "imgProducts/Persistente.jpg",
+    "descripcion": "Set de dos piezas, incluye top manga larga con ligero volumen en los hombros, cuenta con un detalle de espalda descubierta con cierre de botones, y un pantalón: Corte recto . Incluye un cordón en la cintura con detalles dorados",
+    "tallas": ["M", "L"],
+    "colores": ["Borgoña"]
+  },
+  {
+    "nombre": "INGENIOSA",
+    "precio": 160000,
+    "img": "imgProducts/Ingeniosa.jpg",
+    "descripcion": "Enterizo de manga larga con ajuste en la cintura mediante un lazo con corte en corte short bolsillos frontales y con cierre en botones",
+    "tallas": ["M", "L"],
+    "colores": ["Crudo"]
+  },
+  {
+    "nombre": "SUTIL",
+    "precio": 200000,
+    "img": "imgProducts/sutil1.png",
+    "descripcion": "Set de tres piezas, compuesto por un top de tirantes delgados con escote en V, una falda corta con pretina ancha y una camisa ligera con mangas cortas",
+    "tallas": ["S", "M"],
+    "colores": ["Nude"]
+  },
+  {
+    "nombre": "ENTREGADA",
+    "precio": 195000,
+    "img": "imgProducts/entregada.png",
+    "descripcion": "Set de dos piezas, compuesto por una camisa de manga corta y un short de tiro alto con bolsillos grandes y solapas decorativas. La camisa tiene un diseño tipo cropped, con botones en la parte frontal y bolsillos en el pecho",
+    "tallas": ["S", "M"],
+    "colores": ["Azul"]
   }
 ]
